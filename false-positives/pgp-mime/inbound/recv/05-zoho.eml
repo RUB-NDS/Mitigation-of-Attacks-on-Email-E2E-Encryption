@@ -1,0 +1,127 @@
+Delivered-To: john.10180@zohomail.eu
+Received-SPF: pass (zoho.com: domain of web.de designates 212.227.15.14 as permitted sender) client-ip=212.227.15.14; envelope-from=brucewayne45@web.de; helo=mout.web.de;
+Authentication-Results: mx.zoho.eu;
+	spf=pass (zoho.com: domain of web.de designates 212.227.15.14 as permitted sender)  smtp.mailfrom=brucewayne45@web.de
+Return-Path: <brucewayne45@web.de>
+Received: from mout.web.de (mout.web.de [212.227.15.14]) by mx.zoho.eu
+	with SMTPS id 1556614239622482.0967798125713; Tue, 30 Apr 2019 10:50:39 +0200 (CEST)
+Received: from [192.168.3.225] ([134.147.40.133]) by smtp.web.de (mrweb002
+ [213.165.67.108]) with ESMTPSA (Nemesis) id 0MBTXi-1hVsKm1yoY-00AW54 for
+ <john.10180@zohomail.eu>; Tue, 30 Apr 2019 10:50:38 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+	s=dbaedf251592; t=1556614238;
+	bh=Sa2k0nUsY0MOrlwY5doyWx1Vn8B/+lGMV65uZL/Bync=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=H8SeP+mB9romYXd1n+ckI4PdspIWOcYfPZPBvKFpCMPO960UhwthrfjsycPDqBrVA
+	 re4rR0YTiNMfcBKi/ZseYtZsb6t7jjupVi4Z7aLyFdHSzoDFTyUG57mkcu/qelQkFa
+	 aSio7xmnzvhDZrLRS1tVLSliBMQJUxJ7HRp4wRyw=
+X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
+To: john.10180@zohomail.eu
+From: "brucewayne45@web.de" <brucewayne45@web.de>
+Subject: Inbound PGP/MIME
+Openpgp: preference=signencrypt
+Autocrypt: addr=brucewayne45@web.de; keydata=
+ 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
+ 8RNuhi9qShTp2cog6/yJmAtX
+Message-ID: <4f6136ed-15c7-be9c-7a89-6c612d4626bb@web.de>
+Date: Tue, 30 Apr 2019 10:50:38 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="hzPrzKO8qQgMMcIDQ4VwPmlzOvxgjzRGr"
+X-Provags-ID: V03:K1:ZTaQXnM/P8V1a8SrVnkxSsQ0Vq5DKSKE2BjzDybTREVfyNMcWam
+ F4+ezrc/r/wc6J/T79RgiFFek837ds/KsgEzHQmfIlhEbL1KbJWmJZHbdgacRNMjHJEwiJD
+ 0jVaUTHsnpPhT0SkApEtoV75mqu+Nx/edvN3rqNvFo1ghif9yTiqXOkHENt1X7qTWeoQgRy
+ e/PwAa9ralLuW17F3UK5A==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:hLrACY10t8M=:X3b3NojXL95iR/LMSKGdSp
+ 4SBuJJPG7B9wBLwEvCW3F0XRTiBMMzYsTXvO2+ONCUk0DM2KDqlc6TTcR/nmO5OpJec2fgrtf
+ pZy6mKtVqubfpLGM57w4YQwHWjG3+fB+9b0aWOObqXXXhsk4Yaj/Jh+Nzv1H2yBPRBIGoWiVi
+ kNchDKMbpYdGO0VXjZlSmrnRC668cwVq6blVOGcHmAljWPIHlIZeas0GsWL50pkDtNdE8/ybD
+ ijow45MV1tLsW3ctN+GyhUvlgQQhFK5SvjAIq123EloLA40GiR0nQW5FTRnf+dCk4npOYprXC
+ worXQf6RoxUwmvv7LfhWFsfg1oM0EIzOZPiKKdaYfWS4BZLORNO/BErXxWgs+7EYnOxyIIslZ
+ f/OMU/UK4KcVJM8uNR3224VuMaKmyYJRXrAxZOmUIk6DA0X/ZoeJ+eR6owK6DwJ52S7z6MbEX
+ mhDw2eZW/XkMzDN9knM61yVivlWiOfalUHMlQUqdy0aJ/se4UrJ+CrNWLNs62LYGwDia4pRtD
+ uDqla/tznoER8BriIHUSXmc3sYHnPsTmHB7Hce19UC7W1l9hc9Nq5hDZjwejChqMr6OJsJqHd
+ 2/8lzicXRwM2Gi+eKxjTrfjiU5pcoSNgeB44oKyNU3q5RMOqW+yUfl/NBhCdEsdnJafvNh1F2
+ JOFYST2BvNmTKL9JEHZvNM1OvvBzdnAPSGswlhWcZySye9VJCmVsTllZc8xlam4h3wEcCuovp
+ ktEhaMnmFk6CyY0fldwSnHRKiB3AvWdNUQSB3NrZnnVybGsDoqW0Cnhfvx/VjmuuwwlRpKM4j
+ xiqQAd6hmzM/qZJesdwZs3PTU/bR5RufGkJqwj+W71pu8oS97GzYgNHB/RGRucLDTnopoO1J7
+ NsuW1200Lf15PXatzioqjk7s7zSQNJkF3rZ9FScSvvgOvdOCmAy43aOw5X0Ckr
+X-Zoho-Virus-Status: 1
+X-ZohoMail-Owner: <4f6136ed-15c7-be9c-7a89-6c612d4626bb@web.de>+zmo_0_brucewayne45@web.de
+X-ZohoMail-Sender: 134.147.40.133
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--hzPrzKO8qQgMMcIDQ4VwPmlzOvxgjzRGr
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--hzPrzKO8qQgMMcIDQ4VwPmlzOvxgjzRGr
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA+XhBIZl3+i5AQgAkRbjEUv+Sin70HHQ1RfZ/72Q/WKHskwv6s4hcbFWhzs4
+jgzza73twE4nKatmGkvkpQ1CmYAN8DQql7eTIstcT8ZgghtupZd9/6cOPKYsxbj/
+JY1rbYrnFHQ9iBMTWdyggbAQ9+0RPJU0UGg7m2aE8Pk2l3l/1Mf1rkQClYZlHdSe
+ZKgWxxrLhGGvjlWC3cXhvwk28R4qIT8LQ1284gu/FibPGaq2OgY9L9AEvuXS2YEJ
+g0Klqpt9pvMAIhSwyqxN4Joq9BjkIVesDC8WMDvGHXtOvJBJJFKcU46eo20/V6gp
+5vaRAbS49ayx97K39i7yc8y1riZrhI9j6OcrO8+jW4UBjAPMfQm1K/htLQEL/Aw+
+8Fiu7UgoqcF0Dmv8RBtsyezER4T8rg9m1r433riwofG5GPty+PBc8npgkisSSLo9
+chYB/JEIUPl7LTAVxugLEDh1RcLbGDJqCzW7uS/Wh6dqcPRd0RxxzUcemrWPvA5p
+amVeOEANUGGwxlvenVmJMfGMjhzYikSa0swyP8bxdzIud7M2FCMxM3SmauqJFYXe
+TcKxzrYvlWLQofe+8fCxFRxxdEqmsxNr6ZcZWSdYwRfmeLH8ZdgzhjiWtmaTXN1H
+qVrrsJ8aEYtIKiHfT2jAGaVFnW+ICiYiPziPrDTU3ZNvaQo0TQt7p1/6oypKmui8
+/YxsSkS/SJyGwZmMO4dC3AVy8WbiuKfJp+zyxi9wTFjeIuPACexgpwMNxGlDJj2G
+OBxx5IHbovfcPUCIcLTMr1RCQ2XZ0ky39dotR+UoOLUedFyXWCjmy34Qox8XIn/4
+zyMrAK0IHBS+nUp+pKsIZ1DxkRw3NCt93fSbONJQX1FuE7pXOJtEWLZXSG0RItLA
+rAE3MQJ4PdIBOJ0zPIkYfzSiLc79xkgr4DgHUJYotjBQLBOCJlPxUjGVneen9FHT
+oErhMykN7bu8vsnvBN8R8yC/Et5bx8oxAY7I0QJTjhRzcwBVKKEwW1qFBbobjNLL
+7irOLHZULj46XDNpmQiH2+wmHNRdhqsdp+q/Ujm6nIQPIgA7XEJco2D8NDQ1yL+g
+jXAlMIn+05hNEOTjZCfECzaeMSwX9Ktoun6YCM8+eYUP/Omvj3y9mOCOBYUuZyne
+PLbtpzfAIQ/XHa803cfxwIa0Q/a5oO1ofUbbJ7Is9gnJapv4R1asypWV5mRiHfzp
+6jSpyipLG9+5J1JbawwuWBigMbjNGmCBFsK4l8Jbqb1Qr+WbVBJeHWpi8kFbK/Dc
+TReX9sTDQ/+RW4IjLHW7wbjHBleYEO/TNrbN8+LEtah0cYlClwp9KoJbHjPJJ1Vr
+aDi41PFTZkz703TYIey8raIx7iB9q418QPDyDns=
+=PbgX
+-----END PGP MESSAGE-----
+
+--hzPrzKO8qQgMMcIDQ4VwPmlzOvxgjzRGr--

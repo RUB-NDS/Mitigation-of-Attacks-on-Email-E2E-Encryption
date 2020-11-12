@@ -1,0 +1,52 @@
+Return-Path: <john.10180@zohomail.eu>
+Delivered-To: brucewayne45@das-labor.org
+Received: from newvegas.das-labor.org
+	by newvegas.das-labor.org with LMTP id COUOBAwWx1yzFwAAAera6A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 17:19:40 +0200
+Received: by newvegas.das-labor.org (Postfix, from userid 1040)
+	id F3B3D1052360; Mon, 29 Apr 2019 17:19:39 +0200 (CEST)
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on
+	newvegas.das-labor.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.7 required=5.0 tests=BAYES_00,DKIM_INVALID,
+	DKIM_SIGNED,URIBL_BLOCKED autolearn=no autolearn_force=no version=3.4.2
+Received: from sender-pp-o92.zoho.eu (sender-pp-o92.zoho.eu [185.20.209.252])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by newvegas.das-labor.org (Postfix) with ESMTPS id D13BE105207A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 17:19:38 +0200 (CEST)
+ARC-Seal: i=1; a=rsa-sha256; t=1556551176; cv=none; 
+	d=zohomail.eu; s=zohoarc; 
+	b=MdYSblpg00jEsBTniyLTOQ9PDWF8XqPF6ixHHqWoTtOVjMD29m0HmYNAxrvIpt3q/U0YGUkxaICDJWwmS69DcgwVTo/VMiaZKB6/jRZZvztghG5AD2Eqacfp/HLkDlG7zQ5ubKVK89Fh+LKkkgSH+PmbTqBij1ZdrXrnvo6FOZM=
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=zohomail.eu; s=zohoarc; 
+	t=1556551176; h=Content-Type:Content-Transfer-Encoding:Date:From:MIME-Version:Message-ID:Subject:To:ARC-Authentication-Results; 
+	bh=2WpsD/O5enUvQA5aU0QKc5TEhcqMd8+IRm15gTmVBLE=; 
+	b=Qm4xJJ3fi8oXMbbhttbX780phU9V9SgTrFCJzKWTSqArlIzgrCkmSIPQjjSm1qgCtlxeKqB50HkCN4ZkqEoA6xrhcugSwgVqWNVDu5sIIuLh9tjos1YK7jxkHLj1pBYqZFnC84Rd9cC/E88512hbD4pZhX0MAVorIqXGp3RCjrs=
+ARC-Authentication-Results: i=1; mx.zohomail.eu;
+	dkim=pass  header.i=zohomail.eu;
+	spf=pass  smtp.mailfrom=john.10180@zohomail.eu;
+	dmarc=pass header.from=<john.10180@zohomail.eu> header.from=<john.10180@zohomail.eu>
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1556551176;
+	s=zoho; d=zohomail.eu; i=john.10180@zohomail.eu;
+	h=To:From:Subject:Message-ID:Date:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	l=25; bh=2WpsD/O5enUvQA5aU0QKc5TEhcqMd8+IRm15gTmVBLE=;
+	b=kh1YmcNfHzX5lMM+gySJfnHZPMTKNRV7NSBeN+Sa27aeanOTu3CksgPQzTjBE66A
+	uLFNaEy3Hb27i4gecyPdVm7uQujtRnJIWxbg1Gw00ccUJ4P37mu236DgSQ6sXVaUjNZ
+	t/M1KsulhqJ458DLsmVfCl6XoagV9Svl5oh1SONA=
+Received: from [134.147.40.36] (korolev.nds.ruhr-uni-bochum.de [134.147.40.36]) by mx.zoho.eu
+	with SMTPS id 1556551174147298.2810030841017; Mon, 29 Apr 2019 17:19:34 +0200 (CEST)
+To: brucewayne45@das-labor.org
+From: Zoho Mail <john.10180@zohomail.eu>
+Subject: Outbound from ZoHo Mail
+Message-ID: <48987d76-78cf-2c59-5ef7-49aa4ca275f0@das-labor.org>
+Date: Mon, 29 Apr 2019 17:19:33 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+X-ZohoMailClient: External
+
+Outbound from ZoHo Mail
+

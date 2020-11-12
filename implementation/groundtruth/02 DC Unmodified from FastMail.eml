@@ -1,0 +1,161 @@
+Delivered-To: decryptioncontext@gmail.com
+Received: by 2002:a05:6504:14cd:0:0:0:0 with SMTP id u13csp12027734ltp;
+        Fri, 15 Nov 2019 05:43:05 -0800 (PST)
+X-Google-Smtp-Source: APXvYqy4E+a7TWin9v96scxEq/x5LQZYrdToZ3qR2TOkRG5vqjKaQwUWGcll4/bXG1CHRetpYnt0
+X-Received: by 2002:a17:906:13d5:: with SMTP id g21mr1051007ejc.72.1573825385779;
+        Fri, 15 Nov 2019 05:43:05 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1573825385; cv=none;
+        d=google.com; s=arc-20160816;
+        b=gwfOgVPmQWKqcC8DRUk9tEYLRdIQqFBI4TbDVf8NbJX8QXgafZ9gOld29aMBmXNkcY
+         C7WaoVaEAh5jVq7oxpQEDajSIZjwyaU+WcWKJFLfLflHJI3l8EYkARaK47S7JngXRo+d
+         qi3EFrY68PwbZz+JWWkR8VkpSgDWS2qNUSSU19FPvqSql7vLZ25S4FY6fG9UvzQ+XTYH
+         yGCW1TuaEhMCdKzdsxoRCgdddG+OMK2MbkG5Jb30X39R64XE8W34SoJg+CBoQF0XkWlq
+         ghz+5Bn65jXtOphcYVFPrzFTbzdZoWeNYChMbWdMQkXqfGCsooZh/Icm1WCA68Qzn8B7
+         ZoqQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=decryption-context:mime-version:user-agent:date:message-id
+         :autocrypt:openpgp:subject:from:to:dkim-signature:dkim-signature;
+        bh=5RvmYxYP7MPMheUK4/LYAztW/ownNDCUW21yu5nKSC4=;
+        b=cX6qp8AOW8CEbXCUFA/sN0MNqcCsKwddeItSMIUXWcd5aLI/4iyWxrDpylmRRbw57P
+         4Wd4g6yjceB5Bg9mkj3vVRS+0Q8X4lfvcOENMdFbxXnkq6F26y9bJsrCNUcKHC2PTjTq
+         BwAoUr5KC3g2PiWHzX5FV+k9yVkRLewo2GYrSy9Fy2k5dsEFO5x557ADYBm+PZ6ZGTOG
+         Y3qrFUr5fAUozBGc8OeGx09FqqdIpRCtPjdjQsNfVHZbQgfXDlU2MoA2o0NwFNSFA/qr
+         QxFt/20w7IBU8RnRPYLGSsyFMcqOxaSmzXo3P/sTe4+UI6aAUv1tE3YENPu3MmdhSWz1
+         mbcw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@fastmail.com header.s=fm1 header.b="A/H0ioeW";
+       dkim=pass header.i=@messagingengine.com header.s=fm1 header.b=hYehKZMX;
+       spf=pass (google.com: domain of decryptioncontext@fastmail.com designates 64.147.123.18 as permitted sender) smtp.mailfrom=decryptioncontext@fastmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=fastmail.com
+Return-Path: <decryptioncontext@fastmail.com>
+Received: from wnew4-smtp.messagingengine.com (wnew4-smtp.messagingengine.com. [64.147.123.18])
+        by mx.google.com with ESMTPS id re9si5700929ejb.332.2019.11.15.05.43.05
+        for <decryptioncontext@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 15 Nov 2019 05:43:05 -0800 (PST)
+Received-SPF: pass (google.com: domain of decryptioncontext@fastmail.com designates 64.147.123.18 as permitted sender) client-ip=64.147.123.18;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fastmail.com header.s=fm1 header.b="A/H0ioeW";
+       dkim=pass header.i=@messagingengine.com header.s=fm1 header.b=hYehKZMX;
+       spf=pass (google.com: domain of decryptioncontext@fastmail.com designates 64.147.123.18 as permitted sender) smtp.mailfrom=decryptioncontext@fastmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=fastmail.com
+Received: from compute5.internal (compute5.nyi.internal [10.202.2.45])
+	by mailnew.west.internal (Postfix) with ESMTP id 19B07667
+	for <decryptioncontext@gmail.com>; Fri, 15 Nov 2019 08:43:04 -0500 (EST)
+Received: from mailfrontend2 ([10.202.2.163])
+  by compute5.internal (MEProxy); Fri, 15 Nov 2019 08:43:04 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fastmail.com; h=
+	to:from:subject:message-id:date:mime-version:content-type; s=
+	fm1; bh=5RvmYxYP7MPMheUK4/LYAztW/ownNDCUW21yu5nKSC4=; b=A/H0ioeW
+	QpyPomM3yYtQwfIp1oE3ZGk72D6qN3O8AAUY1Iyx3pkzIQ+rUZgSWqaNhWB/geRA
+	a0Fsdrj43P+pwTmI/W6nCY8quIpFNWzLFQMx5tIChtw97a4uHPfEHQL14ypdK97q
+	wXpasvTxYmEjFkvG1if0aDwYt3DEOhAqRs1ORQiCMsz2eVo5aHcEUYdDSBaLejl/
+	K/hStl9EvA80mSCttBknuAUHLNNlc+HMICXBa7DVI0fneoK8qkoSfFvZOz5gXB7a
+	u/Zh0p+h3xEIJoq+bETena0jbU7oKOudJJKQBRX2WJ2PDmn8I7qEDOfIOLDwNdZ5
+	wPEiVUe8JaudXg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+	messagingengine.com; h=content-type:date:from:message-id
+	:mime-version:subject:to:x-me-proxy:x-me-proxy:x-me-sender
+	:x-me-sender:x-sasl-enc; s=fm1; bh=5RvmYxYP7MPMheUK4/LYAztW/ownN
+	DCUW21yu5nKSC4=; b=hYehKZMXZuPouhJwp1w9JaQssWRof+Mb9aMzqDuLD9XIh
+	UXm9mwyj6jFBd5D4l+I4G+9tPtq6ZKJVCh+QmuU6VF8uIk7Xmx+5GiiKqgWkpr7X
+	oLv2YrezOXcGCR2OtPBW9b4H7bxXsWe9qQm4QBxKvcatqDjDVMA0oR3OdTgbVnwX
+	jiFrtOO7qNJN3XwxvIB3HRGZtFZRr9inCNlKexFqku6dE0q9Q6mTWkeRAO7RAdXs
+	HVysURswgQFq+wHjz+503PPt8Lv2aDd7gW97iQJVYvj1m2RAjFnF9pMbqqnHBx3h
+	6Ow1WuFC/mHnLWCulyHlfnE05yhl0rlWmvWtPp4lg==
+X-ME-Sender: <xms:Z6vOXXoKrZQVBNe4UQwhseZYy6ABEuGYbIf2AB8vU70nRtXYF907zQ>
+X-ME-Proxy-Cause: gggruggvucftvghtrhhoucdtuddrgedufedrudefhedgheeiucetufdoteggodetrfdotf
+    fvucfrrhhofhhilhgvmecuhfgrshhtofgrihhlpdfqfgfvpdfurfetoffkrfgpnffqhgen
+    uceurghilhhouhhtmecufedttdenucenucfjughrpefvhffukffffgggtgesiidtrefotd
+    eftdenucfhrhhomhepffevucffvghmohcuoeguvggtrhihphhtihhonhgtohhnthgvgiht
+    sehfrghsthhmrghilhdrtghomheqnecukfhppedufeegrddugeejrdduheelrdeiudenuc
+    frrghrrghmpehmrghilhhfrhhomhepuggvtghrhihpthhiohhntghonhhtvgigthesfhgr
+    shhtmhgrihhlrdgtohhmnecuvehluhhsthgvrhfuihiivgeptd
+X-ME-Proxy: <xmx:Z6vOXZDSe4dB6B2ycvEobJk8GzuHnZBCJ3JYrVeVEdY-kIwbSIo1oA>
+    <xmx:Z6vOXegulhJiylSiNl16vAh04QcB7w4LFcWgx6gQpRZFN4PklIUbVw>
+    <xmx:Z6vOXQ6mYmNG4hUKzqoaQHXHNp5M1fcpfTBK2kxdST9waVtZV6HLkA>
+    <xmx:Z6vOXaOX6bwS23vUuN1n7sARcg_6-s62r-vK5CFsGj0eQfrc7CQQnrxTEXGq-6x9>
+To: "decryptioncontext@gmail.com" <decryptioncontext@gmail.com>
+From: DC Demo <decryptioncontext@fastmail.com>
+Subject: 02 DC Unmodified from FastMail
+Openpgp: preference=signencrypt
+Autocrypt: addr=decryptioncontext@fastmail.com;
+ keydata= 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
+ Q4sLNFb5PfAKtHki6M4Hlya1xrxtw3xKeusKYao=
+Message-ID: <15a5b645-75d4-efc0-96dd-a12447bb0856@fastmail.com>
+Date: Fri, 15 Nov 2019 14:43:00 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Firefox/60.0 Thunderbird/60.9.0
+MIME-Version: 1.0
+Decryption-Context: {{smtp=from:from:reply-to:reply-to:to:to:cc:cc:subject:subject}{mime=mimepath}}
+X-Decryption-Context: {{smtp=from:from:reply-to:reply-to:to:to:cc:cc:subject:subject}{mime=mimepath}}
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="hAkVsO0Vax9NyI5TQcEOWp9YdVwT3uNS5"
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--hAkVsO0Vax9NyI5TQcEOWp9YdVwT3uNS5
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--hAkVsO0Vax9NyI5TQcEOWp9YdVwT3uNS5
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQGMA3rsgKV/1EtYAQv/Q4BnDUWIcl/6FPC6mbEdm/w3xewsw1WaX/l4dCi3Af3d
+kMe2CqGa8JrUUxsErbcuXYdLcOcMPuSfcl9xKjlpN5vW0Psqp3sp8bLXUoP1T9mI
+Yw8LHCZv7Nkc+aVz7L0p/NekVAOzQXNg3y/E7KZuQc8k7CyT/D2KZLLTPrJciPJs
+G8J+XpVSf9QjillUUi+BQqDXagKJkBBRTyLWikFtUQtN60CNZE+ZO/7xNH5q8l4R
+qvip8tefwXCUaaa9IlXI4gdX3ocQcGqQnpWJKpRGQ5aWBb3jNVRfp1MgN7YQ6+qq
+1GsBzsoGrHN8iLrfcmj1PD+FG/HQo2fQr5agui8f9OGf6djGnXX/wy5DTZv1uo9O
+Mza1lI8zVJyIleK7iBLLV6fXrzwlmKogE9USelZgZJZbbAJ5/tqU7mByCODBtWhr
+2bpd4e6aNmcVv49FWPCXRuID4Y4yvddcERhT2c/IM2GjQKeERN1Msp/dI6SDoC3s
+fGTJELkPUtVTcRFM9cTO1MDaAQkBFe1dMje3sEARc0F6Kjv5bliACezq7deRSkhr
+9jVRDCS+wvb8gTySDQm1rCnpk0cOCoBVwneJKZxF/KdDo9F99ww51YZ2UQA2vZN5
+TNgw8zGpCMaJj/UbmY1kI6u/q4Gac9tZEG2S720omc28kO8WEYNDGn51YnZ8x24F
+haYASzkgMMFu8wjfavn9hnL5HHbalFgEKcSEKmSeVDR/DCW8Lbv5TDtt99ciONlv
+hk9/r+IVFz9/bmUcynLHPYy2yKspv5RHQTpOHbGxjweE/NYiv7UbC1V58N6NjXMD
+bAgh9QIecP77nR2gdZURpGKK+RIdAS/Ylx06tf5jvfTUzASMxuY1lkyvpjpEwq2D
+L1w62aAt893CyovpHgl+84LnzMlk8QPyNu1Rw3RM7UkxgePd1mV9oFw5rKxT/q0b
+fi8vHfXkLzOYZjRJjmtXHgEcQmhyosZ3da1j0tt8MgTuigwT4tlgmduVGqh8H3Ay
+q6rXf6EEnNzCo+2dDuUG2ukjTSxcHo27DoyWThwYn/zZESjHysJINpyjzwU=
+=VzE4
+-----END PGP MESSAGE-----
+
+--hAkVsO0Vax9NyI5TQcEOWp9YdVwT3uNS5--

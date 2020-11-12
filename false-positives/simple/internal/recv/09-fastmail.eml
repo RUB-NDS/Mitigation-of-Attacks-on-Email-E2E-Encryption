@@ -1,0 +1,179 @@
+Return-Path: <john1018@fastmail.com>
+Received: from compute5.internal (compute5.nyi.internal [10.202.2.45])
+	 by sloti26t07 (Cyrus 3.1.6-448-g5cc1c91-fmstable-20190429v1) with LMTPA;
+	 Mon, 29 Apr 2019 10:07:10 -0400
+X-Cyrus-Session-Id: sloti26t07-1556546830-2650244-2-16628988320778159688
+X-Sieve: CMU Sieve 3.0
+X-Spam-known-sender: yes ("Self sent message"); self-send
+X-Spam-score: 0.0
+X-Spam-hits: ALL_TRUSTED -1, FREEMAIL_ENVFROM_END_DIGIT 0.25, FREEMAIL_FROM 0.001,
+  ME_FROM_EQ_TO 0.01, ME_ZS_CLEAN -0.001, SPF_PASS -0.001,
+  LANGUAGES unknown, BAYES_USED none, SA_VERSION 3.4.2
+X-Spam-source: IP='134.147.40.36', Host='unk', Country='DE', FromHeader='com',
+  MailFrom='com'
+X-Spam-charsets: plain='utf-8'
+X-Resolved-to: john1018@fastmail.com
+X-Delivered-to: john1018@fastmail.com
+X-Mail-from: john1018@fastmail.com
+Received: from wgp1 ([10.209.2.41])
+  by compute5.internal (LMTPProxy); Mon, 29 Apr 2019 10:07:10 -0400
+Received: from wmx1.messagingengine.com (localhost [127.0.0.1])
+	by mailmx.west.internal (Postfix) with ESMTP id B294DD42208
+	for <john1018@fastmail.com>; Mon, 29 Apr 2019 10:07:09 -0400 (EDT)
+Received: from mailmx.west.internal (localhost [127.0.0.1])
+    by wmx1.messagingengine.com (Authentication Milter) with ESMTP
+    id 3DA4548FF9A;
+    Mon, 29 Apr 2019 10:07:09 -0400
+ARC-Seal: i=1; a=rsa-sha256; cv=none; d=messagingengine.com; s=fm2; t=
+    1556546829; b=hwe288oTqybUTlXSfGdOlLNZvdp7J8z0JNld5i0aXFmmxEMRC6
+    0nsr1DF4VDx2i4AJ61gf88dSqsYjtcfNCVUG10iauuKIR3OF2BOgBwZY6P18QG2y
+    92Jrb5+PIoG//TTtNAtcNgaq1WcIrORj5gy1SuwxJrChwJuVfQSLEBb4Qpuh0Xv/
+    uQt07Ez8B2lyAYpxadw06EhwQfVDTc2BjquO/KgQJwhV8CIfQ5Z0HDGDQIrHzQS9
+    GCK6oYb18GZADCRiPrpR0IsjFKtLaBu4hynvR73KY8ZJEvxYJXtzlKVrI90MGzjK
+    AxvS+fukUwHxyoIb6eIRQ9uhJKYLbL3ERi+w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=
+    messagingengine.com; h=from:subject:to:message-id:date
+    :mime-version:content-type:content-transfer-encoding; s=fm2; t=
+    1556546829; bh=wt3EpKLFZdyzC4pdgwIPiiL6tTYtd1AvCr3BH7ODDZw=; b=B
+    qtOewvKBtxHeUcf9XK+BmzSMBqUEjNaGKwUm3YMFYkot5GaHM2+VmpxsgYCVzVFk
+    h5NbhA0dUZ7nSSAUGiER3cq1UgOSlgebY7xyKh00vgF8cwFAgjHQIB3AotT5MpMM
+    kR2HEewtCPOd9hKIusMILS9A6GIp8h8epHcJjAsGY5Jb8bkI5fx4C0qBhO9GSgS8
+    EvRJfoJhEHmGyfotWfO+ze6QJKVsqLNMnigXwkooxONlXxnNo4MfT1Sfp4KysRZU
+    Rrkz1KOngkZPRN5fO4clSoNvcpir4RgaY3phEj93svBkg6NioE5m99LlzY2BWBra
+    SKpttey1tCU6L22P+v2gQ==
+ARC-Authentication-Results: i=1; wmx1.messagingengine.com; arc=none (no signatures found);
+    dkim-adsp=pass (ADSP policy from fastmail.com);
+    dkim=pass (2048-bit rsa key sha256) header.d=fastmail.com
+    header.i=@fastmail.com header.b=hdju/xrt header.a=rsa-sha256
+    header.s=fm2 x-bits=2048;
+    dkim=pass (2048-bit rsa key sha256) header.d=messagingengine.com
+    header.i=@messagingengine.com header.b=HB32xORZ header.a=rsa-sha256
+    header.s=fm2 x-bits=2048;
+    dmarc=pass policy.published-domain-policy=none
+    policy.applied-disposition=none policy.evaluated-disposition=none
+    (p=none,d=none,d.eval=none) policy.policy-from=p
+    header.from=fastmail.com;
+    iprev=pass smtp.remote-ip=64.147.123.26
+    (wnew1-smtp.messagingengine.com);
+    spf=pass smtp.mailfrom=john1018@fastmail.com
+    smtp.helo=wnew1-smtp.messagingengine.com;
+    x-aligned-from=pass (Address match);
+    x-dkim-ssp=pass (author policy from fastmail.com);
+    x-ptr=pass smtp.helo=wnew1-smtp.messagingengine.com
+    policy.ptr=wnew1-smtp.messagingengine.com;
+    x-return-mx=pass header.domain=fastmail.com policy.is_org=yes
+    (MX Record found);
+    x-return-mx=pass smtp.domain=fastmail.com policy.is_org=yes
+    (MX Record found);
+    x-tls=pass smtp.version=TLSv1.2 smtp.cipher=ECDHE-RSA-AES128-GCM-SHA256
+    smtp.bits=128/128;
+    x-vs=clean score=15 state=0;
+    x-zs=clean
+Authentication-Results: wmx1.messagingengine.com;
+    arc=none (no signatures found);
+    dkim-adsp=pass (ADSP policy from fastmail.com);
+    dkim=pass (2048-bit rsa key sha256) header.d=fastmail.com
+      header.i=@fastmail.com header.b=hdju/xrt header.a=rsa-sha256
+      header.s=fm2 x-bits=2048;
+    dkim=pass (2048-bit rsa key sha256) header.d=messagingengine.com
+      header.i=@messagingengine.com header.b=HB32xORZ header.a=rsa-sha256
+      header.s=fm2 x-bits=2048;
+    dmarc=pass policy.published-domain-policy=none
+      policy.applied-disposition=none policy.evaluated-disposition=none
+      (p=none,d=none,d.eval=none) policy.policy-from=p
+      header.from=fastmail.com;
+    iprev=pass smtp.remote-ip=64.147.123.26
+      (wnew1-smtp.messagingengine.com);
+    spf=pass smtp.mailfrom=john1018@fastmail.com
+      smtp.helo=wnew1-smtp.messagingengine.com;
+    x-aligned-from=pass (Address match);
+    x-dkim-ssp=pass (author policy from fastmail.com);
+    x-ptr=pass smtp.helo=wnew1-smtp.messagingengine.com
+      policy.ptr=wnew1-smtp.messagingengine.com;
+    x-return-mx=pass header.domain=fastmail.com policy.is_org=yes
+      (MX Record found);
+    x-return-mx=pass smtp.domain=fastmail.com policy.is_org=yes
+      (MX Record found);
+    x-tls=pass smtp.version=TLSv1.2 smtp.cipher=ECDHE-RSA-AES128-GCM-SHA256
+      smtp.bits=128/128;
+    x-vs=clean score=15 state=0;
+    x-zs=clean
+X-ME-VSCause: gggruggvucftvghtrhhoucdtuddrgeduuddriedvgdejfecutefuodetggdotefrodftvf
+    curfhrohhfihhlvgemucfhrghsthforghilhdpggftfghnshhusghstghrihgsvgdpuffr
+    tefokffrpgfnqfghnecuuegrihhlohhuthemuceftddtnecuogetfedtuddqtdduucdlud
+    ehmdenucfjughrpefhuffvkffffgggtgfgsehtjeertddtfeejnecuhfhrohhmpefhrghs
+    thforghilhcuoehjohhhnhdutddukeesfhgrshhtmhgrihhlrdgtohhmqeenucfkphepie
+    egrddugeejrdduvdefrddviedpudefgedrudegjedrgedtrdefieenucfrrghrrghmpehi
+    nhgvthepieegrddugeejrdduvdefrddviedphhgvlhhopeifnhgvfiduqdhsmhhtphdrmh
+    gvshhsrghgihhnghgvnhhgihhnvgdrtghomhdpmhgrihhlfhhrohhmpeeojhhohhhnuddt
+    udeksehfrghsthhmrghilhdrtghomhequcfukfgkgfepfedtleehpdhmrghilhhfrhhomh
+    epjhhohhhnuddtudeksehfrghsthhmrghilhdrtghomhenucevlhhushhtvghrufhiiigv
+    pedt
+X-ME-VSScore: 15
+X-ME-VSCategory: clean
+X-ME-ZSResult: clean
+Received-SPF: pass
+    (fastmail.com: Sender is authorized to use 'john1018@fastmail.com' in 'mfrom' identity (mechanism 'include:spf.messagingengine.com' matched))
+    receiver=wmx1.messagingengine.com;
+    identity=mailfrom;
+    envelope-from="john1018@fastmail.com";
+    helo=wnew1-smtp.messagingengine.com;
+    client-ip=64.147.123.26
+Received: from mailnew.west.internal (wgp2.west.internal [10.209.2.42])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mailmx.west.internal (Postfix) with ESMTPS
+	for <john1018@fastmail.com>; Mon, 29 Apr 2019 10:07:09 -0400 (EDT)
+Received: from compute7.internal (compute7.nyi.internal [10.202.2.47])
+	by mailnew.west.internal (Postfix) with ESMTP id D7D619DC
+	for <john1018@fastmail.com>; Mon, 29 Apr 2019 10:07:08 -0400 (EDT)
+Received: from mailfrontend2 ([10.202.2.163])
+  by compute7.internal (MEProxy); Mon, 29 Apr 2019 10:07:08 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fastmail.com; h=
+	from:subject:to:message-id:date:mime-version:content-type
+	:content-transfer-encoding; s=fm2; bh=wt3EpKLFZdyzC4pdgwIPiiL6tT
+	Ytd1AvCr3BH7ODDZw=; b=hdju/xrtN0zekj4x0LDIUUdAXfIDOjF8pJJi77Hd+a
+	OAEfV0A1qF1zLb+rtR0CaBEHj4plfM6pO1WExFnlwF/7BaEeD8L0ys+Sruj0BzRm
+	H88vlNK1Z1lGVxZpyFAgloS2f4vQljnVP5VxZRTMYukX0fG39A3ZhZOWm7RuH3sU
+	TfNs/iTvJGKjL1uXvA2dYXB1KcJTiZRunoRNJVWgoW3Gg7+QwCQ5Ik3X/wkb97Iq
+	ELk3RAS4TF4F6PqsDs6EqMuo1OiG81g0GRPhfgliYF5mJe7isV8CLtEDLamayZaY
+	qU5D2b0+xD+PWYdprmnZqhXvcJCb7G0ceV7sPNwbLqcw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+	messagingengine.com; h=content-transfer-encoding:content-type
+	:date:from:message-id:mime-version:subject:to:x-me-proxy
+	:x-me-proxy:x-me-sender:x-me-sender:x-sasl-enc; s=fm2; bh=wt3EpK
+	LFZdyzC4pdgwIPiiL6tTYtd1AvCr3BH7ODDZw=; b=HB32xORZoVRfWB5t0PSDom
+	s1fiO0MyAxcTXKrtlCVkKzG2WZvLIH42tiI1WgawLuPRjwDhuQLVAjoEU0hIkQGX
+	Xa8pn/Ajev2kq0AzE7YKV8+5K8SCZ948o2nFW4UX5ha9kIWreq8XS48cChKuNpN0
+	O5JJtey/+Cj5+yD5l+MKRiVDSkKnFZ6sk8hvbKJni2szvwqvvIvg6vS8Xi8RU1XA
+	sD9vfdJhapLxlEz6C+yHbpbAVCQt2P6ZHGR33GlocpS/FuWcd4I0Z57Lt5D3ORXo
+	ChPX6yBhmCNj1eQmOWejrADq74XZDeRAFnCQPlXHdW3fdsw7iIihL31NOWuN0dfg
+	==
+X-ME-Sender: <xms:DAXHXCNR8eaUYrJQuPTO__yDMVqsWgOgFr6_H3CyBYk9QpDf8a3Lsg>
+X-ME-Proxy-Cause: gggruggvucftvghtrhhoucdtuddrgeduuddriedvgdejgecutefuodetggdotefrodftvf
+    curfhrohhfihhlvgemucfhrghsthforghilhdpqfgfvfdpuffrtefokffrpgfnqfghnecu
+    uegrihhlohhuthemuceftddtnecuogetfedtuddqtdduucdludehmdenucfjughrpefhuf
+    fvkffffgggtgfgsehtjeertddtfeejnecuhfhrohhmpefhrghsthforghilhcuoehjohhh
+    nhdutddukeesfhgrshhtmhgrihhlrdgtohhmqeenucfkphepudefgedrudegjedrgedtrd
+    efieenucfrrghrrghmpehmrghilhhfrhhomhepjhhohhhnuddtudeksehfrghsthhmrghi
+    lhdrtghomhenucevlhhushhtvghrufhiiigvpedt
+X-ME-Proxy: <xmx:DAXHXMrNi1aZEH7hbnB2ykd66bJVU2HliMBXBU3Q7jjSrnz02uQKsA>
+    <xmx:DAXHXD906vKotk6_bNxyipJbJlHgqeRVQ4h7nvDD08LXmQqScPu4Iw>
+    <xmx:DAXHXDpggqwuRi34MGYovuHSbN1i6V6fE5NgCI7Cj2_dTWIW8qxPOA>
+    <xmx:DAXHXL5udfduaTPbazTyw00o25vLO9nXUqpfcuOWzb0b8X5Afj7BkJRab0y_lO8J>
+Received: from [134.147.40.36] (korolev.nds.ruhr-uni-bochum.de [134.147.40.36])
+	by mail.messagingengine.com (Postfix) with ESMTPA id DF67A103D5
+	for <john1018@fastmail.com>; Mon, 29 Apr 2019 10:07:07 -0400 (EDT)
+From: FastMail <john1018@fastmail.com>
+Subject: Internal for FastMail
+To: john1018@fastmail.com
+Message-ID: <9a674f98-9d90-251f-2695-3fe0ce8f8373@fastmail.com>
+Date: Mon, 29 Apr 2019 16:07:07 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+
+Internal for FastMail

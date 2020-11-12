@@ -1,0 +1,622 @@
+-----------------------------------------------------
+Testcase: simple, inbound, 01-gmail.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Received-SPF', 'Return-Path', 'X-Google-Smtp-Source', 'X-Provags-ID', 'X-Received', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 02-outlook.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-EOPAttributedMessage', 'X-EOPTenantAttributedMessage', 'X-Forefront-Antispam-Report', 'X-IncomingHeaderCount', 'X-IncomingTopHeaderMarker', 'X-MS-Exchange-CrossTenant-FromEntityHeader', 'X-MS-Exchange-CrossTenant-Id', 'X-MS-Exchange-CrossTenant-Network-Message-Id', 'X-MS-Exchange-CrossTenant-OriginalArrivalTime', 'X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg', 'X-MS-Exchange-EOPDirect', 'X-MS-Exchange-Organization-AuthAs', 'X-MS-Exchange-Organization-AuthSource', 'X-MS-Exchange-Organization-ExpirationInterval', 'X-MS-Exchange-Organization-ExpirationIntervalReason', 'X-MS-Exchange-Organization-ExpirationStartTime', 'X-MS-Exchange-Organization-ExpirationStartTimeReason', 'X-MS-Exchange-Organization-MessageDirectionality', 'X-MS-Exchange-Organization-Network-Message-Id', 'X-MS-Exchange-Organization-PCL', 'X-MS-Exchange-Processed-By-BccFoldering', 'X-MS-Exchange-Transport-CrossTenantHeadersStamped', 'X-MS-Exchange-Transport-EndToEndLatency', 'X-MS-Office365-Filtering-Correlation-Id', 'X-MS-PublicTrafficType', 'X-MS-TrafficTypeDiagnostic', 'X-MS-UserLastLogonTime', 'X-Message-Delivery', 'X-Message-Info', 'X-Microsoft-Antispam', 'X-Microsoft-Antispam-Mailbox-Delivery', 'X-Microsoft-Antispam-Message-Info', 'X-OriginatorOrg', 'X-Provags-ID', 'X-SID-PRA', 'X-SID-Result', 'X-Sender-IP', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  ['Content-Type']
+-Content-Type: 'text/plain; charset=utf-8'
++Content-Type: 'text/plain; charset="utf-8"'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 03-yahoo.eml
+Add Header:  ['Authentication-Results', 'Content-Length', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Apparently-To', 'X-Originating-IP', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'X-YMailISG']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 04-gmx.eml
+Add Header:  ['DKIM-Signature', 'Envelope-To', 'Received', 'Return-Path', 'X-GMX-Antispam', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Filterresults', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 05-zoho.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Received-SPF', 'Return-Path', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'X-ZohoMail-Owner', 'X-ZohoMail-Sender']
+Del Header:  []
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 06-icloud.eml
+Add Header:  ['Authentication-results', 'Content-language', 'Content-type', 'DKIM-Signature', 'MIME-version', 'Message-id', 'Original-recipient', 'Received', 'Received-SPF', 'Return-path', 'X-CLX-Score', 'X-CLX-Shades', 'X-CLX-Spam', 'X-CLX-UShades', 'X-CLX-UnSpecialScore', 'X-MANTSH', 'X-Proofpoint-Spam-Details', 'X-Proofpoint-Virus-Version', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'x-dmarc-info', 'x-dmarc-policy']
+Del Header:  ['Content-Language', 'Content-Transfer-Encoding', 'Content-Type', 'MIME-Version', 'Message-ID']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 07-aol.eml
+Add Header:  ['Authentication-Results', 'Content-Length', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Apparently-To', 'X-Originating-IP', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'X-YMailISG']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 08-hushmail.eml
+Add Header:  ['DKIM-Signature', 'Received', 'Return-Path', 'X-Hush-Real-Recipient', 'X-Hush-Verified-Domain', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  []
+Body:  False
+Body Send:  Inbound for Hushmail
+
+Body Recv:  Inbound for Hushmail
+
+
+-----------------------------------------------------
+Testcase: simple, inbound, 09-fastmail.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'Authentication-Results', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Cyrus-Session-Id', 'X-Delivered-to', 'X-ME-VSCategory', 'X-ME-VSCause', 'X-ME-VSScore', 'X-ME-ZSResult', 'X-Mail-from', 'X-Provags-ID', 'X-Remote-Spam-Flag', 'X-Resolved-to', 'X-Sieve', 'X-Spam-charsets', 'X-Spam-hits', 'X-Spam-known-sender', 'X-Spam-score', 'X-Spam-source', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 10-mailbox.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Provags-ID', 'X-Rspamd-Queue-Id', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'X-Virus-Scanned']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 11-mailru.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Received-SPF', 'Return-path', 'X-6b629377', 'X-77F55803', 'X-7FA49CB5', 'X-C8649E89', 'X-DMARC-Policy', 'X-Mailru-Intl-Transport', 'X-Mras', 'X-Provags-ID', 'X-Spam', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, inbound, 12-runbox.eml
+Add Header:  ['DKIM-Signature', 'Received', 'Received-SPF', 'Return-path', 'X-DSPAM-Confidence', 'X-DSPAM-Factors', 'X-DSPAM-Probability', 'X-DSPAM-Result', 'X-FILTER-DSPAM', 'X-Provags-ID', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Report', 'X-Spam-Status', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  ['Content-Transfer-Encoding']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, outbound, 01-gmail.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Gm-Message-State', 'X-Google-DKIM-Signature', 'X-Google-Smtp-Source', 'X-Received', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<7f4848b6-1ded-8fa0-420c-43c212dad220@gmail.com>'
++Message-ID: '<7f4848b6-1ded-8fa0-420c-43c212dad220@das-labor.org>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, outbound, 02-outlook.eml
+Add Header:  ['Accept-Language', 'Content-ID', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'Thread-Index', 'Thread-Topic', 'X-MS-Exchange-CrossTenant-Network-Message-Id', 'X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg', 'X-MS-Exchange-CrossTenant-fromentityheader', 'X-MS-Exchange-CrossTenant-id', 'X-MS-Exchange-CrossTenant-originalarrivaltime', 'X-MS-Exchange-CrossTenant-rms-persistedconsumerorg', 'X-MS-Exchange-Transport-CrossTenantHeadersStamped', 'X-MS-Has-Attach', 'X-MS-TNEF-Correlator', 'X-OriginatorOrg', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'x-clientproxiedby', 'x-eopattributedmessage', 'x-incomingheadercount', 'x-incomingtopheadermarker', 'x-microsoft-antispam', 'x-microsoft-antispam-message-info', 'x-microsoft-original-message-id', 'x-ms-exchange-messagesentrepresentingtype', 'x-ms-publictraffictype', 'x-ms-traffictypediagnostic', 'x-tmn']
+Del Header:  ['User-Agent']
+Mod Header:  ['Content-Transfer-Encoding', 'Content-Type', 'Date', 'From', 'Message-ID', 'To']
+-Content-Type: 'text/plain; charset=utf-8; format=flowed'
++Content-Type: 'text/plain; charset="utf-8"'
+-To: 'brucewayne45@das-labor.org'
++To: '"brucewayne45@das-labor.org" <brucewayne45@das-labor.org>'
+-Content-Transfer-Encoding: '7bit'
++Content-Transfer-Encoding: 'base64'
+-Date: 'Mon, 29 Apr 2019 16:29:42 +0200'
++Date: 'Mon, 29 Apr 2019 14:29:43 +0000'
+-Message-ID: '<b7ceac22-c435-e1f5-1f6f-c1136f1eef2a@outlook.com>'
++Message-ID: '<HE1P18901MB0107ED0004CDEB393DB842E3E1390@das-labor.org>'
+-From: '"Outlook.com" <john10179@outlook.com>'
++From: 'John Smith <john10179@outlook.com>'
+Body:  False
+Body Send:  Outbound from Outlook.com
+
+Body Recv:  T3V0Ym91bmQgZnJvbSBPdXRsb29rLmNvbQ0K
+
+-----------------------------------------------------
+Testcase: simple, outbound, 03-yahoo.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'X-YMail-OSG']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<1220bc4f-9468-897f-f04d-3453c7debe7c@yahoo.com>'
++Message-ID: '<1220bc4f-9468-897f-f04d-3453c7debe7c@das-labor.org>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, outbound, 04-gmx.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Provags-ID', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<430c14d5-1a44-951d-c256-09f1b0376f01@gmx.de>'
++Message-ID: '<430c14d5-1a44-951d-c256-09f1b0376f01@das-labor.org>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, outbound, 05-zoho.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'DKIM-Signature', 'Delivered-To', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  ['Bcc']
+Mod Header:  ['Message-ID', 'Received']
+-Message-ID: '<48987d76-78cf-2c59-5ef7-49aa4ca275f0@zohomail.eu>'
++Message-ID: '<48987d76-78cf-2c59-5ef7-49aa4ca275f0@das-labor.org>'
+-Received: 'from [134.147.40.36] (korolev.nds.ruhr-uni-bochum.de [134.147.40.36]) by mx.zoho.eu\n\twith SMTPS id 1556551174147298.2810030841017; Mon, 29 Apr 2019 17:19:34 +0200 (CEST)'
++Received: 'from newvegas.das-labor.org\n\tby newvegas.das-labor.org with LMTP id COUOBAwWx1yzFwAAAera6A\n\tfor <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 17:19:40 +0200'
+Body:  False
+Body Send:  Outbound from ZoHo Mail
+
+Body Recv:  Outbound from ZoHo Mail
+
+
+-----------------------------------------------------
+Testcase: simple, outbound, 06-icloud.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Proofpoint-Spam-Details', 'X-Proofpoint-Virus-Version', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<de18c0e6-b2f1-e735-9c16-e8e501acdf07@icloud.com>'
++Message-ID: '<de18c0e6-b2f1-e735-9c16-e8e501acdf07@das-labor.org>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, outbound, 07-aol.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'X-YMail-OSG']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<c522ad91-afc3-c503-518d-ab9977d3df07@aol.com>'
++Message-ID: '<c522ad91-afc3-c503-518d-ab9977d3df07@das-labor.org>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, outbound, 08-hushmail.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Content-Type', 'Message-ID']
+-Content-Type: 'text/plain; charset=utf-8'
++Content-Type: 'text/plain; charset=utf-8; format=flowed'
+-Message-ID: '<958121310.960161.1556548445664.JavaMail.tomcat@zimbrahost5.hushmail.com>'
++Message-ID: '<04803618d2a31f7027beb63b8451e494@das-labor.org>'
+Body:  False
+Body Send:  Outbound from Hushmail
+
+Body Recv:  Outbound from Hushmail
+
+
+-----------------------------------------------------
+Testcase: simple, outbound, 09-fastmail.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-ME-Proxy', 'X-ME-Proxy-Cause', 'X-ME-Sender', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<c5ccc597-c747-dbff-e71d-1efc2d31eeab@fastmail.com>'
++Message-ID: '<c5ccc597-c747-dbff-e71d-1efc2d31eeab@das-labor.org>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, outbound, 10-mailbox.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'X-Virus-Scanned']
+Del Header:  ['User-Agent']
+Mod Header:  ['Message-ID']
+-Message-ID: '<e7eb697a-ec45-8aee-0ef3-b658e4284a52@mailbox.org>'
++Message-ID: '<e7eb697a-ec45-8aee-0ef3-b658e4284a52@das-labor.org>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, outbound, 11-mailru.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-77F55803', 'X-7FA49CB5', 'X-Mailru-Sender', 'X-Mras', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<b5cab942-d316-a6b8-a4e6-f16df25d92ba@mail.ru>'
++Message-ID: '<b5cab942-d316-a6b8-a4e6-f16df25d92ba@das-labor.org>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, outbound, 12-runbox.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<ba1dee34-9be3-33bc-f6e4-4d1566413262@runbox.com>'
++Message-ID: '<ba1dee34-9be3-33bc-f6e4-4d1566413262@das-labor.org>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 01-gmail.eml
+Add Header:  []
+Del Header:  []
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 02-outlook.eml
+Add Header:  ['Accept-Language', 'Authentication-Results', 'Content-ID', 'DKIM-Signature', 'Received-SPF', 'Thread-Index', 'Thread-Topic', 'X-EOPTenantAttributedMessage', 'X-Forefront-Antispam-Report', 'X-IncomingHeaderCount', 'X-IncomingTopHeaderMarker', 'X-MS-Exchange-CrossTenant-FromEntityHeader', 'X-MS-Exchange-CrossTenant-Id', 'X-MS-Exchange-CrossTenant-Network-Message-Id', 'X-MS-Exchange-CrossTenant-OriginalArrivalTime', 'X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg', 'X-MS-Exchange-CrossTenant-rms-persistedconsumerorg', 'X-MS-Exchange-EOPDirect', 'X-MS-Exchange-Organization-PCL', 'X-MS-Exchange-Processed-By-BccFoldering', 'X-MS-Exchange-Transport-CrossTenantHeadersPromoted', 'X-MS-Exchange-Transport-CrossTenantHeadersStamped', 'X-MS-Exchange-Transport-CrossTenantHeadersStripped', 'X-MS-Exchange-Transport-EndToEndLatency', 'X-MS-Has-Attach', 'X-MS-Office365-Filtering-Correlation-Id', 'X-MS-TNEF-Correlator', 'X-MS-TrafficTypeDiagnostic', 'X-MS-UserLastLogonTime', 'X-Message-Delivery', 'X-Message-Info', 'X-Microsoft-Antispam', 'X-Microsoft-Antispam-Mailbox-Delivery', 'X-Microsoft-Antispam-Message-Info', 'X-Microsoft-Antispam-Message-Info-Original', 'X-Microsoft-Antispam-Untrusted', 'X-OriginatorOrg', 'X-SID-PRA', 'X-SID-Result', 'X-Sender-IP', 'x-clientproxiedby', 'x-eopattributedmessage', 'x-incomingheadercount', 'x-incomingtopheadermarker', 'x-microsoft-original-message-id', 'x-ms-exchange-messagesentrepresentingtype', 'x-ms-exchange-slblob-mailprops', 'x-ms-publictraffictype', 'x-tmn']
+Del Header:  ['User-Agent', 'X-ClientProxiedBy', 'X-MS-Exchange-Organization-AuthMechanism', 'X-Microsoft-Original-Message-ID', 'X-TMN']
+Mod Header:  ['Content-Transfer-Encoding', 'Content-Type', 'Date', 'From', 'Message-ID', 'Received', 'To', 'X-MS-Exchange-Organization-AuthAs', 'X-MS-Exchange-Organization-AuthSource', 'X-MS-Exchange-Organization-ExpirationStartTime', 'X-MS-Exchange-Organization-MessageDirectionality', 'X-MS-Exchange-Organization-Network-Message-Id']
+-Content-Type: 'text/plain; charset=utf-8; format=flowed'
++Content-Type: 'text/plain; charset="utf-8"'
+-X-MS-Exchange-Organization-ExpirationStartTime: '29 Apr 2019 14:02:29.8442\n (UTC)'
++X-MS-Exchange-Organization-ExpirationStartTime: '29 Apr 2019 14:02:31.8521\n (UTC)'
+-To: 'john10179@outlook.com'
++To: 'John Smith <john10179@outlook.com>'
+-Content-Transfer-Encoding: '7bit'
++Content-Transfer-Encoding: 'base64'
+-X-MS-Exchange-Organization-AuthSource: '\n HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM'
++X-MS-Exchange-Organization-AuthSource: '\n DM3NAM03FT061.eop-NAM03.prod.protection.outlook.com'
+-Received: 'from [IPv6:2a05:3e00:9:2100:8550:192a:e3b5:b00e]\n (2603:10a6:20b:3a::19) by HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM\n (2603:10a6:3:91::16) with Microsoft SMTP Server (version=TLS1_2,\n cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1835.15 via Mailbox\n Transport; Mon, 29 Apr 2019 14:02:29 +0000'
++Received: 'from DM3NAM03HT019.eop-NAM03.prod.protection.outlook.com\n (2603:10a6:3:e5::26) by HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM with HTTPS\n via HE1PR0902CA0016.EURPRD09.PROD.OUTLOOK.COM; Mon, 29 Apr 2019 14:02:32\n +0000'
+-Date: 'Mon, 29 Apr 2019 16:02:28 +0200'
++Date: 'Mon, 29 Apr 2019 14:02:30 +0000'
+-X-MS-Exchange-Organization-Network-Message-Id: '\n 5a5134f6-7fe9-4234-da7a-08d6ccab5181'
++X-MS-Exchange-Organization-Network-Message-Id: 'cc70d604-82e2-4f74-3bbc-08d6ccab52b4'
+-Message-ID: '\n <HE1P18901MB01076736C7287BA387FC2674E1390@HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM>'
++Message-ID: '<HE1P18901MB01076736C7287BA387FC2674E1390@HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM>'
+-From: '"Outlook.com" <john10179@outlook.com>'
++From: 'John Smith <john10179@outlook.com>'
+-X-MS-Exchange-Organization-AuthAs: 'Internal'
++X-MS-Exchange-Organization-AuthAs: 'Anonymous'
+-X-MS-Exchange-Organization-MessageDirectionality: 'Originating'
++X-MS-Exchange-Organization-MessageDirectionality: 'Incoming'
+Body:  False
+Body Send:  Internal for Outlook.com
+
+Body Recv:  SW50ZXJuYWwgZm9yIE91dGxvb2suY29tDQo=
+
+-----------------------------------------------------
+Testcase: simple, internal, 03-yahoo.eml
+Add Header:  ['Authentication-Results', 'Content-Length', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Apparently-To', 'X-Originating-IP', 'X-YMail-OSG', 'X-YMailISG']
+Del Header:  []
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 04-gmx.eml
+Add Header:  ['DKIM-Signature', 'Envelope-To', 'Received', 'Return-Path', 'X-GMX-Antispam', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Filterresults', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 05-zoho.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-ZohoMailClient']
+Del Header:  []
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 06-icloud.eml
+Add Header:  ['Content-language', 'Content-transfer-encoding', 'Content-type', 'DKIM-Signature', 'MIME-version', 'Message-id', 'Original-recipient', 'Received', 'Return-path', 'X-CLX-Score', 'X-CLX-Shades', 'X-CLX-Spam', 'X-CLX-UShades', 'X-CLX-UnSpecialScore', 'X-MANTSH', 'X-Proofpoint-Spam-Details', 'X-Proofpoint-Virus-Version']
+Del Header:  ['Content-Language', 'Content-Transfer-Encoding', 'Content-Type', 'MIME-Version', 'Message-ID']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 07-aol.eml
+Add Header:  ['Authentication-Results', 'Content-Length', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Apparently-To', 'X-Originating-IP', 'X-YMail-OSG', 'X-YMailISG']
+Del Header:  []
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 08-hushmail.eml
+Add Header:  ['DKIM-Signature', 'Received', 'Return-Path', 'X-Hush-Encrypted', 'X-Hush-Real-Recipient', 'X-hush-all-parts-signature-verified-against-from-header']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<805907676.957224.1556546779052.JavaMail.tomcat@zimbrahost5.hushmail.com>'
++Message-ID: '<237669839.957259.1556546980035.JavaMail.tomcat@zimbrahost5.hushmail.com>'
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 09-fastmail.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'Authentication-Results', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Cyrus-Session-Id', 'X-Delivered-to', 'X-ME-Proxy', 'X-ME-Proxy-Cause', 'X-ME-Sender', 'X-ME-VSCategory', 'X-ME-VSCause', 'X-ME-VSScore', 'X-ME-ZSResult', 'X-Mail-from', 'X-Resolved-to', 'X-Sieve', 'X-Spam-charsets', 'X-Spam-hits', 'X-Spam-known-sender', 'X-Spam-score', 'X-Spam-source']
+Del Header:  []
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 10-mailbox.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Virus-Scanned']
+Del Header:  ['User-Agent']
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 11-mailru.eml
+Add Header:  ['Authentication-Results', 'Delivered-To', 'Received', 'Return-path', 'X-77F55803', 'X-7FA49CB5', 'X-Mailru-Intl-Transport', 'X-Mailru-Sender', 'X-Mras']
+Del Header:  []
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: simple, internal, 12-runbox.eml
+Add Header:  ['Received', 'Return-path']
+Del Header:  []
+Mod Header:  []
+Body:  True
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 01-gmail.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Received-SPF', 'Return-Path', 'X-Google-Smtp-Source', 'X-Provags-ID', 'X-Received', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 02-outlook.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-EOPAttributedMessage', 'X-EOPTenantAttributedMessage', 'X-Forefront-Antispam-Report', 'X-IncomingHeaderCount', 'X-IncomingTopHeaderMarker', 'X-MS-Exchange-CrossTenant-FromEntityHeader', 'X-MS-Exchange-CrossTenant-Id', 'X-MS-Exchange-CrossTenant-Network-Message-Id', 'X-MS-Exchange-CrossTenant-OriginalArrivalTime', 'X-MS-Exchange-EOPDirect', 'X-MS-Exchange-Organization-AuthAs', 'X-MS-Exchange-Organization-AuthSource', 'X-MS-Exchange-Organization-ExpirationInterval', 'X-MS-Exchange-Organization-ExpirationIntervalReason', 'X-MS-Exchange-Organization-ExpirationStartTime', 'X-MS-Exchange-Organization-ExpirationStartTimeReason', 'X-MS-Exchange-Organization-MessageDirectionality', 'X-MS-Exchange-Organization-Network-Message-Id', 'X-MS-Exchange-Organization-PCL', 'X-MS-Exchange-Processed-By-BccFoldering', 'X-MS-Exchange-Transport-CrossTenantHeadersStamped', 'X-MS-Exchange-Transport-EndToEndLatency', 'X-MS-Office365-Filtering-Correlation-Id', 'X-MS-PublicTrafficType', 'X-MS-TrafficTypeDiagnostic', 'X-MS-UserLastLogonTime', 'X-Message-Delivery', 'X-Message-Info', 'X-Microsoft-Antispam', 'X-Microsoft-Antispam-Mailbox-Delivery', 'X-Microsoft-Antispam-Message-Info', 'X-OriginatorOrg', 'X-Provags-ID', 'X-SID-PRA', 'X-SID-Result', 'X-Sender-IP', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  ['Content-Type']
+-Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="5KndsQqMxTsej6i3INO65oY7Zth0oegtU"'
++Content-Type: 'multipart/encrypted; protocol="application/pgp-encrypted";\n\tboundary="5KndsQqMxTsej6i3INO65oY7Zth0oegtU"'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 03-yahoo.eml
+Add Header:  ['Authentication-Results', 'Content-Length', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Apparently-To', 'X-Originating-IP', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'X-YMailISG']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 04-gmx.eml
+Add Header:  ['DKIM-Signature', 'Envelope-To', 'Received', 'Return-Path', 'X-GMX-Antispam', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Filterresults', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 05-zoho.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Received-SPF', 'Return-Path', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'X-Zoho-Virus-Status', 'X-ZohoMail-Owner', 'X-ZohoMail-Sender']
+Del Header:  []
+Mod Header:  ['Content-Type', 'Date', 'Message-ID', 'To']
+-Date: 'Mon, 29 Apr 2019 18:07:11 +0200'
++Date: 'Tue, 30 Apr 2019 10:50:38 +0200'
+-Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="5KndsQqMxTsej6i3INO65oY7Zth0oegtU"'
++Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="hzPrzKO8qQgMMcIDQ4VwPmlzOvxgjzRGr"'
+-Message-ID: '<cf22b236-554e-3e59-b715-8c11c7035794@web.de>'
++Message-ID: '<4f6136ed-15c7-be9c-7a89-6c612d4626bb@web.de>'
+-To: 'tmail3096@gmail.com, john10179@outlook.com, p2329669@yahoo.com,\n john.10179@gmx.de, john.10180@zoho.eu, mail.t3st@icloud.com,\n smith_j46@aol.com, john.1019@hushmail.com, john1017@fastmail.com,\n john.1018@mailbox.org, john.10177@mail.ru, john.10177@runbox.com'
++To: 'john.10180@zohomail.eu'
+Body:  [True, False]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 06-icloud.eml
+Add Header:  ['Authentication-results', 'Content-type', 'DKIM-Signature', 'MIME-version', 'Message-id', 'Original-recipient', 'Received', 'Received-SPF', 'Return-path', 'X-CLX-Score', 'X-CLX-Shades', 'X-CLX-Spam', 'X-CLX-UShades', 'X-CLX-UnSpecialScore', 'X-MANTSH', 'X-Proofpoint-Spam-Details', 'X-Proofpoint-Virus-Version', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'x-dmarc-info', 'x-dmarc-policy']
+Del Header:  ['Content-Type', 'MIME-Version', 'Message-ID']
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 07-aol.eml
+Add Header:  ['Authentication-Results', 'Content-Length', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Apparently-To', 'X-Originating-IP', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'X-YMailISG']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 08-hushmail.eml
+Add Header:  ['DKIM-Signature', 'Received', 'Return-Path', 'X-Hush-Encrypted', 'X-Hush-Real-Recipient', 'X-Hush-Verified-Domain', 'X-Provags-ID', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<cf22b236-554e-3e59-b715-8c11c7035794@web.de>'
++Message-ID: '<133271588.1008661.1556554261377.JavaMail.tomcat@zimbrahost5.hushmail.com>'
+Body:  [False, False]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 09-fastmail.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'Authentication-Results', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Attached', 'X-Cyrus-Session-Id', 'X-Delivered-to', 'X-ME-VSCategory', 'X-ME-VSCause', 'X-ME-VSScore', 'X-ME-ZSResult', 'X-Mail-from', 'X-Provags-ID', 'X-Remote-Spam-Flag', 'X-Resolved-to', 'X-Sieve', 'X-Spam-charsets', 'X-Spam-hits', 'X-Spam-known-sender', 'X-Spam-score', 'X-Spam-source', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  ['Content-Type', 'Date', 'Message-ID', 'To']
+-Date: 'Mon, 29 Apr 2019 18:07:11 +0200'
++Date: 'Tue, 30 Apr 2019 10:52:31 +0200'
+-Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="5KndsQqMxTsej6i3INO65oY7Zth0oegtU"'
++Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="eIKWQ2Fgsy5I1mg9exMFU17v3EPavVZmB"'
+-Message-ID: '<cf22b236-554e-3e59-b715-8c11c7035794@web.de>'
++Message-ID: '<bb8d1fe0-c045-b88e-5f38-60f35797e662@web.de>'
+-To: 'tmail3096@gmail.com, john10179@outlook.com, p2329669@yahoo.com,\n john.10179@gmx.de, john.10180@zoho.eu, mail.t3st@icloud.com,\n smith_j46@aol.com, john.1019@hushmail.com, john1017@fastmail.com,\n john.1018@mailbox.org, john.10177@mail.ru, john.10177@runbox.com'
++To: 'john1018@fastmail.com'
+Body:  [True, False]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 10-mailbox.eml
+Add Header:  ['Authentication-Results', 'Content-Language', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Provags-ID', 'X-Rspamd-Queue-Id', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class', 'X-Virus-Scanned']
+Del Header:  []
+Mod Header:  ['Content-Type', 'Date', 'Message-ID', 'Subject', 'To']
+-Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="5KndsQqMxTsej6i3INO65oY7Zth0oegtU"'
++Content-Type: 'text/plain; charset=utf-8'
+-To: 'tmail3096@gmail.com, john10179@outlook.com, p2329669@yahoo.com,\n john.10179@gmx.de, john.10180@zoho.eu, mail.t3st@icloud.com,\n smith_j46@aol.com, john.1019@hushmail.com, john1017@fastmail.com,\n john.1018@mailbox.org, john.10177@mail.ru, john.10177@runbox.com'
++To: 'john.1019@mailbox.org'
+-Subject: 'Inbound PGP/MIME'
++Subject: 'Inbound for Mailbox.org'
+-Date: 'Mon, 29 Apr 2019 18:07:11 +0200'
++Date: 'Mon, 29 Apr 2019 16:11:23 +0200'
+-Message-ID: '<cf22b236-554e-3e59-b715-8c11c7035794@web.de>'
++Message-ID: '<b0575d5e-eb51-d245-64a9-81bcd963198b@web.de>'
+Body:  False
+Body Send:  [<email.message.Message object at 0x7fbe0adbc950>, <email.message.Message object at 0x7fbe0b2df8d0>]
+Body Recv:  Inbound for Mailbox.org
+
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 11-mailru.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Received-SPF', 'Return-path', 'X-6b629377', 'X-77F55803', 'X-7FA49CB5', 'X-C8649E89', 'X-DMARC-Policy', 'X-Mailru-Intl-Transport', 'X-Mras', 'X-Provags-ID', 'X-Spam', 'X-Spam-Flag', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, inbound, 12-runbox.eml
+Add Header:  ['DKIM-Signature', 'Received', 'Received-SPF', 'Return-path', 'X-Provags-ID', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Report', 'X-Spam-Status', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 01-gmail.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Gm-Message-State', 'X-Google-DKIM-Signature', 'X-Google-Smtp-Source', 'X-Received', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<fb852f5e-3351-d634-c9b6-684401c98941@gmail.com>'
++Message-ID: '<fb852f5e-3351-d634-c9b6-684401c98941@das-labor.org>'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 02-outlook.eml
+Add Header:  ['Accept-Language', 'Content-Language', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'Thread-Index', 'Thread-Topic', 'X-MS-Exchange-CrossTenant-Network-Message-Id', 'X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg', 'X-MS-Exchange-CrossTenant-fromentityheader', 'X-MS-Exchange-CrossTenant-id', 'X-MS-Exchange-CrossTenant-originalarrivaltime', 'X-MS-Exchange-CrossTenant-rms-persistedconsumerorg', 'X-MS-Exchange-Transport-CrossTenantHeadersStamped', 'X-MS-Has-Attach', 'X-MS-TNEF-Correlator', 'X-OriginatorOrg', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'x-clientproxiedby', 'x-eopattributedmessage', 'x-incomingheadercount', 'x-incomingtopheadermarker', 'x-microsoft-antispam', 'x-microsoft-antispam-message-info', 'x-microsoft-original-message-id', 'x-ms-exchange-messagesentrepresentingtype', 'x-ms-publictraffictype', 'x-ms-traffictypediagnostic', 'x-tmn']
+Del Header:  ['Autocrypt', 'Openpgp', 'User-Agent']
+Mod Header:  ['Content-Type', 'Date', 'From', 'Message-ID', 'To']
+-Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="a4ZCGYSmZflapbg8yUtdV1Ld5aVZBiEBr"'
++Content-Type: 'multipart/mixed;\n\tboundary="_003_HE1P18901MB0107A4B51FECB89ED4B93A63E1390HE1P18901MB0107_"'
+-To: 'brucewayne45@das-labor.org'
++To: '"brucewayne45@das-labor.org" <brucewayne45@das-labor.org>'
+-Date: 'Mon, 29 Apr 2019 19:03:29 +0200'
++Date: 'Mon, 29 Apr 2019 17:03:30 +0000'
+-Message-ID: '<e730154f-1059-23d5-ef2d-01f76c7cd65b@outlook.com>'
++Message-ID: '<HE1P18901MB0107A4B51FECB89ED4B93A63E1390@das-labor.org>'
+-From: '"Outlook.com" <john10179@outlook.com>'
++From: 'John Smith <john10179@outlook.com>'
+Body:  False
+Body Send:  [<email.message.Message object at 0x7fbe0ac2d290>, <email.message.Message object at 0x7fbe0ac2dd50>]
+Body Recv:  [<email.message.Message object at 0x7fbe0abd1590>, <email.message.Message object at 0x7fbe0abd1790>, <email.message.Message object at 0x7fbe0abd1450>]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 03-yahoo.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'X-YMail-OSG']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<5f7a32ba-ecfa-e51a-0efb-9f030f6b0e03@yahoo.com>'
++Message-ID: '<5f7a32ba-ecfa-e51a-0efb-9f030f6b0e03@das-labor.org>'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 04-gmx.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Provags-ID', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'X-UI-Out-Filterresults', 'X-UI-Sender-Class']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<6de53e5c-c5b3-66c1-7173-6ff62263e2b3@gmx.de>'
++Message-ID: '<6de53e5c-c5b3-66c1-7173-6ff62263e2b3@das-labor.org>'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 05-zoho.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'X-Zoho-Virus-Status', 'X-ZohoMailClient']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<574102f4-9063-15bd-5ee5-f9ae42271ead@zohomail.eu>'
++Message-ID: '<574102f4-9063-15bd-5ee5-f9ae42271ead@das-labor.org>'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 06-icloud.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Proofpoint-Spam-Details', 'X-Proofpoint-Virus-Version', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Content-Type', 'Date', 'Message-ID']
+-Date: 'Mon, 29 Apr 2019 19:09:06 +0200'
++Date: 'Tue, 30 Apr 2019 11:43:07 +0200'
+-Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="gYlVsMqqBYeL53JLkGuXL5opuxENcWCMf"'
++Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="vMKdAwfVaQOMJYowmNW1cGWx8iqnBzSg8"'
+-Message-ID: '<bd2784b3-402a-f563-a86e-b454541e64a0@icloud.com>'
++Message-ID: '<f61a8b65-503a-444f-6c06-a19e4b2bceaf@das-labor.org>'
+Body:  [True, False]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 07-aol.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'X-YMail-OSG']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<d6dbae21-c399-a439-24ec-d1e36c319331@aol.com>'
++Message-ID: '<d6dbae21-c399-a439-24ec-d1e36c319331@das-labor.org>'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 08-hushmail.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Hush-Encrypted', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<1527646254.1017418.1556557816737.JavaMail.tomcat@zimbrahost5.hushmail.com>'
++Message-ID: '<918bbb8835fc1a93bc881ae72a6b5266@das-labor.org>'
+Body:  [False, False]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 09-fastmail.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-ME-Proxy', 'X-ME-Proxy-Cause', 'X-ME-Sender', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Autocrypt', 'Message-ID']
+-Message-ID: '<134eb1e8-ff27-0a3d-2cb0-42c110db27a4@fastmail.com>'
++Message-ID: '<134eb1e8-ff27-0a3d-2cb0-42c110db27a4@das-labor.org>'
+-Autocrypt: 'addr=john1018@fastmail.com; keydata=\n mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk\n IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp\n V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9\n mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH\n 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB\n AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud\n yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO\n gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke\n EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb\n azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R\n qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS\n nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E\n WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU\n KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s\n vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd\n v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG\n 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB\n NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H\n /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K\n vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/\n NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O\n wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF\n cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc='
++Autocrypt: 'addr=john1018@fastmail.com;\n keydata= mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk\n IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp\n V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9\n mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH\n 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB\n AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud\n yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO\n gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke\n EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb\n azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R\n qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS\n nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E\n WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU\n KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s\n vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd\n v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG\n 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB\n NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H\n /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K\n vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/\n NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O\n wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF\n cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc='
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 10-mailbox.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status', 'X-Virus-Scanned']
+Del Header:  ['User-Agent']
+Mod Header:  ['Message-ID']
+-Message-ID: '<30c1a1ed-c779-40e2-35cb-4251be678041@mailbox.org>'
++Message-ID: '<30c1a1ed-c779-40e2-35cb-4251be678041@das-labor.org>'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 11-mailru.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-77F55803', 'X-7FA49CB5', 'X-Mailru-Sender', 'X-Mras', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<d4028bd8-1c32-d2ad-93e0-562eb6e27f7a@mail.ru>'
++Message-ID: '<d4028bd8-1c32-d2ad-93e0-562eb6e27f7a@das-labor.org>'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, outbound, 12-runbox.eml
+Add Header:  ['DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Spam-Checker-Version', 'X-Spam-Level', 'X-Spam-Status']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<40298785-cade-6563-a168-3f4cb0e2643a@runbox.com>'
++Message-ID: '<40298785-cade-6563-a168-3f4cb0e2643a@das-labor.org>'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 01-gmail.eml
+Add Header:  ['Received', 'Return-Path']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 02-outlook.eml
+Add Header:  ['Accept-Language', 'Authentication-Results', 'Content-Language', 'DKIM-Signature', 'Received-SPF', 'Thread-Index', 'Thread-Topic', 'X-EOPTenantAttributedMessage', 'X-Forefront-Antispam-Report', 'X-IncomingHeaderCount', 'X-IncomingTopHeaderMarker', 'X-MS-Exchange-CrossTenant-FromEntityHeader', 'X-MS-Exchange-CrossTenant-Id', 'X-MS-Exchange-CrossTenant-Network-Message-Id', 'X-MS-Exchange-CrossTenant-OriginalArrivalTime', 'X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg', 'X-MS-Exchange-CrossTenant-rms-persistedconsumerorg', 'X-MS-Exchange-EOPDirect', 'X-MS-Exchange-Organization-PCL', 'X-MS-Exchange-Processed-By-BccFoldering', 'X-MS-Exchange-Transport-CrossTenantHeadersPromoted', 'X-MS-Exchange-Transport-CrossTenantHeadersStamped', 'X-MS-Exchange-Transport-CrossTenantHeadersStripped', 'X-MS-Exchange-Transport-EndToEndLatency', 'X-MS-Has-Attach', 'X-MS-Office365-Filtering-Correlation-Id', 'X-MS-TNEF-Correlator', 'X-MS-TrafficTypeDiagnostic', 'X-MS-UserLastLogonTime', 'X-Message-Delivery', 'X-Message-Info', 'X-Microsoft-Antispam', 'X-Microsoft-Antispam-Mailbox-Delivery', 'X-Microsoft-Antispam-Message-Info', 'X-Microsoft-Antispam-Message-Info-Original', 'X-Microsoft-Antispam-Untrusted', 'X-OriginatorOrg', 'X-SID-PRA', 'X-SID-Result', 'X-Sender-IP', 'x-clientproxiedby', 'x-eopattributedmessage', 'x-incomingheadercount', 'x-incomingtopheadermarker', 'x-microsoft-original-message-id', 'x-ms-exchange-messagesentrepresentingtype', 'x-ms-exchange-slblob-mailprops', 'x-ms-publictraffictype', 'x-tmn']
+Del Header:  ['Autocrypt', 'Openpgp', 'User-Agent', 'X-ClientProxiedBy', 'X-MS-Exchange-Organization-AuthMechanism', 'X-Microsoft-Original-Message-ID', 'X-TMN']
+Mod Header:  ['Content-Type', 'Date', 'From', 'Message-ID', 'Received', 'To', 'X-MS-Exchange-Organization-AuthAs', 'X-MS-Exchange-Organization-AuthSource', 'X-MS-Exchange-Organization-ExpirationStartTime', 'X-MS-Exchange-Organization-MessageDirectionality', 'X-MS-Exchange-Organization-Network-Message-Id']
+-Content-Type: 'multipart/encrypted;\n protocol="application/pgp-encrypted";\n boundary="dM6LVifdDWDKVnELWAXasnkcoc2jJtSRE"'
++Content-Type: 'multipart/mixed;\n\tboundary="_003_HE1P18901MB0107ECC346B731ACBE55974EE1390HE1P18901MB0107_"'
+-X-MS-Exchange-Organization-ExpirationStartTime: '29 Apr 2019 16:28:42.3837\n (UTC)'
++X-MS-Exchange-Organization-ExpirationStartTime: '29 Apr 2019 16:28:43.4400\n (UTC)'
+-To: 'john10179@outlook.com'
++To: 'John Smith <john10179@outlook.com>'
+-X-MS-Exchange-Organization-AuthSource: '\n HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM'
++X-MS-Exchange-Organization-AuthSource: '\n DB3EUR04FT055.eop-eur04.prod.protection.outlook.com'
+-Received: 'from [IPv6:2a05:3e00:9:2100:8550:192a:e3b5:b00e]\n (2603:10a6:20b:c0::34) by HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM\n (2603:10a6:3:91::16) with Microsoft SMTP Server (version=TLS1_2,\n cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1835.15 via Mailbox\n Transport; Mon, 29 Apr 2019 16:28:42 +0000'
++Received: 'from DB3EUR04HT186.eop-eur04.prod.protection.outlook.com\n (2603:10a6:3:f7::32) by HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM with HTTPS\n via HE1PR1001CA0022.EURPRD10.PROD.OUTLOOK.COM; Mon, 29 Apr 2019 16:28:43\n +0000'
+-Date: 'Mon, 29 Apr 2019 18:28:41 +0200'
++Date: 'Mon, 29 Apr 2019 16:28:42 +0000'
+-X-MS-Exchange-Organization-Network-Message-Id: '\n 127180b0-99e9-4ad6-25b1-08d6ccbfbe59'
++X-MS-Exchange-Organization-Network-Message-Id: '6db49ca5-11b0-44c8-5355-08d6ccbfbefa'
+-Message-ID: '\n <HE1P18901MB0107ECC346B731ACBE55974EE1390@HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM>'
++Message-ID: '<HE1P18901MB0107ECC346B731ACBE55974EE1390@HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM>'
+-From: '"Outlook.com" <john10179@outlook.com>'
++From: 'John Smith <john10179@outlook.com>'
+-X-MS-Exchange-Organization-AuthAs: 'Internal'
++X-MS-Exchange-Organization-AuthAs: 'Anonymous'
+-X-MS-Exchange-Organization-MessageDirectionality: 'Originating'
++X-MS-Exchange-Organization-MessageDirectionality: 'Incoming'
+Body:  False
+Body Send:  [<email.message.Message object at 0x7fbe0abd1110>, <email.message.Message object at 0x7fbe0abd1c10>]
+Body Recv:  [<email.message.Message object at 0x7fbe0abd3350>, <email.message.Message object at 0x7fbe0abd3790>, <email.message.Message object at 0x7fbe0abd3450>]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 03-yahoo.eml
+Add Header:  ['Authentication-Results', 'Content-Length', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Apparently-To', 'X-Originating-IP', 'X-YMail-OSG', 'X-YMailISG']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 04-gmx.eml
+Add Header:  []
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 05-zoho.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'DKIM-Signature', 'Delivered-To', 'Return-Path']
+Del Header:  ['Bcc']
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 06-icloud.eml
+Add Header:  ['Content-type', 'DKIM-Signature', 'MIME-version', 'Message-id', 'Original-recipient', 'Received', 'Return-path', 'X-CLX-Score', 'X-CLX-Shades', 'X-CLX-Spam', 'X-CLX-UShades', 'X-CLX-UnSpecialScore', 'X-MANTSH', 'X-Proofpoint-Spam-Details', 'X-Proofpoint-Virus-Version']
+Del Header:  ['Content-Type', 'MIME-Version', 'Message-ID']
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 07-aol.eml
+Add Header:  ['Authentication-Results', 'Content-Length', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Apparently-To', 'X-Originating-IP', 'X-YMail-OSG', 'X-YMailISG']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 08-hushmail.eml
+Add Header:  ['DKIM-Signature', 'Received', 'Return-Path', 'X-Hush-Encrypted', 'X-Hush-Real-Recipient']
+Del Header:  []
+Mod Header:  ['Message-ID']
+-Message-ID: '<631039507.1016150.1556556367649.JavaMail.tomcat@zimbrahost5.hushmail.com>'
++Message-ID: '<467450022.1012806.1556555572280.JavaMail.tomcat@zimbrahost5.hushmail.com>'
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 09-fastmail.eml
+Add Header:  ['ARC-Authentication-Results', 'ARC-Message-Signature', 'ARC-Seal', 'Authentication-Results', 'DKIM-Signature', 'Received', 'Received-SPF', 'Return-Path', 'X-Attached', 'X-Cyrus-Session-Id', 'X-Delivered-to', 'X-ME-Proxy', 'X-ME-Proxy-Cause', 'X-ME-Sender', 'X-ME-VSCategory', 'X-ME-VSCause', 'X-ME-VSScore', 'X-ME-ZSResult', 'X-Mail-from', 'X-Resolved-to', 'X-Sieve', 'X-Spam-charsets', 'X-Spam-hits', 'X-Spam-known-sender', 'X-Spam-score', 'X-Spam-source']
+Del Header:  []
+Mod Header:  ['Autocrypt']
+-Autocrypt: 'addr=john1018@fastmail.com; keydata=\n mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk\n IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp\n V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9\n mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH\n 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB\n AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud\n yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO\n gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke\n EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb\n azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R\n qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS\n nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E\n WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU\n KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s\n vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd\n v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG\n 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB\n NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H\n /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K\n vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/\n NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O\n wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF\n cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc='
++Autocrypt: 'addr=john1018@fastmail.com;\n keydata= mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk\n IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp\n V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9\n mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH\n 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB\n AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud\n yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO\n gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke\n EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb\n azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R\n qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS\n nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E\n WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU\n KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s\n vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd\n v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG\n 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB\n NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H\n /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K\n vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/\n NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O\n wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF\n cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc='
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 10-mailbox.eml
+Add Header:  ['Authentication-Results', 'DKIM-Signature', 'Delivered-To', 'Received', 'Return-Path', 'X-Virus-Scanned']
+Del Header:  ['User-Agent']
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 11-mailru.eml
+Add Header:  ['Authentication-Results', 'Delivered-To', 'Received', 'Return-path', 'X-77F55803', 'X-7FA49CB5', 'X-Mailru-Intl-Transport', 'X-Mailru-Sender', 'X-Mras']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]
+-----------------------------------------------------
+Testcase: pgp-mime, internal, 12-runbox.eml
+Add Header:  ['Received', 'Return-path']
+Del Header:  []
+Mod Header:  []
+Body:  [True, True]

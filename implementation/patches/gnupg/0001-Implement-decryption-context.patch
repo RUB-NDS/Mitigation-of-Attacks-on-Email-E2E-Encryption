@@ -1,0 +1,130 @@
+From 614c0d06b80ab31cda6a2c2f371798a4c931828b Mon Sep 17 00:00:00 2001
+From: DC Demo <decryptioncontext@gmail.com>
+Date: Wed, 30 Oct 2019 16:21:08 +0100
+Subject: [PATCH] Implement decryption context.
+
+---
+ g10/cipher-aead.c  | 17 +++++++++++++++--
+ g10/decrypt-data.c | 16 ++++++++++++++--
+ g10/gpg.c          |  6 ++++++
+ g10/options.h      |  2 ++
+ 4 files changed, 37 insertions(+), 4 deletions(-)
+
+diff --git a/g10/cipher-aead.c b/g10/cipher-aead.c
+index b14b85444..d925e3c5d 100644
+--- a/g10/cipher-aead.c
++++ b/g10/cipher-aead.c
+@@ -65,6 +65,9 @@ set_nonce_and_ad (cipher_filter_context_t *cfx, int final)
+   gpg_error_t err;
+   unsigned char nonce[16];
+   unsigned char ad[21];
++  int ad_len;
++  int associated_data_len;
++  unsigned char* associated_data;
+   int i;
+ 
+   switch (cfx->dek->use_aead)
+@@ -122,9 +125,19 @@ set_nonce_and_ad (cipher_filter_context_t *cfx, int final)
+       ad[19] = cfx->total >>  8;
+       ad[20] = cfx->total;
+     }
++
++  ad_len = final ? 21 : 13;
++  associated_data_len = ad_len;
++  if (opt.associated_data)
++    associated_data_len = ad_len + strlen(opt.associated_data);
++  associated_data = xmalloc(associated_data_len);
++  memcpy(associated_data, ad, ad_len);
++  if (opt.associated_data)
++    memcpy(associated_data + ad_len, opt.associated_data, strlen(opt.associated_data));
++
+   if (DBG_CRYPTO)
+-    log_printhex (ad, final? 21 : 13, "authdata:");
+-  return gcry_cipher_authenticate (cfx->cipher_hd, ad, final? 21 : 13);
++    log_printhex (associated_data, associated_data_len, "authdata:");
++  return gcry_cipher_authenticate (cfx->cipher_hd, associated_data, associated_data_len);
+ }
+ 
+ 
+diff --git a/g10/decrypt-data.c b/g10/decrypt-data.c
+index 5fd458845..edfa5f466 100644
+--- a/g10/decrypt-data.c
++++ b/g10/decrypt-data.c
+@@ -126,6 +126,9 @@ aead_set_nonce_and_ad (decode_filter_ctx_t dfx, int final)
+ {
+   gpg_error_t err;
+   unsigned char ad[21];
++  int ad_len;
++  int associated_data_len;
++  unsigned char* associated_data;
+   unsigned char nonce[16];
+   int i;
+ 
+@@ -183,9 +186,18 @@ aead_set_nonce_and_ad (decode_filter_ctx_t dfx, int final)
+       ad[19] = dfx->total >>  8;
+       ad[20] = dfx->total;
+     }
++  ad_len = final ? 21 : 13;
++  associated_data_len = ad_len;
++  if (opt.associated_data)
++    associated_data_len = ad_len + strlen(opt.associated_data);
++  associated_data = xmalloc(associated_data_len);
++  memcpy(associated_data, ad, ad_len);
++  if (opt.associated_data)
++    memcpy(associated_data + ad_len, opt.associated_data, strlen(opt.associated_data));
++
+   if (DBG_CRYPTO)
+-    log_printhex (ad, final? 21 : 13, "authdata:");
+-  return gcry_cipher_authenticate (dfx->cipher_hd, ad, final? 21 : 13);
++    log_printhex (associated_data, associated_data_len, "authdata:");
++  return gcry_cipher_authenticate (dfx->cipher_hd, associated_data, associated_data_len);
+ }
+ 
+ 
+diff --git a/g10/gpg.c b/g10/gpg.c
+index b9b6de4e6..f4f937af2 100644
+--- a/g10/gpg.c
++++ b/g10/gpg.c
+@@ -431,6 +431,7 @@ enum cmd_and_opt_values
+     oNoSymkeyCache,
+     oUseOnlyOpenPGPCard,
+ 
++    oAssociatedData,
+     oNoop
+   };
+ 
+@@ -935,6 +936,7 @@ static ARGPARSE_OPTS opts[] = {
+   ARGPARSE_s_n (oNoop, "allow-multiple-messages", "@"),
+   ARGPARSE_s_n (oNoop, "no-allow-multiple-messages", "@"),
+ 
++  ARGPARSE_s_s (oAssociatedData, "associated-data", "@"),
+   ARGPARSE_end ()
+ };
+ 
+@@ -3669,6 +3671,10 @@ main (int argc, char **argv)
+             opt.flags.use_only_openpgp_card = 1;
+             break;
+ 
++    case oAssociatedData:
++            opt.associated_data = pargs.r.ret_str;
++            break;
++
+ 	  case oNoop: break;
+ 
+ 	  default:
+diff --git a/g10/options.h b/g10/options.h
+index 26c8439b6..a30760114 100644
+--- a/g10/options.h
++++ b/g10/options.h
+@@ -290,6 +290,8 @@ struct
+   int no_symkey_cache;   /* Disable the cache used for --symmetric.  */
+ 
+   int use_keyboxd;       /* Use the external keyboxd as storage backend.  */
++
++  const char* associated_data;
+ } opt;
+ 
+ /* CTRL is used to keep some global variables we currently can't
+-- 
+2.23.0
+

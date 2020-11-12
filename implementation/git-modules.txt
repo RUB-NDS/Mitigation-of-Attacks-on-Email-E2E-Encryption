@@ -1,0 +1,21 @@
+[submodule "src/gnupg"]
+	path = src/gnupg
+	url = https://dev.gnupg.org/source/gnupg.git
+[submodule "src/libgpg-error"]
+	path = src/libgpg-error
+	url = https://dev.gnupg.org/source/libgpg-error.git
+[submodule "src/npth"]
+	path = src/npth
+	url = https://dev.gnupg.org/source/npth.git
+[submodule "src/libgcrypt"]
+	path = src/libgcrypt
+	url = https://dev.gnupg.org/source/libgcrypt.git
+[submodule "src/libksba"]
+	path = src/libksba
+	url = https://dev.gnupg.org/source/libksba.git
+[submodule "src/libassuan"]
+	path = src/libassuan
+	url = https://dev.gnupg.org/source/libassuan.git
+[submodule "src/enigmail"]
+	path = src/enigmail
+	url = https://gitlab.com/enigmail/enigmail.git

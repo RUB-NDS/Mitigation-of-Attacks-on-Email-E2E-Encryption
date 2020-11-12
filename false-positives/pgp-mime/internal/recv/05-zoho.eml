@@ -1,0 +1,93 @@
+Delivered-To: john.10180@zohomail.eu
+Return-Path: <john.10180@zohomail.eu>
+ARC-Seal: i=1; a=rsa-sha256; t=1556555414; cv=none; 
+	d=zohomail.eu; s=zohoarc; 
+	b=aWp8wZU1xY3SPZTVVPcbDHgN+PEcuEia0z56Sq4NqaHLOckLZcvsGErfHPjKOCpicFlREJw7j7tCT4EjjsIq5iRpW/kBOUVBhU5Udgi0Fc/6AyxaRDfCluQ0ZLbFA/J3j3HzsKbVDLEv5NGfgBSvdjFU7L4B+XehNoYpeAoJpxI=
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=zohomail.eu; s=zohoarc; 
+	t=1556555414; h=Content-Type:Date:From:MIME-Version:Message-ID:Subject:To:ARC-Authentication-Results; 
+	bh=XoP4oWaiNFB1asEOBF3ikQMPBJnDcDjiKr4hEnGq9B4=; 
+	b=BcNnRc+0+hqjQheU5xaTlur9p9JWMD+JqlUdl9NL4CTg3viz0n5SRl9kayqFD6CEzQrJ703eLlv4AYX9Nwec7dUXraRqFMKcbXffoPTYQG1/agCu4kqicrdAxWK0iVidxyGHI+1mcascZXhINDYf+ljjiRLGOMf28f1DqLoy1hY=
+ARC-Authentication-Results: i=1; mx.zohomail.eu;
+	dkim=pass  header.i=zohomail.eu;
+	spf=pass  smtp.mailfrom=john.10180@zohomail.eu;
+	dmarc=pass header.from=<john.10180@zohomail.eu> header.from=<john.10180@zohomail.eu>
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1556555414;
+	s=zoho; d=zohomail.eu; i=john.10180@zohomail.eu;
+	h=To:From:Subject:Message-ID:Date:MIME-Version:Content-Type;
+	l=1397; bh=XoP4oWaiNFB1asEOBF3ikQMPBJnDcDjiKr4hEnGq9B4=;
+	b=cpyZbCEx+5MzaaZf+2f1kZ5H/wlK95xQ6SE5i97y4CJ6nzQFFJqRLNHAiA5EAgvu
+	LKpHrWY4BjL9YlsPqTVAdQ931/kQJDuIhfBO/JuZZ0F55vEv8KXQlyp3zWVXnH58D/M
+	bNYc3A3r2+eADlxiMh8vgArjPSFUac2L8Gp5PXH0=
+Received: from [134.147.40.36] (korolev.nds.ruhr-uni-bochum.de [134.147.40.36]) by mx.zoho.eu
+	with SMTPS id 1556555412765710.6806367125411; Mon, 29 Apr 2019 18:30:12 +0200 (CEST)
+To: john.10180@zohomail.eu
+From: Zoho Mail <john.10180@zohomail.eu>
+Subject: Internal PGP/MIME
+Openpgp: preference=signencrypt
+Autocrypt: addr=john.10180@zohomail.eu; keydata=
+ mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk
+ IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp
+ V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9
+ mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH
+ 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB
+ AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud
+ yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO
+ gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke
+ EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb
+ azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R
+ qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS
+ nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E
+ WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU
+ KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s
+ vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd
+ v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG
+ 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB
+ NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H
+ /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K
+ vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/
+ NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O
+ wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF
+ cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc=
+Message-ID: <3423a059-1ded-3fd4-763d-142accb6e9a2@zohomail.eu>
+Date: Mon, 29 Apr 2019 18:30:12 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="bmtjqs8bngrDmsR4BR3NYMKuCVVr65NKL"
+X-Zoho-Virus-Status: 1
+X-ZohoMailClient: External
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--bmtjqs8bngrDmsR4BR3NYMKuCVVr65NKL
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--bmtjqs8bngrDmsR4BR3NYMKuCVVr65NKL
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA+XhBIZl3+i5AQf/YcSBIk/ZZfoshCwRrKrMEi9mXqC4mEnNkyJbMJLHTt1G
+9vzr0ou/ytiUBf9cLwag/UlYNJ+O4AQ4HXOa07ZjZdOQu35aYcI5iOfs0TO0O+4R
+fcrjEGPhmMDU2zy1/Ual03bsWNEBlZyEeoMcAZ4MGoXdOoo5LBaEPxyO9xftwfum
+0F5m5xDFJ43BhjBl1VaVaVTx3DW+V3p0CXNmZ1UcRtfV4X4PptwlvzYWqUFP7smx
+X9ippTVVMttgJpUEWU9lvsl219pXS7bCGDtboVJvU1QB2+CSiMSZJ6u8RJWCaWUw
+XIpuXCkuEiYUZKbVrgFCCecUOUWBu84306K3I+YX5NLAqAGM6tLdRbRs66M3UgUn
+3nBFozvfuPjTAhG/FxgWyBKPRTfN5IW/RsVBIoJv8b9MPuxUOhZRYvo4sIRuFf9+
+B0mXgPVts3YU4zlO0eEWQt5wOKzb2hAAJCMmTmgD8gaeV60xZcm8vlj25x8o+h0L
+2/suYv12F5E2zpJ4V9Src88DP5SQAldoQN2MPEAmWBpmaPOzdm3em7hphod9zB3M
+LPZogDqBrz+drLcVBbREISPwErcYAlNR+E6jeleiM1OrBH3cmf9SV6jqbma5XQYk
+KFLxqRtY3IMMVzwfwd8DtYuNHJYj87V9Dc1EOcEq5hgmzzr0+fkjLARgravh4r/9
+loEY0+psA51jxBQw2o66rJ5JKSFDAcC1Ki8yTpjUGk1nlrD/vhcmpKOopBqugXCr
+Jklvjo5W+slmEzPSALmXbk3BAO6ltM9EO+oXC+5+F/o4jNzCb05QvqmiHqsNA8d9
+r/59yR6GGJHzxg==
+=Qz3w
+-----END PGP MESSAGE-----
+
+--bmtjqs8bngrDmsR4BR3NYMKuCVVr65NKL--

@@ -1,0 +1,115 @@
+Delivered-To: tmail3096@gmail.com
+Received: by 2002:aed:38c6:0:0:0:0:0 with SMTP id k64csp3556172qte;
+        Mon, 29 Apr 2019 07:09:55 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqxUv47iaroo70XqFd4XrFa3ZU+Fl6OtZaZJW+1xPmre/ZoujZbTb4CeYcltf6fUgVGabuy4
+X-Received: by 2002:a1c:dcc2:: with SMTP id t185mr18618827wmg.143.1556546995714;
+        Mon, 29 Apr 2019 07:09:55 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1556546995; cv=none;
+        d=google.com; s=arc-20160816;
+        b=PEBdG0YAgV5ETZL2v5I/1J5sIBxe8jkJjetrWS7dD2l/0Wmwu6WvD8wuQ43ZhYFbpC
+         iJcT/h/Hf1vA0qHHW642JEaTG6b4XfG7ZmRQafgFayGjdKWSrTzXo93bkHm1HFDTDh9K
+         /h0ty1UMJyIXOE3YY7XU+GXN01jTTptAKVOpHW4JhLwdudivA5uLFi1KfMJ0LFJe0XWE
+         GyhgjPlZzI+T9R/nId7vOCad7sjgMK5TRAj4YLGyiHqyREuJQUj/wBD52UQPLuMLH4uY
+         bgO8RgyO0FGxXgcvt7boXqbd1hmANSnT+GczBP6idzFti/Ya5OYMOjYZRRYGIlHH2CLu
+         9eTQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-language:mime-version:user-agent:date:message-id:subject
+         :autocrypt:openpgp:from:to:dkim-signature;
+        bh=NjiBmEgP/xxT9pOkVNWwlclnyMfOW4izuBUJVf2+BLo=;
+        b=dIcu2GMaIEGPTYGmHSg4frwkcptQ86k8CLO00w0tANvIXvTu3sHN/iyl3vxETWX+MZ
+         1IfZkTYlNDGvHu6Xpuw42VBFz5SUOpCByLGWyUMmZJn5I2SXJfhR82aP2dpclBfHs9yS
+         bhBnkYyLSLfbEgqGUlb2IokRv9ao8F957jSVM3IMynBnFMRG9Rzy2lbyYEdLn+QPwUUA
+         b2wAwMxeyu1HK1oTz7DIBfPsrjwIWfOT2/6IK3QHYWm0nmul3gu+kjnw4QZJwbiK0anC
+         EEQwEFAmlclMAchK7DAkJUQdRNNDMeGsULAKV+ABmKJM2C6t9uk6JqIrfMAyL8a/o7IS
+         KIUA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@web.de header.s=dbaedf251592 header.b=TOuINz4l;
+       spf=pass (google.com: domain of brucewayne45@web.de designates 212.227.15.3 as permitted sender) smtp.mailfrom=brucewayne45@web.de
+Return-Path: <brucewayne45@web.de>
+Received: from mout.web.de (mout.web.de. [212.227.15.3])
+        by mx.google.com with ESMTPS id y12si6010845wrw.308.2019.04.29.07.09.55
+        for <tmail3096@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 29 Apr 2019 07:09:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of brucewayne45@web.de designates 212.227.15.3 as permitted sender) client-ip=212.227.15.3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@web.de header.s=dbaedf251592 header.b=TOuINz4l;
+       spf=pass (google.com: domain of brucewayne45@web.de designates 212.227.15.3 as permitted sender) smtp.mailfrom=brucewayne45@web.de
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+	s=dbaedf251592; t=1556546995;
+	bh=NjiBmEgP/xxT9pOkVNWwlclnyMfOW4izuBUJVf2+BLo=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=TOuINz4lErEEH0xihcOk7boIuj4lVgPEsLYdYVOGvZesqqCMo0sBXoqtkbJd+dURY
+	 Q7/VGh8VOyZAxI896F2xeFneGLKbaLC997eDMg2dVnTOCio3J7rs8gYLQ6pytvl6Gj
+	 gZRWwjbkUJJb+NIi9kvdkI9kZ/9GnP1zX9Yw4aig=
+X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
+Received: from [134.147.40.36] ([134.147.40.36]) by smtp.web.de (mrweb001
+ [213.165.67.108]) with ESMTPSA (Nemesis) id 0M1FqS-1gWjHf0pSq-00tFb5 for
+ <tmail3096@gmail.com>; Mon, 29 Apr 2019 16:09:55 +0200
+To: tmail3096@gmail.com
+From: "brucewayne45@web.de" <brucewayne45@web.de>
+Openpgp: preference=signencrypt
+Autocrypt: addr=brucewayne45@web.de; keydata=
+ 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
+ 8RNuhi9qShTp2cog6/yJmAtX
+Subject: Inbound for GMail
+Message-ID: <12a36715-d8a0-2c1f-49d1-a65cb1d4641c@web.de>
+Date: Mon, 29 Apr 2019 16:09:54 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-US
+X-Provags-ID: V03:K1:b4qIDuPFAMf09/MLcFVNqirIgMYVuHzJhqEzAsOSpLUxLpHyNdY
+ gp5QPYwUZjLK8jHR68m/9OpRXaqOHbfep2yyvAxmtE3XEMTIMrVyv7OtTSlcEwisOziwoEE
+ 0fV9pKPxEph8Jav5AmoPyWdv88krMU1v87VXjN1VhPKhCd7isSxkrsaF8H05vjBSKzjZqtr
+ lkUAuugu1WNuuVaFAAxZQ==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:0jmT3sqVXAI=:BmRSf3XMH+OkGYej7ZFs5G
+ aOUFohw1zRhKOa2QOKjVeDiLEMnI9Hwwix5sppsGdQTizbMvHTpSXnndp+Qhkmf/T6//KzhEH
+ EeV0zHSzSrMAGdo7vOGsATvRz16hPgOjh38pda6xauLl76DluVhEEc1USzXnA1sPZLl28F2MX
+ PeCN6mq8tFbFpABX8jXpIUynTxTsXe6FExZNww2IqKNvTAJqCwor4zTcU2L55AD8le1QOqA4S
+ HiLyiZxoOwm3xriaPCDJjVGR/3FirFZcnD90oY87/1duidrAUU/lz5T0+StMNee1hqSbDuXVw
+ etRsNycamZAL4XTdXoJ6OM3V8T9uSEJV6vXG8Mc8Mq0fEVBN1jBwidMLkje+EN8KpLP04oW8+
+ kW0tESyx/j2HLd72nSi8kowWemmdF/0VLs/bCx8rxh6mTTc/S3dL9a55plp27IjfdwJRhRTE4
+ 8Qssq2EgyQRgYiwKyb2mXaJztRxtqtWeqdTjyW+zu7nlukNOHZ1f70Sj6HYnbucejnt6Md7Xh
+ NPNkT9ahZeE2o0tzn8OrNo28iAMQFdy6nqnAM6NprPILkVMTj7VjmJQYcMQBSv25D+LrpVGs+
+ L7L0k2dm5tHs0x8eYfxDzjY+zr44rkgXwOwxkIeN/Nux+SEuBvQ/XxmA4/iATYAGBRkqUiwCf
+ i/4beJPWsVcIp7TAnEvOvdH28c4fLDqBTRwOswIyf3vz0/c0sJShujjUzCBoYgjYMqFrrrQg/
+ BFjwQ8MjMuTJdusbsB294v0wze94u2hEZhcYVsmxjnTKkCx5vF4+5USwQACheWC+8krDb6TJa
+ nkZXOk5OKHCLPSwoE7MDyNWE4PDeyXDh1kz+nOJK7pp7raH2FYf/xSERrPgsDfk07EgVLbG1l
+ f3fNxi+9efSvek+430SyXanO7KENI6L0Ct6rh9N1Jf0qJ0y5mKzCibQIdpFNOaklgEEtgXUoC
+ llklTZlCMhQ==
+
+Inbound for GMail

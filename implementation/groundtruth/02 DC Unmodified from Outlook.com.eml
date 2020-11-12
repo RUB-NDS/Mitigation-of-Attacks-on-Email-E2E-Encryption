@@ -1,0 +1,161 @@
+Delivered-To: decryptioncontext@gmail.com
+Received: by 2002:a05:6504:14cd:0:0:0:0 with SMTP id u13csp12103926ltp;
+        Fri, 15 Nov 2019 06:45:31 -0800 (PST)
+X-Google-Smtp-Source: APXvYqxFayGJSnn6ZL0nYJ6M6KBKg6i8dmQbP6Iqg1gnu2zm0zAGDQTe9dd95r8JHarnibIfckEM
+X-Received: by 2002:a17:906:d9db:: with SMTP id qk27mr1349122ejb.309.1573829131278;
+        Fri, 15 Nov 2019 06:45:31 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1573829131; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=r+zG0P1gd0yKKaBot5bNMXCD3rsIx7TSpWKw0Ih5W75HaMKsSMV0ZUNb2J1LLH6daY
+         lD6EKzWXpHbv34tY9l7QZ67VC3tck2u8NnAej7rgAiEE9xScKO4oS1TFJBC0iCoQeolN
+         QEbTZ3j7YC4KqB+4xEEjlkdxOVIf5Uamtil0KhPQWOjFzwWjmXg5DjfZ/JT2LYzGMe42
+         W0FS8j+/kznu14g2zg0M63mQ9b/P886GZ4dcDMpvFkKRVtXQ2hBFN8IjD4S/C4UbcPPL
+         lV5q9yks2hw3h/9IcDunvHZYqxiIw4gaU9pb5ICk1A0BLl2MoNyeqPTd3mFo1oTmAO2t
+         UgLg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from:dkim-signature;
+        bh=MKUKPcNDeS8DlxjGPECitdzZqAC05HF5hzLn/rfvQ8w=;
+        b=aLdWWrFkRCHkXPDN+tSeDduv6FHnURiTKCI1zKAUhcBShbzvHzX/iiEcNgdfS6bJel
+         2q4FkCIXSMNzwsI7bmRkqa7iPo42vwLhEfxui9aGEpSduDnclzWrrmL9O3u+jYKJAjFK
+         ggVH2xHv4bXtRZtqT4zDtxkctjY5E57aFA90pDpgbfjQaNpc3XFbwb1L0R+V3/SQ263B
+         vA1YPF5Vn/pioRewFcn3eFaaArZCzbc/HJkg8NDcvjal45MBRMxgPiWyJDCxmhVoqeff
+         JnLQVecqUTP48UfoRAG9AmrXae3d3fimpjkn2+wPOKVxd0YCRyFDxvI2BggZ0kqYJGuq
+         UcSA==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=kcBZ5C0U;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of decryptioncontext@outlook.com designates 40.92.70.32 as permitted sender) smtp.mailfrom=decryptioncontext@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+Return-Path: <decryptioncontext@outlook.com>
+Received: from EUR03-AM5-obe.outbound.protection.outlook.com (mail-oln040092070032.outbound.protection.outlook.com. [40.92.70.32])
+        by mx.google.com with ESMTPS id f22si6274228eds.54.2019.11.15.06.45.30
+        for <decryptioncontext@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 15 Nov 2019 06:45:31 -0800 (PST)
+Received-SPF: pass (google.com: domain of decryptioncontext@outlook.com designates 40.92.70.32 as permitted sender) client-ip=40.92.70.32;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=kcBZ5C0U;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of decryptioncontext@outlook.com designates 40.92.70.32 as permitted sender) smtp.mailfrom=decryptioncontext@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=lVR4M6YcXnvkVMzzQdtKv5vyxukaEoM2rYxEXpj8wuhNTgsHda0I1segqdIQJD707IUyQmdZNKLx7gHAyNGppdCJJZ/9PSOweRBzOw9kn2bR5dWZYSivHAQNFdf2pSIu8QU9NXF1/wEe2e0VbhiipnLPBbH3q75AhVOWx1tci7++MF9umhXrwI00yJC55xdhe5TCQ6a7N5Fkud2eK0DTwR1HsLyszFmXGMZuEgAjs+UBCIMCsjf0HenKEJVYxrCty8iD77+nRtuVxSrjMJKPtdClC/U4bpQIN0ibUUE83yJ2oPx6jPfSftrXys1ef7hqTTNof6e+SBKq/3OoSBzmSg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=MKUKPcNDeS8DlxjGPECitdzZqAC05HF5hzLn/rfvQ8w=;
+ b=JAulYs9BHEyhhDP31sYb/r4xPIFBy8QyTTOGi52SfQbuUvyra6cPkyDfGr4sEvjcA+FEhFCU10o4qia2koOQv2IJvHxYOnBJ28Jved1OEmcPh8pxFmDAxBgQ2suyADTPL1Xx2QfncIJmN+TvLCCkic7GUMXtzfuWP2ihX+aYu14i1BY5Yp3l2OkpakQM6j0arzf1PoTkVE8tS6xSEW6LznjxdHlcpwU4+4yzZ7RjrLWW42nhaUp/QJ1OaypM1RgIfUVm9tuPUKFS40uUjI/flgHkfTm4ggxEURwtH8hDOL/0/n95ex1CETWXURNR/mAVNRfNemVDmvyLNtB8md5W1w==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=MKUKPcNDeS8DlxjGPECitdzZqAC05HF5hzLn/rfvQ8w=;
+ b=kcBZ5C0UpfCV3pbLLL++VFTWRV8vQOj8gyTrfQiXwzASbb6n1t1+8hXo+jx7cpex7CAB4+iRu5EGVSvp0DbP1Heqn46OjAzjqF4uZzeC6KZVQf6ZYHq9mBKUqScvifYXFtXMnQx/cU7NfCza7j3Rgeh7ZCb7Zm0p60m7CHGkx2OUjrmGEXQ8hld3G1CBJtKaCO+4/1RctckrslEfS66kkSxZpApSayTCabmbvWggKypcIg0mhjeFTtu095t/G7BN0IO4lbnG++kA+khhCa6wPiVHToKU+kbvyK/m3rBITjhYnfLAhDOtigeRtyYtBCHkq7/VfD7WP7YGQKwrF3Mqbg==
+Received: from AM5EUR03FT042.eop-EUR03.prod.protection.outlook.com
+ (10.152.16.51) by AM5EUR03HT228.eop-EUR03.prod.protection.outlook.com
+ (10.152.16.199) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2451.23; Fri, 15 Nov
+ 2019 14:45:28 +0000
+Received: from HE1PR0302MB2748.eurprd03.prod.outlook.com (10.152.16.58) by
+ AM5EUR03FT042.mail.protection.outlook.com (10.152.17.168) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2451.23 via Frontend Transport; Fri, 15 Nov 2019 14:45:28 +0000
+Received: from HE1PR0302MB2748.eurprd03.prod.outlook.com
+ ([fe80::a121:595e:4ea8:22c5]) by HE1PR0302MB2748.eurprd03.prod.outlook.com
+ ([fe80::a121:595e:4ea8:22c5%9]) with mapi id 15.20.2451.027; Fri, 15 Nov 2019
+ 14:45:28 +0000
+From: DC Demo <decryptioncontext@outlook.com>
+To: "decryptioncontext@gmail.com" <decryptioncontext@gmail.com>
+Subject: 02 DC Unmodified from Outlook.com
+Thread-Topic: 02 DC Unmodified from Outlook.com
+Thread-Index: AQHVm8NSyMPFiyht306vBuetL1qrOQ==
+Date: Fri, 15 Nov 2019 14:45:28 +0000
+Message-ID:
+ <HE1PR0302MB2748814C966EEC13411B960AA6700@HE1PR0302MB2748.eurprd03.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+x-clientproxiedby: AM4PR0701CA0023.eurprd07.prod.outlook.com
+ (2603:10a6:200:42::33) To HE1PR0302MB2748.eurprd03.prod.outlook.com
+ (2603:10a6:3:ee::15)
+x-incomingtopheadermarker:
+ OriginalChecksum:96490B862DFCB1C61DAF716B2809C6F3BF75825B9246C36DD8F554FCED1D904E;UpperCasedChecksum:A159C618A84355371A82DF7817349002DA62BAC9DE96518E3A992AEF88E3B5D0;SizeAsReceived:7203;Count:47
+x-ms-exchange-messagesentrepresentingtype: 1
+x-decryption-context:
+ {{smtp=from:from:reply-to:reply-to:to:to:cc:cc:subject:subject}{mime=mimepath}}
+x-tmn: [rJIub/wAlhO+FW2FUGk42emuJRvyw/yi]
+x-microsoft-original-message-id:
+ <ea180131-915a-e631-fcfc-c4f5bf3ece0a@outlook.com>
+x-ms-publictraffictype: Email
+x-incomingheadercount: 47
+x-eopattributedmessage: 0
+x-ms-office365-filtering-correlation-id: f78eec35-23bf-43f6-ecf7-08d769da74cb
+x-ms-traffictypediagnostic: AM5EUR03HT228:
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ fnMy4CL2XUrquXDzNuB0TfjkegdfnKmIQah5oow1YEO/xwkyA7gNpFYadEY2WlEg
+x-ms-exchange-transport-forked: True
+Content-Type: multipart/mixed;
+	boundary="_003_HE1PR0302MB2748814C966EEC13411B960AA6700HE1PR0302MB2748_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: f78eec35-23bf-43f6-ecf7-08d769da74cb
+X-MS-Exchange-CrossTenant-originalarrivaltime: 15 Nov 2019 14:45:28.1542
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM5EUR03HT228
+
+--_003_HE1PR0302MB2748814C966EEC13411B960AA6700HE1PR0302MB2748_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+
+--_003_HE1PR0302MB2748814C966EEC13411B960AA6700HE1PR0302MB2748_
+Content-Type: application/pgp-encrypted; name="PGPMIME version identification"
+Content-Description: PGP/MIME version identification
+Content-Disposition: attachment; filename="PGPMIME version identification";
+	size=12; creation-date="Fri, 15 Nov 2019 14:45:27 GMT";
+	modification-date="Fri, 15 Nov 2019 14:45:27 GMT"
+Content-ID: <A30235062C3D624BB11FB87A307E8CCA@eurprd03.prod.outlook.com>
+Content-Transfer-Encoding: base64
+
+VmVyc2lvbjogMQ0K
+
+--_003_HE1PR0302MB2748814C966EEC13411B960AA6700HE1PR0302MB2748_
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message.asc
+Content-Disposition: attachment; filename="encrypted.asc"; size=1179;
+	creation-date="Fri, 15 Nov 2019 14:45:28 GMT";
+	modification-date="Fri, 15 Nov 2019 14:45:28 GMT"
+Content-ID: <60EBB0DA5453BC4F992DDF8C3C3B7B05@eurprd03.prod.outlook.com>
+Content-Transfer-Encoding: base64
+
+LS0tLS1CRUdJTiBQR1AgTUVTU0FHRS0tLS0tDQoNCmhRR01BM3JzZ0tWLzFFdFlBUXYrUGZQblk0
+Z0NhYnB2aVhnWTNXSFZ4UVJZTCt0QTlKN1JzZzd3ODJ6TkoybmENCmhySExrWlNrekZDdGdwK2V4
+NEpzNUMxRHNVOWtjS2xlUDFCR2JmN3UyN2Q2WU12NjNXem1oeXlweVExNSsydXkNCno1L1Z6anQ0
+SVU2UWp5WGhFWDIvYms1dDJXRkFVeWR5NGNWMHNLQW4xZE9Fbm90Z242WWlYK0hSS3dlejJsS1kN
+CjRSRTh2NEpEc1dJUjU4T1hLQmJCVXl1dFM5OEowcjU2WEVqV0YwVUs3Rm42WlAxM1BKQnh5VTJm
+U0kxbmhRV0INCmIvQmdjb2M4Q1dJQVNTdmJManFXWTcxTHRPMnJCMGxvazFRblRqN0pEUkFNZmJV
+ZzdsbURxaUhYaGtnNWw0MU4NClA0NWV4Sks4N0ljUEk2eEc1QkdDanhFSjJOUS9yVzZHSTZ6LytG
+M3JBV0pzUkp3YTRtbXpkbHF6OHFVajFjaGYNCk9wUWFEUjhhTU42bFhBK3djb280c1YrcjRXUWJ3
+TW9QQVVuVU4xVExGZDJSZDg5Q1RnamZ5TjBXTTVEZ3FDUVYNCnhYRk16Y0VzRG0rQ01mOGxNc3Q5
+djZHMXJVc2dJbGRKcmZIT09Pc3cxZjBpVUgvTDEvNEtOTUVoYmlBc3lCZjkNClpCa3RuVno5S2gz
+OEVLc0Z0STdFMU1EV0FRa0JGYjZWRkxNYm5XdFMxalR4eW1xZnFnWEhiVkdQN2NlVkNpQksNCjVI
+NVZObUthbjdyVE1vOUdMSlZDQXVpWXllWU5Kd3lGcTNBb3VsTkxrc3draEtWR0pzaGRFQWRVN05G
+N2pjZUINClBnN0xBdWxZREM2LzkxemVqQVdiMnpDUURzWFM1Qll5TUFrUDUzOWlYeEZYalBJTlRx
+TmNZOUord3pVUlhBMGENCi9MSHV2MHl6MklzL0hQMkxiektGR2UwcjkvSFFrYUZjTHlPUWFDYXVj
+cEQxQkZhMXpUMXhKeEdBaVlTU1VCMEUNClFYbndhbUdrOXI5UFcwaC8vei9JUXdsa0dQdXpSMkdK
+R2k0V1VZQ3h4ZUR4ZFhpQ3lMU3Z5SXhzaVZxazNyWlkNClhCVzlnWUZjUkV2YWxSZTBqZGQ1Tm5N
+aTQvdWFsbmREaG1VS2RUaXZyUXFubnJaVVkvMGtTK2ZkOFd4UEtBc3ANCmJGWVp1dElidXgzaXIw
+Rm5PbjIybnkwTlIrOWFiYVYwYXdzcXd0VHJSelp3SndEeVp2ekdLZU52Q05IZ2ZhM2MNClczbDN2
+a0FvYzY4QnBuNC9sMVJnMkRZMEFaaTFZTFBRY0RlQldzb09reUNDQWxvM0w2ck83bVozYisxWTdT
+L2cNCnkzaXpueUJGKzZnMzJNR3EybmxNYmx1UnhMSEVkR3drVCtmeHZLb21OT1FRazdRTVJrUWtS
+Zz09DQo9MnZndQ0KLS0tLS1FTkQgUEdQIE1FU1NBR0UtLS0tLQ0K
+
+--_003_HE1PR0302MB2748814C966EEC13411B960AA6700HE1PR0302MB2748_--

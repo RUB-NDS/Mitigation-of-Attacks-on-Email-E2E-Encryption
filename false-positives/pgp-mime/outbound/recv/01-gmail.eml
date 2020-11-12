@@ -1,0 +1,122 @@
+Return-Path: <tmail3096@gmail.com>
+Delivered-To: brucewayne45@das-labor.org
+Received: from newvegas.das-labor.org
+	by newvegas.das-labor.org with LMTP id 0Ex6CTwux1y5IQAAAera6A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 19:02:52 +0200
+Received: by newvegas.das-labor.org (Postfix, from userid 1040)
+	id 1792C1052360; Mon, 29 Apr 2019 19:02:52 +0200 (CEST)
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on
+	newvegas.das-labor.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.8 required=5.0 tests=BAYES_00,DKIM_ADSP_CUSTOM_MED,
+	DKIM_INVALID,DKIM_SIGNED,ENCRYPTED_MESSAGE,FREEMAIL_FROM,
+	NML_ADSP_CUSTOM_MED,TVD_SPACE_RATIO autolearn=no autolearn_force=no
+	version=3.4.2
+Received: from mail-wr1-f42.google.com (mail-wr1-f42.google.com [209.85.221.42])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by newvegas.das-labor.org (Postfix) with ESMTPS id A6786105207A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 19:02:51 +0200 (CEST)
+Received: by mail-wr1-f42.google.com with SMTP id s18so17194830wrp.0
+        for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 10:02:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=to:from:subject:openpgp:autocrypt:message-id:date:user-agent
+         :mime-version;
+        bh=VrYmlWdX9xqZXtJAUvWp6lxXwuKFYkEw4/wS92gYH9Y=;
+        b=Mpf9BCXb5WTemtQvNgRbAw8vF3WSl9E/fVRpYh06AJrtrTRkFrE5swSGWJKoArrlTB
+         xDXOesol0RwL3LjMNCJFpaJisJ+IB37H3tc/9mUIHI5eUfc6e79qWkwXld2Y6B065AJi
+         8YrdyllzVQrh2vgQmF3Bkhf0tuCh1JQKVbgbPieHObcUBuUvGJ34MV1rui4pJ/ZANOHp
+         tXWh9zSVxyTq2q0k1Ii/cp94HwSyyEIIJnk2Hg6r3LaScwwcBrUAND4kFb3Ti3aeRSJ8
+         RgtHyOVuNYtrJjIM7nVyOYWxnTPRx7/KmX4VzKyIkubjWhDmKu3FfTPzeM48rYmqyYHt
+         SO3g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:to:from:subject:openpgp:autocrypt:message-id
+         :date:user-agent:mime-version;
+        bh=VrYmlWdX9xqZXtJAUvWp6lxXwuKFYkEw4/wS92gYH9Y=;
+        b=Mhy9qG8Biv+sWZ/V+tHqWYAjeuuVEmq9XTtZXh7yaUFjlQ1luopnvjNhsJShqbJ/E2
+         4vbNtBwAxzGzKhe7SK9xk7duFR7VAXDHpcuYKu7d1UMeBBBcW+Pz1WuiHADyI+UHV6Co
+         PEyW7G7vLjsQcyx6OYxXHlIaMJuH7w+JVHgANgoNqtVyjQ8bHfRs/9mBUpZn0PmViXtd
+         vw0Dl0BJ5cQJJ5pJJxHd3N89joDpTvZgq6Dqf+QiZYG+fpUn0cYtLUYiNrICtsW1moB9
+         Pr2G+yN6/2iAH6qfB/ZgdI+63B2dzsfjaKlxE8geuAxPxWn4JBgv7vSaK0+k8HzFxS++
+         DnYA==
+X-Gm-Message-State: APjAAAVuc40DqKUFuVFG7B6bivQBCx6f4Sp62l50TBlh0Grr7eA5V0a4
+	2HYr9jAyXxlh62sJO4eJr4nKGXuE
+X-Google-Smtp-Source: APXvYqxIcpmtd+qGFLxq9extqwr/iruDj1IyYcOlmKMimAYDbfP8pu9w4P/TzW+6qwgNWKvMtlUWQg==
+X-Received: by 2002:adf:e6c6:: with SMTP id y6mr21634447wrm.225.1556557370973;
+        Mon, 29 Apr 2019 10:02:50 -0700 (PDT)
+Received: from ?IPv6:2a05:3e00:9:2100:8550:192a:e3b5:b00e? (dyn-e00b5b3ea291055800129000.nds.ipv6.ruhr-uni-bochum.de. [2a05:3e00:9:2100:8550:192a:e3b5:b00e])
+        by smtp.gmail.com with ESMTPSA id r2sm6379632wrr.65.2019.04.29.10.02.49
+        for <brucewayne45@das-labor.org>
+        (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
+        Mon, 29 Apr 2019 10:02:50 -0700 (PDT)
+To: brucewayne45@das-labor.org
+From: GMail <tmail3096@gmail.com>
+Subject: Outbound PGP/MIME
+Openpgp: preference=signencrypt
+Autocrypt: addr=tmail3096@gmail.com; keydata=
+ mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk
+ IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp
+ V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9
+ mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH
+ 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB
+ AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud
+ yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO
+ gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke
+ EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb
+ azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R
+ qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS
+ nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E
+ WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU
+ KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s
+ vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd
+ v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG
+ 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB
+ NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H
+ /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K
+ vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/
+ NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O
+ wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF
+ cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc=
+Message-ID: <fb852f5e-3351-d634-c9b6-684401c98941@das-labor.org>
+Date: Mon, 29 Apr 2019 19:02:49 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="az7d7KJxveUYSCndfTZQRI6rsccz64moE"
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--az7d7KJxveUYSCndfTZQRI6rsccz64moE
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--az7d7KJxveUYSCndfTZQRI6rsccz64moE
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA+XhBIZl3+i5AQf+KT1DVmQoSRU14JXNHx6VN+tdtOnDfyiP9Hli1GztBJrR
++VnqFfFHsKqwZxVxjAIS8lcj/TUG+b/h09ku/YQLZEmW3QO4YxrupZ+ZjEJmtvlJ
+HLCuGkCIbH3Z+caCh9sY2X/TQbi+pY2+W0Bn0n0Bt+7IOtXxSS1Y3JNqhlhVVZb+
+w7GzrHhVBbi/6QYe27sOy+QbqY7PovfuT7J1cgbk2CJXEy8vBiqhQvFJlvZlSj9H
+Py73rX7uSedlRpcmV3VYeLX0zl/YVeWOgEYsWQgBpTjcI8Acz0klMfdcyShDNmvk
+gsJf9vBsEE9/h/dqWpkvJQwsA7iX7XS3H50aVzN3+NLAqwHz4ey1zUhVDx/EXfaR
+Vk/xPzbJEy2uxOKx8NNQyJEh859XaOHYpCr/nXX16lNNlpBXNdIa+a5F5Jb3Fh5Z
+t88XccXeRH/adI10Kih+ueHadGTKYwHxxmpOLQRsqwgO85B9I+aYTHqrbp4jOwIQ
++/Ly4FFJ76lQ230hxYW4sEgKe9O0cFXUxKWY52QJM4vvxFVs5DksAoCvfk68Upyb
+rNOj3/G891IBCIdB2H8qtcGJpiPZcZcpfgg3GXlW4e0dyGNwIpmExR/08uJ+eQRr
+zW6fBXLrdjKkAIJNYig49jyqOz10lxkNp0boTyaIguitrCbc92kwGISybggmRENP
+5SjCEc+FSGJf0RmLflvVyJNoNHGknaNzN+cQENuOZOcGMtWtoxtAAkDW52e4Gl/t
+S0zGki72+6V5QZMv+J9/pKurIxIE1oX0O4FwfmIdXYqOBshI3C1pNiy0+O2P9sVY
+UswRWn4sZn3Vu4HqOw==
+=JY3K
+-----END PGP MESSAGE-----
+
+--az7d7KJxveUYSCndfTZQRI6rsccz64moE--

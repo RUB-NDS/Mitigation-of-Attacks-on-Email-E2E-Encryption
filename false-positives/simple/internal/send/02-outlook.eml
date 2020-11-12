@@ -1,0 +1,38 @@
+Received: from [IPv6:2a05:3e00:9:2100:8550:192a:e3b5:b00e]
+ (2603:10a6:20b:3a::19) by HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM
+ (2603:10a6:3:91::16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1835.15 via Mailbox
+ Transport; Mon, 29 Apr 2019 14:02:29 +0000
+To: john10179@outlook.com
+From: "Outlook.com" <john10179@outlook.com>
+Subject: Internal for Outlook.com
+Message-ID:
+ <HE1P18901MB01076736C7287BA387FC2674E1390@HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM>
+Date: Mon, 29 Apr 2019 16:02:28 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Apr 2019 14:02:29.8442
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 5a5134f6-7fe9-4234-da7a-08d6ccab5181
+X-MS-Exchange-Organization-AuthSource:
+ HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 06
+X-TMN: [rDPIUNEsHo4UMhJgJTmlDN3JZtOxRX7HhBoV/BPi3Vao9be2GSxT8Kxymz+vfWrN]
+X-ClientProxiedBy: AM6PR0202CA0042.eurprd02.prod.outlook.com
+ (2603:10a6:20b:3a::19) To HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM
+ (2603:10a6:3:91::16)
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+Return-Path: john10179@outlook.com
+X-Microsoft-Original-Message-ID:
+ <8caccfac-745c-08cd-de93-a30a4ed3b926@outlook.com>
+MIME-Version: 1.0
+
+Internal for Outlook.com

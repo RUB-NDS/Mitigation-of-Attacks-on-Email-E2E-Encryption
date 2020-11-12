@@ -1,0 +1,69 @@
+To: brucewayne45@das-labor.org
+From: GMail <tmail3096@gmail.com>
+Subject: Outbound PGP/MIME
+Openpgp: preference=signencrypt
+Autocrypt: addr=tmail3096@gmail.com; keydata=
+ mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk
+ IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp
+ V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9
+ mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH
+ 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB
+ AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud
+ yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO
+ gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke
+ EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb
+ azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R
+ qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS
+ nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E
+ WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU
+ KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s
+ vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd
+ v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG
+ 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB
+ NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H
+ /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K
+ vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/
+ NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O
+ wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF
+ cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc=
+Message-ID: <fb852f5e-3351-d634-c9b6-684401c98941@gmail.com>
+Date: Mon, 29 Apr 2019 19:02:49 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="az7d7KJxveUYSCndfTZQRI6rsccz64moE"
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--az7d7KJxveUYSCndfTZQRI6rsccz64moE
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--az7d7KJxveUYSCndfTZQRI6rsccz64moE
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA+XhBIZl3+i5AQf+KT1DVmQoSRU14JXNHx6VN+tdtOnDfyiP9Hli1GztBJrR
++VnqFfFHsKqwZxVxjAIS8lcj/TUG+b/h09ku/YQLZEmW3QO4YxrupZ+ZjEJmtvlJ
+HLCuGkCIbH3Z+caCh9sY2X/TQbi+pY2+W0Bn0n0Bt+7IOtXxSS1Y3JNqhlhVVZb+
+w7GzrHhVBbi/6QYe27sOy+QbqY7PovfuT7J1cgbk2CJXEy8vBiqhQvFJlvZlSj9H
+Py73rX7uSedlRpcmV3VYeLX0zl/YVeWOgEYsWQgBpTjcI8Acz0klMfdcyShDNmvk
+gsJf9vBsEE9/h/dqWpkvJQwsA7iX7XS3H50aVzN3+NLAqwHz4ey1zUhVDx/EXfaR
+Vk/xPzbJEy2uxOKx8NNQyJEh859XaOHYpCr/nXX16lNNlpBXNdIa+a5F5Jb3Fh5Z
+t88XccXeRH/adI10Kih+ueHadGTKYwHxxmpOLQRsqwgO85B9I+aYTHqrbp4jOwIQ
++/Ly4FFJ76lQ230hxYW4sEgKe9O0cFXUxKWY52QJM4vvxFVs5DksAoCvfk68Upyb
+rNOj3/G891IBCIdB2H8qtcGJpiPZcZcpfgg3GXlW4e0dyGNwIpmExR/08uJ+eQRr
+zW6fBXLrdjKkAIJNYig49jyqOz10lxkNp0boTyaIguitrCbc92kwGISybggmRENP
+5SjCEc+FSGJf0RmLflvVyJNoNHGknaNzN+cQENuOZOcGMtWtoxtAAkDW52e4Gl/t
+S0zGki72+6V5QZMv+J9/pKurIxIE1oX0O4FwfmIdXYqOBshI3C1pNiy0+O2P9sVY
+UswRWn4sZn3Vu4HqOw==
+=JY3K
+-----END PGP MESSAGE-----
+
+--az7d7KJxveUYSCndfTZQRI6rsccz64moE--

@@ -1,0 +1,105 @@
+X-Apparently-To: p2329669@yahoo.com; Mon, 29 Apr 2019 14:10:13 +0000
+Return-Path: <brucewayne45@web.de>
+Received-SPF: pass (domain of web.de designates 212.227.15.3 as permitted sender)
+X-YMailISG: cD2Su2IWLDtE4lGdN.fp6eG2kScCRl_RpVk8jMspRI7xPNRR
+ C5Y6BnSQf0MJQGdKcdbqTaG5GQiK7ZnLl088judm_4MVhb0.wyChOES.ifAO
+ tRz5UVOF0OyqiMfqmXEbnFKqDeArfNVp3sdD5cF2KlwlpDTM5QLOoqV1V.qS
+ e.24prwDiM7IrTObr5SiJvecN1nEtTmdInsUMH3cG_lkF919qXyUpIW6iUdV
+ 99lQxb.XCnfp1sn9lV6RFGpFgQaAu4l0WnQ8yv1Ic8nilv_3WE9neOrZ5NRm
+ EueUy5S_2yv1u4a2DzooqCLrdNd9BnxIdRZH3iOS.mXTVyTRA0YUoo_YACcl
+ 0SM4YuoGiDsGL4HtnINUPj9YA3IOokZYGzE7qhd2xZBOIki14Wzrj2JKAZsk
+ t15DNlPM8Stsg7RysACqz5SEawPsNSi78EWxvTrhJuoxQsAQx8cjWZD763NF
+ xiZ82Vd335Sc.71RCcci7xoh3LZmyI74qWWrW.1n0.jQ9MUaQedLVLScUsOJ
+ tU2WpVltMgM1GsywFmALvUGDQzFo9q2fjh6_8LkFtG_0dtS0cNikyyueAEKh
+ xhHl7_RUseaTYiJu_XfkueOevLD4GK3rY.nJDTRPFxapQ_RJtK5uDKXM497O
+ KdG6vWEh9lVHioOvMb8xDV7mDz_L3qjmvIaljDml0o94nuGdV25e1zxqAFV9
+ XNh6C9LWO5zmkbMvVOuAUgzDN.Tw3o1G7c1tTOz9slpt0p7RdoU.YqAeqePG
+ IAKBDcWIE0CRB5jepuFgrLQ3nI.SdA5VUdJaOSwWNhYorks2BYsiN7sg5JnV
+ fJhX0VVFk9IIEZR.ActG_b42rNys_3GKFB8OS81W1C3K1S_6o6JUzn_21vTV
+ WZsfGvrMTUyfHQQphH0OMJ3Ey9iXiU6YW8qj8ZT_azkew_nRIXl6Yjzj_JNi
+ VidHk.XnCbUIhgKXn2v.ns0xa4CDIoMn8hQvv8rMeeRKP.gVq.hBHX17e90x
+ mwyt72xzmMLML1i3PfWhTA--
+X-Originating-IP: [212.227.15.3]
+Authentication-Results: mta4378.mail.gq1.yahoo.com 
+ header.i=@web.de; header.s=dbaedf251592; dkim=pass (ok)
+Received: from 127.0.0.1  (EHLO mout.web.de) (212.227.15.3)
+  by mta4378.mail.gq1.yahoo.com with SMTPS; Mon, 29 Apr 2019 14:10:13 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+	s=dbaedf251592; t=1556547011;
+	bh=cr8w/1gz2teiJKwJjhytDukpmts1H4pgqRFCmHGj9gY=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=YgOHdHi6WA4x8WoVs0O6lVuhmn2q1WGE44Ln+01AeEZAznNsYYZHYOr6pR6yYGS5/
+	 P1JUyHvJ59rRkoJ0FdIpFsbQSHP7OAD1Px2x7z3zpCPEMr2b/IIZ+xUvQeiJrj5USt
+	 OdG7xz1hVzc+kF6Xvv4jfo3O1OQOch299aad2o+s=
+X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
+Received: from [134.147.40.36] ([134.147.40.36]) by smtp.web.de (mrweb003
+ [213.165.67.108]) with ESMTPSA (Nemesis) id 0MZUXF-1h4PRm0MWr-00LG3P for
+ <p2329669@yahoo.com>; Mon, 29 Apr 2019 16:10:11 +0200
+To: p2329669@yahoo.com
+From: "brucewayne45@web.de" <brucewayne45@web.de>
+Openpgp: preference=signencrypt
+Autocrypt: addr=brucewayne45@web.de; keydata=
+ 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
+ 8RNuhi9qShTp2cog6/yJmAtX
+Subject: Inbound for Yahoo! Mail
+Message-ID: <fae035da-799c-6dd2-7842-99a73787032b@web.de>
+Date: Mon, 29 Apr 2019 16:10:10 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-US
+X-Provags-ID: V03:K1:pSviHAchH+2AT8LlK6RLzHEjHlIzVm3e19YcjtnNlFrTER5FFWp
+ 1DHcnMr4mTMOP36dfmyVKi1uIZG6H9u5pXuqSki5ytGnsA0Py/MleZe6s6f91sU8mFfriam
+ /K//RVRvTUQ2sp9X62jJW0mNtp0YdE3MlhEhkg/zDWu3QGauefxXqafCZsZNfMaDTbYMM3r
+ lTygrAHNd65+Axbw8IGaQ==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:ssdgqQL6Dng=:iQElepLrCkDELNKhHRiokO
+ IvaFe1WXYne/JTby7sRPq9OHEj39sYh3KmKRBeUDPgpSuBx1UvmvSzoL+fMlrlwnxYhFnWmHy
+ yucVStZkwPqkpn62GRqTJV6sge1dQ4wsxY7bPjbpv1DwsZx4OaWNwKdc9COEbsL34DkRGzMQk
+ XKvgtobUUWpg/PctzEQT/uBqxQpCP/OIG7LQXCFjVlGwcR70Gjt0Re7msacCQXHYj/VNPnwd8
+ jWjX7iRgejmy0jJZKGJLSEUXLTFXiQsoneoCfuEMeye3Alw6E2UjaFRYJZMxHA97sjL1tFjG/
+ eN8Y7k+kOt+Bgyoh53okEX7DNo/6CZtrRs9TGOqWpRU+Wf1qgyCkNYfm///QrxArViLrI1HKH
+ TVdYmo521fH2L37tqQjUKpL+/EsR3FrXSzBWVxDO0x9TcwSLX0j0vNcgWtduRGDNaqUT89lXe
+ 8tqEw90ds7+KmRljQwZTC1jF25HUmwhhIlqNQfMjSQ7Knumxwd2h2Mb0B6Aynzy1welOk3LLQ
+ 4KNXxKAp6JYKTDoKvle6bvX5JlDPXSlmXu4Fa58BUENugpoxsurEF1oYC+oxlVIt+5I/JqwyK
+ ZPRbCm7XcYCwymibG3d8Rf1uwmwwTM5HfSPx3TSCfw+GgUCZwPXUtQnNDxZCPvPVtf+dFHRhq
+ lFX//HtedbG4FPGntbY8jx3+n/MDAclDemPxPTj9gDzs74En+JwI9SPA/9h+Wsrm/0/p3CeFw
+ iT+Uj0gU+VyByTMwh6xqWxt8T8KLcW4jNCMohvkdg8cM4DIshfIk6i+JeawDBXZlMNDp6uE74
+ gnkHYTddi51Ls/esjyuKq+4nzFW9haSGFLou76NIa7217jnWfzOxsL2NdZZ+SlTfg9uLgMujQ
+ m2gs+LQxsTlu3pXn7PR7SsePS8Q4YQB57+d8Nej1PI9/NztIBH7PWivcBVaG8LEm4nrtDOR7E
+ 1Wz2fB+k6LQ==
+Content-Length: 24
+
+Inbound for Yahoo! Mail

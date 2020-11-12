@@ -1,0 +1,136 @@
+Return-Path: <john.10179@gmx.de>
+Received: from mout.gmx.net ([212.227.15.19]) by mx-ha.gmx.net (mxgmx117
+ [212.227.17.5]) with ESMTPS (Nemesis) id 1M4qoZ-1hJDU12LNn-001vzj for
+ <john.10179@gmx.de>; Mon, 29 Apr 2019 18:29:42 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+	s=badeba3b8450; t=1556555382;
+	bh=j4H58ebo/lbSYwnSDyTdkJ0QuipRlYEKPfInla4S8mU=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=jdevTl+dM6aPI8wk8XvSS75ssrcaWwUC7K3noFqyW2NzOb7yC/D7AhGkIWFXC+Tm4
+	 NIHcwsIGcBsZ3Af5FnueTUp+9glMk32z0830Hez7RCt31V/kjr3Siz6396OaMmcOe3
+	 e6SaKyKk+L6JrJkgzc5dNZxJNeY5e4oduxF3VZbk=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from [134.147.40.36] ([134.147.40.36]) by mail.gmx.com (mrgmx002
+ [212.227.17.190]) with ESMTPSA (Nemesis) id 0Ldq55-1gu1fZ1FA3-00j4Iz for
+ <john.10179@gmx.de>; Mon, 29 Apr 2019 18:29:42 +0200
+To: john.10179@gmx.de
+From: "GMX / Mail.com" <john.10179@gmx.de>
+Subject: Internal PGP/MIME
+Openpgp: preference=signencrypt
+Autocrypt: addr=john.10179@gmx.de; keydata=
+ mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk
+ IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp
+ V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9
+ mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH
+ 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB
+ AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud
+ yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO
+ gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke
+ EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb
+ azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R
+ qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS
+ nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E
+ WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU
+ KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s
+ vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd
+ v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG
+ 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB
+ NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H
+ /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K
+ vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/
+ NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O
+ wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF
+ cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc=
+Message-ID: <cfcfda5b-fd05-3bb6-4b8a-3dd5869e877b@gmx.de>
+Date: Mon, 29 Apr 2019 18:29:41 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="E3nYUiBVxtFpNMbve19fGi1DENITZ5z1V"
+X-Provags-ID: V03:K1:inXG2Sr1H7cI5vGv3f98YCui3+dFsCQrJKuiTeXcrUJuXUPIQm/
+ lveMvetl9dk0ppVHzF3olCpN4oMLj1g24Yu3sBxNvcvRBleudVX6r6S1m1g6+SNoIZf7qbu
+ 3QDG/n68TXNL8PWv7i72P9Uc9fgSNwsBi+VoMySqGOoeuyvWEUJvG/0a/1omaGVP6uYQaAX
+ YJAKRagQnikfar82DS7og==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:RoYRUiYKtY0=:VAzQ2YcGIwSJRMrDfWLROo
+ z5KKiOf+F9IBeeIeFk2jbrz4ORL31TsyISlRhGYMkV9lsQDRi3KMXbE69f7uQOb3+bO2hyrMQ
+ D+EJO553RFc2zN/KPNMZkuvX/YRL5MYeQVYT9reeiPH0ZGWTEuPjWDbmBRVIU3Bo5CxIpxIJz
+ bJQEpFPzZsYMo5H5ZO+Ix5ZqDiaON20gRHclIgquqjeXOmOUXp68tCnWeuFxAyeqNiYsbQn9m
+ 6h1P5ueREbkL0xt1ilhiTgrwSpt7xGxi1CCCGm5T5Ldvm0YNXmNuRnR9pevePW/0bpY4v2rGK
+ nU3mjtN3d0aovqYmIsf7U5ZB99wKswt4wrLtgyCkGQytn9cN0DAtxcbbV6FUZrtjHavNFW0z2
+ h1BP8x5FwySaIJQo+R3bT0vgLSpQksf1NtyW9mMq0UscIAE/p3K5nKLefvByzXX+NwhWJxV7S
+ aYoWct+VyptYj1D/gm5FkBFKSSP6lIj6YzRWY3uEc7vuOSU5In2qema+tuXP+fWpRdrQCI5NU
+ UHKB0I4K3BZcqAHP6Di7vq7PrfBvtGd1YJTShdUWGG/2RJsDgjcswLpVZULDXJUsNzak8rxXk
+ XAdX2ItpkXaLob/gcrboOLSvfcx2CIZeQaR54uLC3zdx79XTulJ2oaCvpXwMHbgpaW+Z5Xpfq
+ 6fPo4Jj7OjM31YZPo/fjDHcL8Ry1h6Ih4/Z4TuC18RLUYQflPcON7r3API/Nz7oC0r/85yIju
+ 4aaHf1dPFjSsh+CfjSoEw5NPfzhAjheKH+c40vGjwy+RZtH10a/tpqh/wehb295pVjOUo6zTr
+ 3pMsWXpHE1CED87NVd2oBrWLwjl0mU4ON2EfEXhzjE2Iu90fRKKf2jQMircyispQGw4iMSKU0
+ x+QJmHNPwoUVY5xJq6qISXa3k+EhAN5WzKz6CHyXk7RZ3Ied1odmgyzWWfPOBd
+Envelope-To: <john.10179@gmx.de>
+X-GMX-Antispam: 0 (Mail was not recognized as spam); Detail=V3;
+X-Spam-Flag: NO
+X-UI-Filterresults: notjunk:1;V03:K0:hSVMMkDMwcg=:zhWaEVaHtm9RYnHI/8IWsR2vgq
+ aBD8xsSSRDPdQ1awr1vtbNzxNWOT30go/gabZCO0shbP1pPnq6y+YFGMU03WDGtb4PqnFmr+B
+ dwkB2XRULKj2lRFbklb5/6OC8eOKK4KhqlGx9R6edLmB5jWfg/ShdpCiXICgySpE/1FUwZoVN
+ gIQ4fu7fzqgoWGgRySoWq5k/mF1DCEk0m178i3BiRvJRSZrotuUfoHngKxSwzGdCALstn8Yvu
+ jWeLYGB+7d9JNOYKAZwZ2lLWHcQoeUmeqMZksDdIADXU98xRJkEnS+YQlwbakU8eqfcwfNogb
+ NrbPXC+Vrw7N2e6deZU6tctpkAMUQnCqDHZ9l4NtwHBEVl5VlMMC4MmuDtB8tfk4TNKq6UWR6
+ ISwq0760jnCVWQhVLuzM2XOpKLUjr+DWKQDJ+8Nmu1qQpGDe9wDUeTWoYM2BelEnQFBCKortr
+ z8Bj3nmMwYI42Lx5kxhStsxQsS0cItIWtLHqMuMZSMtIA2qI61xkP9vyeulx+GdRgIEKzAzzt
+ Wv0vW1h7dyotJiYDDJ0QgKalomJgQEUIiLDDkVkUn9t4E4G36Dwce+xR5UQJh3ip3nsCOLyD3
+ dLx/DNwKt4vcbxMbcQZAUA74LnWFb3rMxt3t8HR5rLV0JK++19c1jM3DRBT9KuX2+jOw1MjBl
+ 0A+tDyeYASKQ4o3lfI6rVZLpkNbEkY8XutzODkvOevRxfzvaWzK1+PPjYhmIAkSouV2WEE9pN
+ SW0VFYZkrNRIMi5iZb+khugEAyJXLAqD2Qzi6R3pDvnKXRebup/vd73aOE3Lpjs7CHV997zPs
+ kSVbfoFFAGW0x7k66BGBi69ZUPXL9ikJbahjw/zPgCS3xfHoMpqICKtPay2zdrA0M+Tq9ADbG
+ PzFyH1gcaaK69chHsoADK3a1DYkFSWm+bbExZsH0SxYSXF8pX3pc3KTmAmivWGEZ8So7mGeFI
+ WgLLOiztsK0mG2IPK04eswufvgC3PuIO/KYBQ3ZVP782CkvqJkD80YrwPf/BxDy3XsZAa7C3B
+ MC6OuAQr6USvt8Sz8jBzcTTLIpanX0aRMkzCZ+AAhSFs7QVAZnjZBQ+frbw1VVGoXOjdM5poF
+ 2bqM6C+oJRYaM6TrcIFvjNYzHofySp/FX2sIecsoZKCMA+S9kYXfDXau+ZLkW90IBE6SLUrfY
+ +tx1yBnIKvLPmRH3LkFQysre2Ff8CHKWqz2nhbh3PQCIrrgHGbfz/rquRbhucQm5de4OhTOer
+ Ix6mF6947X6tzxbLQGXylJh8siuc4w8/CZdvSzivhqkDKVqfbXGnL3c0e77ugSuQG75/2KsFd
+ JU5hjzt1n2rvreewOCBHDXZ4TXym1LgvZMtjhGriqD4sJFqqk0AVhr7Ix/gN5zzIOJAPvnzoJ
+ MYgorjfmkuypXn+IjfPmp/vEmIZXPx6yHta0UDacAU6ClE7s+dirN8pQ+NJspJoOIx35cV99S
+ Z+huCIHIutk8BJCcz7kcKsy87oXOHha4TSf3vSqHwbg+9FW0NfmCn507sEXFVD+RIz2wwPood
+ +AMFw9GTWAacEWthnvTnHODUU9am3pduexEMp1xsdpr+oVJFfJaaHSFZkk00L3UCDdClLJrrv
+ N/wncBah3tBi/PXpuz2htVmYnafsTmDMuNHwNsc5mC068egbGlytw9yPERQHmDZg376rVG/SS
+ kNaeY3YWMxWfDZnF6f28SFCcwAh/FaE8/5eOYjxHzO4mIvSrdcRYUZh16cznHAyUMUwNySI14
+ mnKmPtqBXvHJDY2iaigvQKSTK5r1a/2roc6o5tEbKNtGdqI4UqjmP+kMNRR+8RRaTlUWzqpci
+ thahnWCxx7JfGeyiNF+fBUoSd7n/gYDnK4VasiLJ2poutgX4nJEhZugZrp6ifccLwoplE8pkl
+ UZFdzFkN5u7UQwimh3fdyHW8+G3UIypbrFNTiNFm7ZT0/ewnG8UDzSItrPeZSWhpCs70cvnvH
+ Ghhr4PTGyI/h+3JffcQpr3WoLmnlY3fcpzlKotgwvfLYHWskWgyRAf7pY6XTgiC50cs2nkyaA
+ ==
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--E3nYUiBVxtFpNMbve19fGi1DENITZ5z1V
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--E3nYUiBVxtFpNMbve19fGi1DENITZ5z1V
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA+XhBIZl3+i5AQf7BkgL/NZD+gio6dNE5n7X8Lp4MbHkTrnRjySIOmjJkXS3
+znzJ2CRZPXTO7oBTBNnmZxeasBQnotQaGHGIMg5B3ofQY8n3raSoM1CF5rwuliab
+O+GCHzQrnJ6tRoaWxJS5A7xabt6uGhFZKhO/Xckcd1FxCmMAgy7EuWCKI2Z3k+rI
+cDqLyn6If9baqOjf89M5NCdDGVivO2vSqL8nAydLheDwNtyPxMQxu21jDPxjMVkJ
+iAFuWiknYi036B/HvkXhwgeDRbmw81ubA89kVp8KciJcMYd95MOt+FI9CRQsiGW2
+2P63tyLbeqvH/KqivsttczfGeoS0AdEPo9uYEeN4ytLAqAH9wPY1bDPwS7CgBTx0
+aor1XuALC7Fe3F7kopA2Rzb8a3v0TodpSnjGCFgarmqwAkePJ3KFu9HUUuJI2B9q
+3xfyhc9JB7DmyEqx4PWGcZ6m2EZS2+2eCLDsRnnDDBsNpuRIWwCwALUATSclzcTa
+HFXAQ+jV0OKqDlT4YNWVIN4qzK6bJFcBANB1XuRKQdtRQxNyHteJ984iVYEic6/A
+0kyvUbTCEllAOSx41rivItFuAkZZvVR46alIGRS2LAL1bwbhc4CtpXvIA4fJo5zd
+ogXwDpGDAbHmmESrx7KS9yb3cFmjoNGox1+8mutSmQcb9HDMuuVnA5Mn92eU07jq
+mUMLqpzij9TQZlsIks1AqmQQ6+MJeKZciZbzfbeC6ToJvfWFfsrjp2HBOSb5DzxP
+feExOZV+68ToBnlit5bwUHV23NYg10vEJge4Pd92njWpzQnlXphk0tNqX1DCNfnt
+g+dPy1wADHo1EQ==
+=Ge2s
+-----END PGP MESSAGE-----
+
+--E3nYUiBVxtFpNMbve19fGi1DENITZ5z1V--

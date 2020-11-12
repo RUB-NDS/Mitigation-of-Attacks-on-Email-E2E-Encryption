@@ -1,0 +1,63 @@
+X-Apparently-To: smith_j46@aol.com; Mon, 29 Apr 2019 14:06:50 +0000
+Return-Path: <smith_j46@aol.com>
+Received-SPF: pass (domain of aol.com designates 77.238.178.132 as permitted sender)
+X-YMailISG: Tcz.g3wWLDsIIJOOIsXTkdrJv7CX8IQeft.knIjeSLvFGFwv
+ igtiVh8BMVc2xVJS4xv77lQCJDxEQ9s2hLZePbiMN3vEBKJzZ9LpC..r3AWt
+ rlj_kbqt.vVvl3oWwqSaIeTFg5HjXjr0eOuBKtuDDm_iA.lkIjSYOCMcmB_k
+ 9A4oY70n5P7Aiz7ULM.pfrgDYUKhGfvAugztkiVc70uHO_sjTbC7h.PwG78k
+ XaCmvOcFMWp.2oLDmU5IHlmEx9am3ClveUVofRn7aYHKUiQbhWBmq_XPfnHY
+ LmA3KIQ7uun5.l0XrTzV0MfwgX2UwNsZ1LX6hlwT7pGTh2VIkEdjN8ojKOvd
+ JRz0yHaG0mCpLM8yGPvlHqeK6FIZ4jXknLCQyU8BWESRHgTt8Pn7Q5zpTaD9
+ bLOd7_fRbPLkJIn6jaQleZSbhTQO2vx7U6JHFfKrOjX1iA6Eb82RAqnj0Mpm
+ kdZOKwe5w8s6BpaK.nyXNk6u6.J90ksvb.yY3zF6eDps7bdDkjDn9ZGi.Dm0
+ 3aHJFYLkKjDKpj4kLcIrmvzY9bNmhKd903Dss.kaEUg71o.lwCYWqdGAauoq
+ DrtR5HhkcmzPrIc3AV8NUwLIzmrAllzTIIOq_Tpx19Ef4yQgJm7lTbb1.W0T
+ 8qnDspk_v._jWRTBT.l8_hd_OnoixfAY3vbm4ETAPAZspC48zCBSSw4s09di
+ KIaiNounMpxsZB5xX8EPXcfaeyUTvUC1AEN8jeOewkMQ08LEkedDWZkJIoQ1
+ nqHzlYucxizxro0UCrcF6i3aMBHrjL9MOhRG4fwRowkhM6dsb272fu43MlrJ
+ cRXN3hdJ1tQC0pyHX.qEJJd9tQDp57o79nAnUD9E38IcDx4FoISTjvGH6Klt
+ 8ADl8IL7.jtm8WulaAArE8K1vV6ZZDXOESr1ywY7Y1xzWfSk6ZdhrsiM.ZMt
+ WAATZJYJAuS8ZmGCw9KcqWRKR_.E3rQmcNTRnyYpvuRcuBghRreb.9gNxXuO
+ 5YWVJ1kBK9vVId33fxDE2xMRRhVUiw6bsFE.EQQSZqtFHm6X63ikex89La.h
+ VyaHUm93E2VXLF2f
+X-Originating-IP: [77.238.178.132]
+Authentication-Results: mta4023.aol.mail.gq1.yahoo.com 
+ header.i=@aol.com; header.s=a2048; dkim=pass (ok)
+Received: from 127.0.0.1  (EHLO sonic312-45.consmr.mail.ir2.yahoo.com) (77.238.178.132)
+  by mta4023.aol.mail.gq1.yahoo.com with SMTPS; Mon, 29 Apr 2019 14:06:49 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=aol.com; s=a2048; t=1556546807; bh=tn294bOb7qGneL5fORuNdkszF3zVJZLUJ9LCHD1fRqg=; h=To:From:Subject:Date:From:Subject; b=AWz1p7qEdghgImJJ1KsCHjezWSsqEv0myn3h1QtPMpnTuPqI0vo5MmOPo/85QWGvqcRF4beI2PpjBK8hIvnOkBkgxF2svRma1Boc+/aj6iW2vnlqbwnJCOoHf+bMKmKO75DzLXRTBS+fHJZqEbqFeHwg4poeTQjUyGxmSD2Eg79pzQpqtiK1TjD7ydbbG0kqpbWYIRVNKpzZU8UyJ3vvS9WkZa24lTVOVJGgBsI1CDLYdkyb4pSXNml+rTy3UJ38RLVmQO6apXKC674wf+9a6p7q7WEGMqc9PabLyNIB0oIVSXsm8GB6mogA6BjLErDp14My7Wl3fK4RZUrnIFaRMQ==
+X-YMail-OSG: E_Cl65IVM1ldfjbsNxWxwJ_aivKmG5TlaSFrBmEJISTDECBzD_pRqR_z_qJ2wN9
+ oX94bjbyupg9M.6GpvZc87yDvmQVJ6hao6uAFbudO.P9FWk95UV1W5nXnFx926M2gudn9rs5lSoL
+ Vj.LNyb00Q3bsxWfJpNO0iAypw5UGQ.azjPBrjnigtDM6_Fm4wSRcsgnmrT1.aLL5PjpsqQdm0o9
+ 3t4IToltjVNfWatXkFR16ZwIAsHFyFZxYKZaUFP4b5Mh6utZAoZT4MBcGcYIhlPyCLIYJkZ601Xq
+ rM3MjZjPFBl3g7BACrY0NqnVqA2ri0CRORW_Rx7OtudZbtjnx8fD5IaqxFnuT8qmMTeKDlimNS0u
+ 058BWqMKimV6O1HfYAhso2REOkVwUrcZoTC_xCeh4EnjklQY9UhxWYUTTAN6pFIXa3AUMk1SyZZH
+ 76C85wzUxonBBm.VhGPXW8Yqbm5t8je305kZEf5G.1TRxCzGBxpIbFtKEanB8yG2yegjKw1nOi5A
+ F00ftY.DcCIZMaR3xURqgoH93UZf8CpGUhFQblyuumYXN.x7gb9SRNasKUh3NJYXu0LLUT9O.OpK
+ gjLACgXWtESQoKwk15J3jcyQB7M2em1J6esI4qzCIyoJB4wg8w6OL1eyMYlwhIzRyY0nqrHV4QtR
+ 4fMF.iNRa5NIp8CpPWqjaLwYgEZnwoNT7O3zIsLrSEZoe7REy3PMP4n2RCBBLGjuwlWNnhWkOa_9
+ mOlkBiSkIqEPajD7_ZJJ3HYvbEhiqVcqgRqx6RgWAOxJe.TzGBb1qBMfG9u60ozmttHv2qjbzRMX
+ Xq1L_y.vtdVp1bb3mPIAAxFT6w1V_J2CXbuyMADrYQtLkWG8kkwkodtWFo3Lw1fp2VtlelxcE9BL
+ xJsZct1JP6k6FB9VsdvKqoTbKfBhzUbNLyBjckd8IGSitvg1wzpjAYyAPDu3fsjIcDCx15cXhr5g
+ Ud0pAygMea1anpZsmW1p0PkcI9jyTajRpZO8scHt54LZ7uBFwrtZDxXF90A_.1d_M07hRqYpp3al
+ V2K5424jcKWfLnmzFCNNcd1HG1BEuYyFMtCwk6.bVPOZfkepUhLgi.M.wB5VJYuHqIsFfCXnypce
+ To_Q705uSzikkV1sTufd66mMfIEgFcYeKXLXdeHg_zS2.x6kx.sTzQxCwC06C
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic312.consmr.mail.ir2.yahoo.com with HTTP; Mon, 29 Apr 2019 14:06:47 +0000
+Received: from korolev.nds.ruhr-uni-bochum.de (EHLO [134.147.40.36]) ([134.147.40.36])
+          by smtp417.mail.ir2.yahoo.com (Oath Hermes SMTP Server) with ESMTPA ID b790a2ff844f9a1dcf38c2a0552cfd30
+          for <smith_j46@aol.com>;
+          Mon, 29 Apr 2019 14:04:46 +0000 (UTC)
+To: smith_j46@aol.com
+From: AOL Mail <smith_j46@aol.com>
+Subject: Internal for AOL Mail
+Message-ID: <79a32d70-10ac-5e2b-25c8-968fb136e352@aol.com>
+Date: Mon, 29 Apr 2019 16:04:45 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Content-Length: 22
+
+Internal for AOL Mail

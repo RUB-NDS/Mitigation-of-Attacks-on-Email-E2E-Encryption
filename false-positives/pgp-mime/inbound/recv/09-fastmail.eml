@@ -1,0 +1,222 @@
+Return-Path: <brucewayne45@web.de>
+Received: from compute5.internal (compute5.nyi.internal [10.202.2.45])
+	 by sloti26t07 (Cyrus 3.1.6-448-g5cc1c91-fmstable-20190429v1) with LMTPA;
+	 Tue, 30 Apr 2019 04:52:35 -0400
+X-Cyrus-Session-Id: sloti26t07-1556614355-3818425-2-12349358827240087747
+X-Sieve: CMU Sieve 3.0
+X-Spam-known-sender: no
+X-Spam-score: 0.0
+X-Spam-hits: ENCRYPTED_MESSAGE -1, FREEMAIL_ENVFROM_END_DIGIT 0.25, FREEMAIL_FROM 0.001,
+  ME_ZS_CLEAN -0.001, RCVD_IN_DNSWL_LOW -0.7, SPF_PASS -0.001,
+  TVD_SPACE_RATIO 0.001, LANGUAGES unknown, BAYES_USED none,
+  SA_VERSION 3.4.2
+X-Spam-source: IP='212.227.15.14', Host='mout.web.de', Country='DE', FromHeader='de',
+  MailFrom='de'
+X-Spam-charsets: 
+X-Attached: encrypted.asc
+X-Resolved-to: john1018@fastmail.com
+X-Delivered-to: john1018@fastmail.com
+X-Mail-from: brucewayne45@web.de
+Received: from mx3 ([10.202.2.202])
+  by compute5.internal (LMTPProxy); Tue, 30 Apr 2019 04:52:35 -0400
+Received: from mx3.messagingengine.com (localhost [127.0.0.1])
+	by mailmx.nyi.internal (Postfix) with ESMTP id E4B972007A
+	for <john1018@fastmail.com>; Tue, 30 Apr 2019 04:52:34 -0400 (EDT)
+Received: from mx3.messagingengine.com (localhost [127.0.0.1])
+    by mx3.messagingengine.com (Authentication Milter) with ESMTP
+    id 830B3A23C03;
+    Tue, 30 Apr 2019 04:52:34 -0400
+ARC-Seal: i=1; a=rsa-sha256; cv=none; d=messagingengine.com; s=fm2; t=
+    1556614354; b=RP+Sz3Cd+fFsqFrDsLs5DrgMl17KuPGghdt0XCLbT3P0eB9esG
+    ywJpmqcPOTOhD5SR6L5qq7Re9qQ4cOTGbwdIa07eD9VNHidr0EiCBnjf1wwoGhtA
+    GOrxguXoWr3LEqQ1+OMfiWsVOPg02r/UfhLzbhegrcCRdTR5xp8J/bOy81prnKV8
+    lIhGgA0648FqR3ZwDGdoBpHY4zFRH6VhvNVnbC37OEX5CeNEfkoHeKqvb0470Ibh
+    HcDt8C8urHltlQ18Oza9I5qi0OkELefDGEkSzIUasiuQrNIRRJKK/TOYqrDtxyUl
+    YKyqgQ5UzgSmWQ3KMKGkfABK6uYgpccwzz0Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=
+    messagingengine.com; h=to:from:subject:message-id:date
+    :mime-version:content-type; s=fm2; t=1556614354; bh=DApozdSAncq8
+    j6zPu3MfKSRHwNGNyj9gvQyzuYEtbRY=; b=0PMAzFdUuHJIfWOJrN3TOGORVewn
+    SD6uD072OsRUmWpEQiJY8EODvfNWHtFI3OGFvIa3Ha9BNR9UyrMJJNNulF6wdiwB
+    1ZEuwtQAOvqfJRr0uJ8N31E9R5P1s2yffeNf2pzDzVXB3U/iwN5hFMz2UC2dnR8p
+    h3cdUjMQsJ9jja8la8gVq172qOoybYuR+KJqDhVZ9nfoFpqo2L360sOuCvOpbb53
+    27Svp2FB0ttjQOEZuqa9wIiH7Xahei0Zg7eiZuZTfKUzBOkp6kmnFv+mhl9OkQBh
+    TukVrqqYS8MbwZTJYocZSF5KRrUrj9fBqB2pRwWHHMNlv/589SLY5g0olw==
+ARC-Authentication-Results: i=1; mx3.messagingengine.com; arc=none (no signatures found);
+    dkim=pass (1024-bit rsa key sha256) header.d=web.de header.i=@web.de
+    header.b=q4N5N22Y header.a=rsa-sha256 header.s=dbaedf251592
+    x-bits=1024;
+    dmarc=none policy.published-domain-policy=none
+    policy.applied-disposition=none policy.evaluated-disposition=none
+    (p=none,d=none,d.eval=none) policy.policy-from=p header.from=web.de;
+    iprev=pass smtp.remote-ip=212.227.15.14 (mout.web.de);
+    spf=pass smtp.mailfrom=brucewayne45@web.de smtp.helo=mout.web.de;
+    x-aligned-from=pass (Address match);
+    x-ptr=pass smtp.helo=mout.web.de policy.ptr=mout.web.de;
+    x-return-mx=pass header.domain=web.de policy.is_org=yes
+    (MX Record found);
+    x-return-mx=pass smtp.domain=web.de policy.is_org=yes (MX Record found);
+    x-tls=pass smtp.version=TLSv1.2 smtp.cipher=ECDHE-RSA-AES128-GCM-SHA256
+    smtp.bits=128/128;
+    x-vs=clean score=0 state=0;
+    x-zs=clean
+Authentication-Results: mx3.messagingengine.com;
+    arc=none (no signatures found);
+    dkim=pass (1024-bit rsa key sha256) header.d=web.de header.i=@web.de
+      header.b=q4N5N22Y header.a=rsa-sha256 header.s=dbaedf251592
+      x-bits=1024;
+    dmarc=none policy.published-domain-policy=none
+      policy.applied-disposition=none policy.evaluated-disposition=none
+      (p=none,d=none,d.eval=none) policy.policy-from=p header.from=web.de;
+    iprev=pass smtp.remote-ip=212.227.15.14 (mout.web.de);
+    spf=pass smtp.mailfrom=brucewayne45@web.de smtp.helo=mout.web.de;
+    x-aligned-from=pass (Address match);
+    x-ptr=pass smtp.helo=mout.web.de policy.ptr=mout.web.de;
+    x-return-mx=pass header.domain=web.de policy.is_org=yes
+      (MX Record found);
+    x-return-mx=pass smtp.domain=web.de policy.is_org=yes (MX Record found);
+    x-tls=pass smtp.version=TLSv1.2 smtp.cipher=ECDHE-RSA-AES128-GCM-SHA256
+      smtp.bits=128/128;
+    x-vs=clean score=0 state=0;
+    x-zs=clean
+X-ME-VSCause: gggruggvucftvghtrhhoucdtuddrgeduuddrieeggddutdcutefuodetggdotefrodftvf
+    curfhrohhfihhlvgemucfhrghsthforghilhdpggftfghnshhusghstghrihgsvgdpuffr
+    tefokffrpgfnqfghnecuuegrihhlohhuthemuceftddtnecunecujfgurhepvffhuffkff
+    gfgggtseiitderofdtfedtnecuhfhrohhmpedfsghruhgtvgifrgihnhgvgeehseifvggs
+    rdguvgdfuceosghruhgtvgifrgihnhgvgeehseifvggsrdguvgeqnecukfhppedvuddvrd
+    dvvdejrdduhedrudegpddufeegrddugeejrdegtddrudeffeenucfrrghrrghmpehinhgv
+    thepvdduvddrvddvjedrudehrddugedphhgvlhhopehmohhuthdrfigvsgdruggvpdhmrg
+    hilhhfrhhomhepoegsrhhutggvfigrhihnvgegheesfigvsgdruggvqecuuffkkgfgpeei
+    keehieenucevlhhushhtvghrufhiiigvpedt
+X-ME-VSScore: 0
+X-ME-VSCategory: clean
+X-ME-ZSResult: clean
+Received-SPF: pass
+    (web.de: 212.227.15.14 is authorized to use 'brucewayne45@web.de' in 'mfrom' identity (mechanism 'ip4:212.227.15.0/25' matched))
+    receiver=mx3.messagingengine.com;
+    identity=mailfrom;
+    envelope-from="brucewayne45@web.de";
+    helo=mout.web.de;
+    client-ip=212.227.15.14
+Received: from mout.web.de (mout.web.de [212.227.15.14])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx3.messagingengine.com (Postfix) with ESMTPS
+	for <john1018@fastmail.com>; Tue, 30 Apr 2019 04:52:34 -0400 (EDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+	s=dbaedf251592; t=1556614352;
+	bh=DApozdSAncq8j6zPu3MfKSRHwNGNyj9gvQyzuYEtbRY=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=q4N5N22YpZ8mmsJYuLPmYTi6pvhQMlYFnljnSjiUFmgpuLxrL238102DgaEmo2Naj
+	 8v3EiryENcSgWt1a1iLS9lBomY+GrygDC44t4vT4MUF2hT4ihWaeqWd/+k11/vWwik
+	 PYYsXjlIN6Y/JmlSIPwAmyd4kxLYhAg4AiSqR+Gc=
+X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
+Received: from [192.168.3.225] ([134.147.40.133]) by smtp.web.de (mrweb004
+ [213.165.67.108]) with ESMTPSA (Nemesis) id 0LtCm3-1gcFyG448B-012rcP for
+ <john1018@fastmail.com>; Tue, 30 Apr 2019 10:52:32 +0200
+To: john1018@fastmail.com
+From: "brucewayne45@web.de" <brucewayne45@web.de>
+Openpgp: preference=signencrypt
+Autocrypt: addr=brucewayne45@web.de; keydata=
+ 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
+ 8RNuhi9qShTp2cog6/yJmAtX
+Subject: Inbound PGP/MIME
+Message-ID: <bb8d1fe0-c045-b88e-5f38-60f35797e662@web.de>
+Date: Tue, 30 Apr 2019 10:52:31 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="eIKWQ2Fgsy5I1mg9exMFU17v3EPavVZmB"
+X-Provags-ID: V03:K1:ef4O1xPHgRYJoKnhPG7cC//X9P6OMYO6v1PkUMGLaqA7iPMjcYS
+ JjZ8rre2YXo823R33SddQcsjTcyhkI0mfC9RyWQ0kgiZuu6aQQZ1VZvL9aW7BDWUD3SzjQP
+ XnEJLAsEPz5x41KicvCZcBdJOvzppCj6mAAC2ctiS2n29zDrDBKOi3G26bdhWn5b5Zjpojv
+ VW3GLq5bq+7sSjN35J4iQ==
+X-Remote-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:LAWwBUsbRk4=:kPM1SIaZ6GLLSL/BK3j8/j
+ DvXQXlcS+HK8h6db5/vWVzN0iJ8q8PqRXGZxG9ihSufDN5ZYnhhto7STe038Aq/T7qzQrPOmV
+ DLeIY/Tx+anIKr1Ub84YCBRisdQN+voIs9hx3jNLaTiZ/NukMgakdBe6BM7RUPAjUbVzYAtS4
+ 7k7dAbE+aYBchfQCTxyNVu3L49qgPakAs5L0br/J3THTMxtCpRLfcIEKLOThv1h3OYBVFq8mY
+ 5XZ2PQu2aJLaGu081xMeo9rysR9sLVhPhuWcSRsviFe2LLy+6WFDhTxV8PQQT0Vn3/AGzX95G
+ TIxFTX+C1JptKzYGN5Qm6sR5v3iNeTaI6zTqBCyMDNpRJyHRwJ5vwO9Nh1FJFDDsDSXGezvax
+ nrv/guCCsrHmgkcPEdNl9YbCZJavvJIJNcQPdDsYSRy8YLiU6lKH+T78uP/o6oLb02fwVY2+H
+ 4ef6sjzJJhWci5COAIJWJeQK5Uagad7PwfR1cdv5J/AZc9fZSkk1nFid5kh+lgaaHUNICeb5O
+ xUl1q23uA+eCUN1Rt1DtNY2Mb4qiI19MlZqSH5ubDzHnI/4ZlknPMyKaIW/kP9lVK2A5QJr2q
+ 7WnKfhoWQkoNZj2JAmJfYzowAIvKY0LtZHyZhK/ezspo0Oq4R/eOxiPYXNPhlOmOuvSlWxRp7
+ E6GpxwDsydVjGsqlI58letp2A6V2GNr+/2UWVCkOs4xY4rsxE+Dg0husosYEKKl2Ia8YMdDtR
+ g4HIInDvrZKxzSJXSgiz52tSyPXyrmgGKAaQUM/1XGaFtCZB874Uq1jCQeBPB8Ax5NXq84jMi
+ lJYOnkjeAbgYje/r703Lv/8VBapkvUrgVrOl8AzOaL/6zuLvJRInnFmS1SOPhzZ1PYWinFg+8
+ CVbO9EAHOsI6HPwEuER5BDPPcVDXg8oPw4hpc3WA91vuuAysaaCnYFfFV7shEQ
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--eIKWQ2Fgsy5I1mg9exMFU17v3EPavVZmB
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--eIKWQ2Fgsy5I1mg9exMFU17v3EPavVZmB
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA+XhBIZl3+i5AQf+IEVqYeS8e2RDGL8Mx+BrGVY4ll8i2YHRHzXr7UprQ0sg
+a8vNLidcFZezkSSO7o1wwETq8gElb+Dj7rXSh8b8pp3v87Rhg0x9oeKtmvzk42Jv
+Tt1Jol7MhV9v6HIZDVsN8C4f3gHMtTh866KE4p8jWlYOw2OCIMFc3T3LT/kFVlKb
+83r2v9+5be9Pe8JnWUJNoaoabhNaTftSzq+HHDLv78bSsGh9GFUvdLZwJ4UYGvut
+GM7wX8OEZtS00688JA6aNvWgUDJIbM/INLeqMSATbme8ccmOJjujqNDILPGbmUGS
+RrrmAow8cWMWkIQu55Cq0qDRbHOSQDYWIX9uEkWpAYUBjAPMfQm1K/htLQEL+wcB
+zsXOIj1lqGObY0RJEOtzH0uVkkdilx6JpH64L7bkNN14EvIpvHqM1fIN2MWm/FJ1
+0VDL9MqIwwsfyRufS0W4uUCeXPdtXt5AT6AGbpaZt6s6mtf8WSgUCN6zi2U1zUDd
+IGLVKcZV/wsGX65UAuq41j8vBA5cS9W6fRKmwZeaHUyMrB5yFcTcjif63I+CjafQ
+Gqn/yqzcqqo8kl1NoMQcgj4S0Z9rsafLcdtPu9NTCysFTKPhP5j2RjbwIH8Ds1rp
+YhBnciq/KNQr5Yx/DP8TpGZLsLFj4/SZJM3TmDGcJckw31EeAmocax5BoYJTbJpk
+AVys+jxStNs5OzpAHtfLapHKa+2xeAKWppjIrwfEupqdJjvLB1hYC7sTtqBpg9yZ
+U5Bwe9BGw7CYKX0fh8bCVtPljtLDfFpeM33iKo2kWZ4tW4kfTMJM+H0Xi3FTsV8z
+O3vq6w2sEHQLGmYdA/ImXDfQi5Zu/s3p4/l+U2yzkr5mhEt3HlmfvWovUPYNmtLA
+qwFE7Z4bdJaeUJZe/ZPxIbwtwwERtdmNAlR/htO128r6FqaaI8Jk6oA1wMGKmSH1
+We0qXxT5GSIsBBfzYVr96FrSqomoOiu26pn7Y1GjTdULDZIKgZAUblX1hPBIP0uc
+QnCXJ4wLafeO1pj8chjfF/fz2lP0s5jA9RMyM1xd28t701zONtfSHKaPNItbJtRT
+j5V3MIvq2qVnguZYd1MPiLZht75nG7t4ZED0wq25oEdiBvulyqTo5ZEcc2AWMc6t
+wpOC9xxAN8+1pSwm4l2ZZFRB0Ql9aQ1qKH8qopCB76YGXGn4YNon45TWZsAwN6cU
+R8nNE8TLzDhHf/I7VK217J5j99jmPu6eUt0/rC/s+VV8lF1gj9/D5Bd8qsahMOGE
+AguZjXMo/SeISv0diBARdZpPPgOy3sI6TkL+zvETdIZLE4W6EczDjfqp6lEr9CFU
+nj1rtQEUiJ7hTXyJ9SLvB5yV9Fp6GDJjw8YMHA==
+=4/jo
+-----END PGP MESSAGE-----
+
+--eIKWQ2Fgsy5I1mg9exMFU17v3EPavVZmB--

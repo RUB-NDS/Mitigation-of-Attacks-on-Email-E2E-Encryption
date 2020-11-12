@@ -1,0 +1,1 @@
+cat untroubled.txt artinvoice.txt ubuntu.txt markmail.txt | awk '{print tolower($2)}' | sort -u |  sed -e 's/^\(.*\)$/\1: dcheadertest+\1-1@gmail.com\n\1: dcheadertest+\1-2@gmail.com/g' > tests-headers.txt

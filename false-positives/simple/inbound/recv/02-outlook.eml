@@ -1,0 +1,142 @@
+Received: from BY2NAM03HT128.eop-NAM03.prod.protection.outlook.com
+ (2603:10a6:7:66::25) by HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM with HTTPS
+ via HE1PR07CA0039.EURPRD07.PROD.OUTLOOK.COM; Mon, 29 Apr 2019 14:10:05 +0000
+Received: from BY2NAM03FT056.eop-NAM03.prod.protection.outlook.com
+ (10.152.84.57) by BY2NAM03HT128.eop-NAM03.prod.protection.outlook.com
+ (10.152.85.232) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1835.14; Mon, 29 Apr
+ 2019 14:10:04 +0000
+Authentication-Results: spf=pass (sender IP is 212.227.15.4)
+ smtp.mailfrom=web.de; outlook.com; dkim=pass (signature was verified)
+ header.d=web.de;outlook.com; dmarc=bestguesspass action=none
+ header.from=web.de;
+Received-SPF: Pass (protection.outlook.com: domain of web.de designates
+ 212.227.15.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=212.227.15.4; helo=mout.web.de;
+Received: from mout.web.de (212.227.15.4) by
+ BY2NAM03FT056.mail.protection.outlook.com (10.152.85.45) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1835.14 via Frontend Transport; Mon, 29 Apr 2019 14:10:03 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:A4488C8E82F36BD2CB8859D3D7332D4D9FE64C72B793A2C7275535672D117B3E;UpperCasedChecksum:C33A0140C88269DE55F3F88B436D4618784B1ED04A9F96AA2B7C6ACCE83F3CFA;SizeAsReceived:4883;Count:17
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+	s=dbaedf251592; t=1556547002;
+	bh=2MZBsaabARlFRJ8PLUiM/2GZWUe82PWYQkw3lSgezYw=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=hbUQx2qc0Ehm9zLqBC8gQ7e1bWWEI0sWcE2EGkXLLYcWlWXfdi+Q8RICRdxGIlIcU
+	 UqBFLJN0v2aX13u65VhM2YB89iAgizyIShJxU7yjD0wwjoKMZ7bkjEwB6aXaT1sJiU
+	 g0nhHyz3oEBvWlPrNScngV5HJNYPrtw4L1z6RYqM=
+X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
+Received: from [134.147.40.36] ([134.147.40.36]) by smtp.web.de (mrweb004
+ [213.165.67.108]) with ESMTPSA (Nemesis) id 0MFvnC-1hWi5M0v9a-00EufV for
+ <john10179@outlook.com>; Mon, 29 Apr 2019 16:10:02 +0200
+To: john10179@outlook.com
+From: "brucewayne45@web.de" <brucewayne45@web.de>
+Openpgp: preference=signencrypt
+Autocrypt: addr=brucewayne45@web.de; keydata=
+ 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
+ 8RNuhi9qShTp2cog6/yJmAtX
+Subject: Inbound for Outlook.com
+Message-ID: <b90bd0cb-bdb3-d4a7-d8aa-0a44051b370a@web.de>
+Date: Mon, 29 Apr 2019 16:10:01 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+Content-Type: text/plain; charset="utf-8"
+Content-Language: en-US
+X-Provags-ID: V03:K1:gNoBM1kqDcLdRDdUuEp9OfLRgnBwnGYDZscumtzir7JKhWuh+Ux
+ FsyVuqRzf+Enkiwg1+0VheglzW6ICd0VNYW1+DNXbcDafrkImHuhcaIaIPyVb2g0xFKMLzO
+ IMfvtUEK9AO0ERDooEpGnvVychBmA5Niv+Bij95jiaYPH5NTty2ONjDAT8l5qgIbWF3c45/
+ mMNUVpK2FJEJ5bX6EttCA==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:78yuQpiR5E0=:k3PpMoyYP6R93y6ZUInQCJ
+ r7iR3CWS304PuAvL7LYiFWVCpOYBD1NKXS5fEg864DTxYE6yYaRo8PDDbyG7KsW7CWsVh+mvB
+ NWD1ei+CiYdu/NnuO1byMFdi2pnkXdEbnenKD3pFgVCpFltNxLP8yh4W0ce++zjAiIP0JQ0Ow
+ +oKROP5X9BLWofPYIpWuEDIVVNcW50FadnAR0x6/cpPI1E1vsj5UvxkaJsxubsZEFZFjWCJ7m
+ 6oVM9cI9yqWewxUd2HIV+zlsO7uXnvIa9hVFjozQqTp8Hp1ONfbWhSrMRYAD5wvjjXh1/mlGN
+ HkNXtxy9PecASc8V+LJtnx6BYZ23bor4elpR38fsVJYi0q0/tcThYD34kKolCV1go9PzQ0Wxh
+ OXYR/obnQoamRz330ZNApsx/jvRq32jXd0rW1exth6s+yZA1n2PPxcWIu35QdihGrQTAD8nPE
+ CXy7YVeGvC/7oVrRIFUGvofYeUDxBmFcZYQV8VvfAmpbNVpGUZGiNYxs/JE4jx4CgvHnlEE37
+ 01KS4N/QJqCElLJ2F65nkmdUfjgVjv663AhQJD56RMwEFWYv+ZkT790mBk4gFkb4ozSsOOku2
+ MLf/JyV6t9ARR+E5nNj57+hZqK0dzd2UzFLrS3TI/Z4Pd+Kq+U0sOO39LMFv4CJnP+u7+FVea
+ XUWn/jrJiKcmr8LLqjx3K5cLMiwJRHTNgzEMhXMt4mw1Yemh6eXTRZLLbBPtPmlIj9PNkgwCM
+ TNqwpZdG6fPZjSqgNtR82S3bnSg7dJ2N8YZEAGnsJTi4nVCSlt2444W6awocO4uI1Xne829oC
+ ATicqdiUZdLeoNpr5Ddyconxlk6sXIsDb3DljfYS2KGonZ0LuNJ7CuWMiM4KqF5K6ujgYG6ya
+ c9LMpnXSSkhdE4XvVA0ce2gmGfP03TREV44rEw9lUUY6wO3//t/f/RIawo/LjFXUL9eZxTO7y
+ Be6Mc8i/DUA==
+X-IncomingHeaderCount: 17
+Return-Path: brucewayne45@web.de
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Apr 2019 14:10:04.1196
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: fe437689-a380-492d-c758-08d6ccac6046
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: EFV:NLI;
+X-MS-Exchange-Organization-AuthSource:
+ BY2NAM03FT056.eop-NAM03.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-UserLastLogonTime: 4/29/2019 2:02:30 PM
+X-MS-Office365-Filtering-Correlation-Id: fe437689-a380-492d-c758-08d6ccac6046
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(5000113)(711020)(4605104)(610169)(650170)(651021)(8291501072);SRVR:BY2NAM03HT128;
+X-MS-TrafficTypeDiagnostic: BY2NAM03HT128:
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 212.227.15.4
+X-SID-PRA: BRUCEWAYNE45@WEB.DE
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Apr 2019 14:10:03.6240
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: fe437689-a380-492d-c758-08d6ccac6046
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY2NAM03HT128
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.4269013
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1835.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000261)(5061607266)(5061608174)(4900115)(4920090)(6515079)(4950130)(4990090);
+X-Message-Info:
+	5vMbyqxGkdeS6V+7VMJs1RHFQvBJzadGLQoSiB8p9hcxHwn+95T7LDhxTXtWsVBT22mZrSeA1gOMWG6OR1fAU8bwSxz3Ru1afftFnoZBeeMOhdYMtHWI5DFB8CPKT93j/aoMLirHsTvvpnzsO6UG8hfV5WWUEp7yMsafDlIxqaJFQ/yxlHqAs9YAoEvZzdA4RT4KQ0hTvolpZV2eeqq+lw==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0z
+X-Microsoft-Antispam-Message-Info:
+	BEMFmxJXM+amWPqb9BibZnQHoH0YscpwsXqk4kLT6+7GiOGz6gcly8K40KhanFypqvv7GUT6YmLg4UaCLnTu8CLwewzSLnu1tVGze/LWr2xPvjOcpd7+DY/PTo9Xjy3dAufz2+hkj9VPR39jsenHsdALklhh5O3FUoCYotZUTQHnlmCCe6Mm81Uv+GD3oWMqdam4zYJK9rauhd3SsWLbFpCrUNBgEo3ru7jn1xVskqRu8NU4peGjLk8DDZ92NSlj1yGr3IkRbdQck2/W+mCMpPlhZUQTmO/P/ZkIDe7ErUjfWuwSWnC77VCTdQIFexNAHLLJ/ymYYv6l2AhiPDbc1YC/lSM/pW7v4KEFA4WKvniE2rbYAsvafyhWTYInFFzBVi6d/D+rZ7sUjMOd1JDU1r8vdUuLi2rK7DAPQBM/+Y5Ue08fqkL5n+x5QbL8jv8NZFmMU/rOTIZeg8EX1ea5nsRfTNCDg3zEK+NC9auPQBZN4UN9RQ1vkZ1ljo2Dlc4wdc7U2ki0f5S9jYoxJD5Y7Qhza9R5gBNPUQq1xfOGFY5ydQ3VlkvGFj9yZARnraIV7bh2p4EmeytkL+IMJIQrYPOjdrqpCry0uLOlSVbEbLRjnmY4teOurX+GuTE0WDdYJJeqXEBnMpV1pyW22pUfxzRNXm5R3V7OfLcgk5gpFXtzR0oCrXxqgqar4cCXWCs8+5w5pc8SrQfCoabEwa7EJQ==
+MIME-Version: 1.0
+
+Inbound for Outlook.com

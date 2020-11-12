@@ -1,0 +1,119 @@
+From 4fce1f8cd0064fe9fc3d032dd7267eae167480f3 Mon Sep 17 00:00:00 2001
+From: DC Demo <decryptioncontext@gmail.com>
+Date: Tue, 12 Nov 2019 13:03:05 -0800
+Subject: [PATCH 1/2] Support decryption context in account settings.
+
+---
+ package/configBackup.jsm            |  3 ++-
+ package/prefs/defaultPrefs.js       |  3 ++-
+ ui/content/enigmailEditIdentity.js  |  4 ++++
+ ui/content/enigmailEditIdentity.xul | 11 +++++++++++
+ ui/locale/en-US/enigmail.dtd        |  1 +
+ 5 files changed, 20 insertions(+), 2 deletions(-)
+
+diff --git a/package/configBackup.jsm b/package/configBackup.jsm
+index 31c10673..b01d0c2c 100644
+--- a/package/configBackup.jsm
++++ b/package/configBackup.jsm
+@@ -31,7 +31,8 @@ const IdentityPref = {
+   openPgpUrlName: TYPE_CHAR,
+   pgpMimeMode: TYPE_BOOL,
+   attachPgpKey: TYPE_BOOL,
+-  autoEncryptDrafts: TYPE_BOOL
++  autoEncryptDrafts: TYPE_BOOL,
++  dcPolicy: TYPE_CHAR
+ };
+ 
+ var EnigmailConfigBackup = {
+diff --git a/package/prefs/defaultPrefs.js b/package/prefs/defaultPrefs.js
+index e40717da..e446b0a8 100755
+--- a/package/prefs/defaultPrefs.js
++++ b/package/prefs/defaultPrefs.js
+@@ -277,6 +277,7 @@ pref("mail.identity.default.autoEncryptDrafts", true);
+ pref("mail.identity.default.protectSubject", true);
+ pref("mail.identity.default.warnWeakReply", false);
+ pref("mail.identity.default.enablePEP", true);
++pref("mail.identity.default.dcPolicy", "");
+ 
+ /*
+    Default pref values for the enigmail per-account
+@@ -296,4 +297,4 @@ pref("mail.identity.default.mimePreferOpenPGP", 1);
+ pref("mailnews.send_plaintext_flowed", false);
+ 
+ // disable loading of IMAP parts on demand
+-pref("mail.server.default.mime_parts_on_demand", false);
+\ No newline at end of file
++pref("mail.server.default.mime_parts_on_demand", false);
+diff --git a/ui/content/enigmailEditIdentity.js b/ui/content/enigmailEditIdentity.js
+index 9cfa785c..ed083062 100644
+--- a/ui/content/enigmailEditIdentity.js
++++ b/ui/content/enigmailEditIdentity.js
+@@ -22,6 +22,7 @@ Enigmail.edit = {
+   enablePgp: null,
+   pgpKeyMode: null,
+   pgpKeyId: null,
++  dcPolicy: null,
+   cryptoChoicesEnabled: null,
+   signingPolicy: null, // account specific: by default sign
+   encryptionPolicy: null, // account specific: by default encrypt
+@@ -50,6 +51,7 @@ Enigmail.edit = {
+     this.acPreferEncrypt = document.getElementById("enigmail_acPreferEncrypt");
+     this.isSingleIdEditor = document.getElementById("enigmail_singleId") ? true : false;
+     this.openPgpSendKeyWithMsg = document.getElementById("openpgp.sendKeyWithMsg");
++    this.dcPolicy = document.getElementById("dcPolicy");
+ 
+     document.getElementById("enigmail_amPrefAutocryptDesc").innerHTML = EnigmailLocale.getString("amPrefAutocrypt.desc");
+ 
+@@ -94,6 +96,7 @@ Enigmail.edit = {
+       this.pgpSignEncPolicy.checked = this.identity.getBoolAttribute("pgpSignEncrypted");
+       this.pgpSignPlainPolicy.checked = this.identity.getBoolAttribute("pgpSignPlain");
+       this.autoEncryptDrafts.checked = this.identity.getBoolAttribute("autoEncryptDrafts");
++      this.dcPolicy.value = this.identity.getCharAttribute("dcPolicy");
+ 
+     } else {
+       this.enablePgp.checked = false;
+@@ -168,6 +171,7 @@ Enigmail.edit = {
+       this.identity.setBoolAttribute("pgpSignEncrypted", this.pgpSignEncPolicy.checked);
+       this.identity.setBoolAttribute("pgpSignPlain", this.pgpSignPlainPolicy.checked);
+       this.identity.setBoolAttribute("autoEncryptDrafts", this.autoEncryptDrafts.checked);
++      this.identity.setCharAttribute("dcPolicy", this.dcPolicy.value);
+     }
+ 
+     let usingPep = EnigmailPEPAdapter.usingPep();
+diff --git a/ui/content/enigmailEditIdentity.xul b/ui/content/enigmailEditIdentity.xul
+index c3db33ff..d8f7656a 100644
+--- a/ui/content/enigmailEditIdentity.xul
++++ b/ui/content/enigmailEditIdentity.xul
+@@ -113,6 +113,17 @@
+               <checkbox id="openpgp.sendKeyWithMsg"
+                           label="&enigmail.amPrefPgp.sendKeyWithMsg.label;"
+                           checked="false"/>
++
++              <separator/>
++
++              <vbox>
++		<label id="dcPolicy_label" value="&enigmail.amPrefDcPolicy.label;"/>
++		<textbox id="dcPolicy" aria-labelledby="dcPolicy_label"
++			 prefstring="mail.identity.%identitykey%.dcPolicy"
++			 observes="enigmail_bcEnablePgp"
++			 preftype="string" prefattribute="value"/>
++              </vbox>
++
+             </vbox>
+ 
+             <!-- Autocrypt tab -->
+diff --git a/ui/locale/en-US/enigmail.dtd b/ui/locale/en-US/enigmail.dtd
+index 1f881116..21d4184a 100644
+--- a/ui/locale/en-US/enigmail.dtd
++++ b/ui/locale/en-US/enigmail.dtd
+@@ -690,6 +690,7 @@
+ 
+ <!ENTITY enigmail.advancedIdentityDlg.title          "Advanced Enigmail Identity Settings">
+ <!ENTITY enigmail.amPrefPgp.sendKeyWithMsg.label     "Attach my public key to messages">
++<!ENTITY enigmail.amPrefDcPolicy.label               "Decryption Context Policy:">
+ 
+ <!ENTITY enigmail.addPhoto.question.label            "Do you want to add the following picture to the key?">
+ <!ENTITY enigmail.addPhoto.title                     "Add Photo to Key">
+-- 
+2.20.1
+

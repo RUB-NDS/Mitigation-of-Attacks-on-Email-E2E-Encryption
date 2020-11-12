@@ -1,0 +1,53 @@
+Return-Path: <smith_j46@aol.com>
+Delivered-To: brucewayne45@das-labor.org
+Received: from newvegas.das-labor.org
+	by newvegas.das-labor.org with LMTP id 4DM2JAwLx1wrEgAAAera6A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 16:32:44 +0200
+Received: by newvegas.das-labor.org (Postfix, from userid 1040)
+	id 8BCAF1052360; Mon, 29 Apr 2019 16:32:44 +0200 (CEST)
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on
+	newvegas.das-labor.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.0 required=5.0 tests=BAYES_00,DKIM_SIGNED,
+	DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM autolearn=ham
+	autolearn_force=no version=3.4.2
+Received: from sonic308-44.consmr.mail.ir2.yahoo.com (sonic308-44.consmr.mail.ir2.yahoo.com [77.238.178.180])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by newvegas.das-labor.org (Postfix) with ESMTPS id EB9DF105207A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 16:32:43 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=aol.com; s=a2048; t=1556548363; bh=3/CNd0YHG6qJpu5NA0z4dQLLjVU8P4FQDXa9Py9Gzo4=; h=To:From:Subject:Date:From:Subject; b=tCIIhwvB+uW37pin9qo+hoIlkSZPCUbMeWAbRUPQDG/MNkBebU3L9JyKQ7HWk/th8A8sLSlZpCGoQeK4IzO8aX/4xSAS/ba4zXq3wJg0pLyiuPkuEcTWT3mlTtiMHKQl4gVgvbIgpYO3pQrTMRD5rELSdMd9JpdFklI6doSys326NTP2oBeOc7yJDK/Kq4QbRMs7PacW2SH1v1J30ZXd0DolxbGjSTGnJOmCmAoVFxbBhJNlyQNI3fLk4YRoqxUM314lFSMzMqlMGW60WOGPLq+XcLK3k+bO4Fv7ImVynHZmiXkr0Z+kflLOETmS8PKpwSPZr/5o5/42YIo52tBSYg==
+X-YMail-OSG: I5ns1boVM1kQ0PAH4mCXT9duk_mTq1wduyTw3Wds4WczpJt3N9p7zOPPGD6xKjq
+ 1z323aYEbkDjjxbmae._kqJQMe0yzTH9JzrWBha663_KDiqiLZq3vtFVbcae2dJb9_4GU0LaKUxw
+ JRoq8U1dBYa0OFS8D7Gls8YEHF8FpSwg.owx3tOnu61jmlDd13vaLPfmRMgoLCfZ1yL_sXPfmzMJ
+ ZTNb_57TDR5ppLisFRMK1vJbM60vHB_qz0YrT2w6IfpGPFE2RaCHfhFYPzxMbojf9LUFIQeTJngC
+ Fl2SoZNDG3qAQQQex853PK2O.i0UncDRJcuxpV5M9GQB0uPMODZ2qmGa3U0jAWE2d4KLvy0G2.0E
+ b4rSao.ifOrk9ERWOq9iUd6ItIk4kp00WgntJ24oWHn2L4GwG7ZKm9Vn6tGiAf7mm_N4Ze7zrv.i
+ sL6gn0ZxzOahwaktYHbkIHaRarIIgTq1n9i4tbXUhc4eLqvQ7PweRj_QMtupZOeXx2WvhKw_zshZ
+ GpLgfAuX0coSZRuFPi0E1KBMfmj.C62khlTyugRq5mQ5BLtPM_.ZNxjZ8qH4p_2kJTaNSM0UC2rk
+ GAH6uqaEuv7UZq.rvxqrZMJZqrOQqOMgorviS7P4aJC_PnXuofcoUHxGepTMI5zkX34EKgRrIvkN
+ q_x5Kcp6Mq9dCxKOxpDQM368VVi7I5XaaKBMw12UcllgiC3oiM.IaauV2.wjSJ90pxBTCuYTXRnG
+ o9JyZra57WXs615g04FIpiJ5HECI7CDhYA8j7bZdZ3d6_cYCu9wCAEPrH5Wnm14a12XQMF0WZ_K0
+ J1mQngfUSI2Qvf9lYwsAkuWgAdCySddHNPHw5tLmfxOEz.uDVD6yjQui3Fp4wDtEZ.dZr8Xgs1cD
+ N5mAYsNOWcRDKAskpnonyVxfoZUHvqFJUk.jRbPnGQCHGyugscAa.kZqbEwhRFxupBoIPB34OlBj
+ h966xc0KHOIv.bk1XXPKB9jcrBmvmAAmSyKWLKveDZv0yeWJ2jJwd9T69QD_Lu85MTYXM0Jax1Lj
+ qKTEMCR53yHJ_c79fiaZH2bROahB9bDZo7PgvHs2WBLTqrH96hv5ORQAUtZrcZTd.SjPX_aKrH9u
+ xSLcgZchvMR6kr_BE6j1dTCoZdzgNvbrw3YA3xiNGbzWKDqSk_lpGfM3oGU0-
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic308.consmr.mail.ir2.yahoo.com with HTTP; Mon, 29 Apr 2019 14:32:43 +0000
+Received: from korolev.nds.ruhr-uni-bochum.de (EHLO [134.147.40.36]) ([134.147.40.36])
+          by smtp410.mail.ir2.yahoo.com (Oath Hermes SMTP Server) with ESMTPA ID 6e5955a313df3424c3445bad08c65652
+          for <brucewayne45@das-labor.org>;
+          Mon, 29 Apr 2019 14:30:42 +0000 (UTC)
+To: brucewayne45@das-labor.org
+From: AOL Mail <smith_j46@aol.com>
+Subject: Outbound from AOL Mail
+Message-ID: <c522ad91-afc3-c503-518d-ab9977d3df07@das-labor.org>
+Date: Mon, 29 Apr 2019 16:30:41 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+
+Outbound from AOL Mail

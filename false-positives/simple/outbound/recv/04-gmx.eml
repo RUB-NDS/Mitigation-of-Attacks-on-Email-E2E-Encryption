@@ -1,0 +1,60 @@
+Return-Path: <john.10179@gmx.de>
+Delivered-To: brucewayne45@das-labor.org
+Received: from newvegas.das-labor.org
+	by newvegas.das-labor.org with LMTP id GKjvBHEKx1wrEgAAAera6A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 16:30:09 +0200
+Received: by newvegas.das-labor.org (Postfix, from userid 1040)
+	id 0A4BE1052360; Mon, 29 Apr 2019 16:30:08 +0200 (CEST)
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on
+	newvegas.das-labor.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.9 required=5.0 tests=BAYES_00,DKIM_SIGNED,
+	DKIM_VALID,FREEMAIL_FROM autolearn=ham autolearn_force=no version=3.4.2
+Received: from mout.gmx.net (mout.gmx.net [212.227.15.18])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by newvegas.das-labor.org (Postfix) with ESMTPS id 574D2105207A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 16:30:08 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+	s=badeba3b8450; t=1556548207;
+	bh=1rlVDCvx1rMUIl0FfgaULjE1okRjFEPiHiJCfJ56mDw=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=hPRRS1mHmA1fLej0EjVBs4LlID1nqPp5yOoPVcUNcLU+In7yVGmKToxHfP+2NGzE8
+	 TrujonxqSuPcoBNUSDwgvuojhugUfsUFjNGpsZryoyGFv03zL1htTWTiQRWY6pJT0t
+	 A48SqYyqAkPcnFCs4CB/pNiv8o0/8Mb5hzVt9U3A=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from [134.147.40.36] ([134.147.40.36]) by mail.gmx.com (mrgmx002
+ [212.227.17.190]) with ESMTPSA (Nemesis) id 0MVe87-1hH6f22gvP-00Yz1W for
+ <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 16:30:07 +0200
+To: brucewayne45@das-labor.org
+From: "GMX / Mail.com" <john.10179@gmx.de>
+Subject: Outbound from GMX / Mail.com
+Message-ID: <430c14d5-1a44-951d-c256-09f1b0376f01@das-labor.org>
+Date: Mon, 29 Apr 2019 16:30:06 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+X-Provags-ID: V03:K1:fHyq+sdFg3qFfIH/U+uYXMaon2naCFfeSQETHNRlgVJMl+WbeiC
+ hIv8gq1ZXgG7oQeMRnZ8tfjdfFkgI5cBYd5DU0fuxiwNVUn94kzxtTLEuNUZkUfJ3qFtKUO
+ hNNgR4JbG8DMze/gEZuFWjEgcTr0Ho1yyZTPSEWe+mdSrNjmc564j47CThw3TOJoVdQW5xO
+ 19/es3ahHv05LwN0tgKCA==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:aBtcrzECc70=:FtAHDpoK4xWyuSoaYPFYHD
+ D/u2+9epQswkQLyoQWsiMhEjggDOL+IxhUfU93g4fk0KiZxbvF0DwH7eqwRKkTp4eszMcbOVk
+ 7IpA0Czyeog5/srzNBd1by0d9qf6WRbOBwupZ1B0NHEabB2WLMRY/jYHob+zcK3rcCW/CWMKG
+ dZ2UYpFwtPG0s+WAMJZ0UlzXRjjY9wPvnyqMJ87i4woFxAnPNKnYblIj4/In3teoJZRNSd3ff
+ JU19y29/bLzg495lbLQWrjCUnenHV0V7EupIohr2ht/qwJifnCKmoqgtblzdVlytKI4164PZ1
+ 8sZqK5WuPiA/7kOrZv1wnVsWoTziKfXyDp7c1wZKNBlzDcGxYDHcloLkpdSclYGx0N+1LxTKq
+ Y9th/61M3IdjcKyawgnd/opAeRRO+ofhbERGlLDYssmvvP9dD6XqeBmL2YfDC/xh0xMasmtxW
+ 8kJV8CXf8IaAhf5sPdDivGlcPSL1CCiG0qhmY7dMs8C+1DURtuyhj/LCf+G30S0cRp3mVYASk
+ ggEDK7sXl1qEhfnXW8bj8kpOhEkKbygUyy5fNU4giRj0C6lBiLGbv2VVnMcef+Qj2qZb6mzlL
+ q3iZdGrvIpEr6M56/Zg9usO+QQloeFgUrwIXFoGWUu1vDoWMedeuzZwgTx7Sn89WhruL18Gp+
+ A2nmsGV8SI+MGQZpxSKxWAL/8ZujFtWIXItpoAnU7dPBqax5xomzGsXiYpmS4GjNhXSiz7OaR
+ VA1MCVawzaqqCFShWefPV+tn1gHWpm/MHQxmg0qkOzd9OW/7ZfQgiZediLNP0mhHwDXnzQsu1
+ eW3ax1YFLfqe3L3Y+G+QFkpeCHd2fTcjs4oUZJ236HvhFdqL1RUSKimasE3xsYgPxiXRKeGk2
+ B3ca8VsIhluN533PkWK9fLxaJn+sn1Hu4N0ZfWkN3naVm4C2TYY10Gwpbw0xUKm9jyZW6jVuv
+ uu3BMMKVWYA==
+
+Outbound from GMX / Mail.com

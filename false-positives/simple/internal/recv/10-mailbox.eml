@@ -1,0 +1,49 @@
+Return-Path: <john.1019@mailbox.org>
+Delivered-To: john.1019@mailbox.org
+Received: from director-03.heinlein-hosting.de ([2001:67c:2050:105:465:1:2:0])
+	by localhost with LMTP id IJH2JSIFx1xuagAA0J78UA
+	for <john.1019@mailbox.org>; Mon, 29 Apr 2019 16:07:30 +0200
+Received: from smtp2.mailbox.org ([2001:67c:2050:105:465:1:2:0])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	by director-03.heinlein-hosting.de with LMTP id 4OLPFyIFx1yXCgAAlScrYA
+	; Mon, 29 Apr 2019 16:07:30 +0200
+Authentication-Results: spamfilter05.heinlein-hosting.de (amavisd-new);
+	dkim=pass (2048-bit key) reason="pass (just generated, assumed good)"
+	header.d=mailbox.org
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mailbox.org; s=mail20150812;
+	t=1556546841; h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=BWWsKeQ9IJaVBx7MpT4j1XIxeMECZItLRaWQ6mgF0/A=;
+	b=MKZm0Jn25TxwyXdL5Cm6VrjzsjXJmI7gNtLM7fz3L19TgFsk6IbSLLu02aFFEE87jCi3Pm
+	TS0S0GkuU6E1FnKfCmyUF21fWi8jDtVqQgdNTYWPh8wv9tMUjzpYHmKlg6QEO0wJtH64ds
+	jYuMmE6X964FCJyrvARqakbFIpZps1ZzU1r2/BFFMfCkDD/UfxK/2JaQrwtCPRB6XWcjru
+	NLqsdcEvpk0274XMIulHQ/YWNrhHZlNqirWVa/IiItpPJEC7mrHeRF1f+D9UdJuBWRBBp+
+	YflE2HKt16mr011r4479aRGCctQfA2xKY5EFNRLF1DxAcubT69QIoQ8swDuINQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=mailbox.org; h=
+	content-transfer-encoding:content-language:content-type
+	:content-type:mime-version:date:date:message-id:subject:subject
+	:from:from:received; s=mail20150812; t=1556546831; bh=BWWsKeQ9IJ
+	aVBx7MpT4j1XIxeMECZItLRaWQ6mgF0/A=; b=g0Tjo8Mm6j6DYBKat5oB2kHtoI
+	GC6lRQfqz4UyRUPsQfHS0zQUUyNnNrMIWFJHkKEMuBBYpO0OZHTcICLkaNYOYs2D
+	vbIa/ofTH+02j8wCUQsGitVBD2fTUkLD1Y8qH34Fv/xoJ8etTfkr9Mtva1NA6FeF
+	bAPU8JJRBx4XIDYHynScWPAn2jV/0zJh2e5N4MiRkroT6dtyfmzvXsHJgWSHVAqI
+	VqT82ex6JQhE6WSaq/YFdfgKfLCi0XKRllh3oRZVlQLis9ng41Oh5FLjX+Ar/oQL
+	1DOAGQ1/jTGR/vHTY/n/dd+D8VOBTWnWg3ilmoMiwHL9ZiskRMI8I/PsOoIQ==
+X-Virus-Scanned: amavisd-new at heinlein-support.de
+Received: from smtp2.mailbox.org ([80.241.60.241])
+	by spamfilter05.heinlein-hosting.de (spamfilter05.heinlein-hosting.de [80.241.56.123]) (amavisd-new, port 10030)
+	with ESMTP id DUbXryaA_-lG for <john.1019@mailbox.org>;
+	Mon, 29 Apr 2019 16:07:11 +0200 (CEST)
+From: "Mailbox.org" <john.1019@mailbox.org>
+Subject: Internal for Mailbox.org
+To: john.1019@mailbox.org
+Message-ID: <b4cb5dbd-c3ec-26cb-fad3-21942e24daf3@mailbox.org>
+Date: Mon, 29 Apr 2019 16:07:11 +0200
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+
+Internal for Mailbox.org

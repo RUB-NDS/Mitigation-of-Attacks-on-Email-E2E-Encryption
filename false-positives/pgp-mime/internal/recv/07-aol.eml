@@ -1,0 +1,122 @@
+X-Apparently-To: smith_j46@aol.com; Mon, 29 Apr 2019 16:34:20 +0000
+Return-Path: <smith_j46@aol.com>
+Received-SPF: pass (domain of aol.com designates 77.238.178.228 as permitted sender)
+X-YMailISG: i0KL8JYWLDsMMXDsnEvwZId7WMsHzVBS3pURjYCRuv0pHRoL
+ dwEpi0sDBDM0O1XGk9H.2H8KhScM61sscpsyq4NdGMDF47nqLDHhQY055lM2
+ qmCZl7xsn1G0h2fygB9xXcXrYTwnjoEqLTAF_0lfhVMe5RbvhlFUTdPsJtyl
+ R0S8IcvR3xcD5YFUpqnssdCnQPn3NWB6LHvSXx7SXNMDBaTs8hOJ8zrnAdw1
+ GZdngNKk0N8qA1qjGsiMaP9ZOXyTaW8WptCfOC9ehNsu6JVDm25gFv4iUk0e
+ uuQF9KBIw0Dbk.pnsFjlt2zY7v84T9RqFDVCSYozMwBtO5Aor1j3cItlnWss
+ .L7EgXVfA9GLwx2KFBSX0pfBcDmv.ncAyhW626J5UQGcMlwrxDthT9TW29Ij
+ NOZtmobBlHPfzGmW7X1FE1qCxY_QizOKcJPtMwpyDOiNNnhICoyPVRY5lrON
+ PaHYe7TTLY.1hdWW8Rt3AERsZFrM6OF7YFdmGpIZdVavcTseydwz98wcrsPk
+ II4Rasb_FjfHKa1Huy4uN2yprv4zez2StnCmq9wFNAl1PqD6re8vZN7a1ngK
+ 6G1Ay9XJAmYZTeziT9r6r_ElH_JLqBvlZD87J0dOolFnmfqRC1MwrHoCBBk7
+ YZLMvj7Z5z2iYqXtcFuU9oU1cqxtQAH2ed2VsvUaTH4SLjFYYdfq3r870WI1
+ yk8ybZWOMMRRL1TsvPBrtxbHQHbKLDHwGhO4C7Ry5xn8YFfk5a6wShJq5g2c
+ RHBMO0dcxHrIMqbLnqx.DND6Mg7MddwfgdfrjJBCYMyDuokDUncc52C0r8Ib
+ 5c_iSW.cOK2bc4Wy91uAAu8Qi.Zxw75BZWS1dFqZy.b3LX9X8yHYu4ls2_VZ
+ TM3GPnl2pFCSN9oPTYv3IhlFq0GFYh0lWPvMuPs6L4IMknJA5DQaq_1UKJt3
+ Pm56ZwugSQ80G.RA3Sr5DgaSPstmRVq1d6AyRF3jw0h6QaiVhNwiLNWB5btt
+ 01v_6X03AsdbgIB5nRGRGglBJZY7KkS7tzh_mDwtQZXTVvuW4KtNZRNR3pO9
+ dq.lF796uN_qgC9BgbOznOffBtBOb8eVPPxWJLfkeuViyo0MjNlGJJjkKhaa
+ SYKbikBQ.MwepoVlFPP.nGRN8a.3QkgCWxwqqEqdhlZMIOzg3q1TFKXujpSI
+ J_ZGJoB_E.3aJlJZUOdLtWm7JENuT8jF7fYXx4D1KC.algubvH4cphWgoEuS
+ 8CZRsUsNKYhbXexH6abJhIPy7Bpr8tUz
+X-Originating-IP: [77.238.178.228]
+Authentication-Results: mta4036.aol.mail.bf1.yahoo.com 
+ header.i=@aol.com; header.s=a2048; dkim=pass (ok)
+Received: from 127.0.0.1  (EHLO sonic303-47.consmr.mail.ir2.yahoo.com) (77.238.178.228)
+  by mta4036.aol.mail.bf1.yahoo.com with SMTPS; Mon, 29 Apr 2019 16:34:19 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=aol.com; s=a2048; t=1556555658; bh=M3/SnuQ6j3O/ok6tt+3bkvBVPXu/BRmuyieck6k9Cv4=; h=To:From:Subject:Date:From:Subject; b=P+yrglIVPiFeJs8zgR+A56b2wxo8LkHN57xRbekoMoyWFarCk6Z3nSGV6SOoc3uahNzdeHzwPibAoJQ/tChi8ZYcBF8SiL+TsqJ/Azc9LcvVdqorJo4WUUDlTSvW+re0WTNeaADT+Mo1EvMhIhNk4I2eI3JHkMltYSxFZD5NYEtlMhi8L+Rd/XRyqO4UlDHbqhA1Ce7I283Dw6CfMjIlgTzVjfmte1UMNBzdzGelWbcI9lNKU57QXwMczetFXCbQEKqIxTU1VUleCTXj6rjO5G42aYP/ia1bY/qCIJMw6kCTgZXmBXg9O7KY16yTWSGKBLIXUhSqBlQz0mCpHVFe+Q==
+X-YMail-OSG: XTKdd9MVM1mxF03WsfJ9FhAQEw27oDnjGtO2nIsMyWI9dOfiKjEfBnNYM3mag6m
+ l2Lyfw.tzFHRLZsGCRvyqGFA3CAwBJjHdHmnOZFh0qsDi3WX.XyyhEDLyNhqDv7I4_Ck8losmL2V
+ t3OB7gF84igIGZdlvqzJUnT_4V.HgdBqKNGzI1U7hbE1j1unJ38RBJlaWg_rlhHiVVgelOnvT0yJ
+ Cj3jpEO5CYgytInpqE_8ZEBRcB5ByoYYHuAlwstfs7W8JEnkri.11N8k4kdMuGnMZvmgyhCN2WUW
+ Mme4qHNilkREA8UqxJnBce0LYBSS7IBKch8bTDVYQ9F.xFV96AZ751TThYHc91VD1hD556G8qO_L
+ 2JjEZiEHKt3TSlQrgBVmuicN0pRTsSimQ9EPgrgdsXksr27pfV.y6b4WhghJsa2YWKkZlBBLf5gX
+ 1uVt8P3L1__VtGM7aUeLUhD_nK.tK0aDWi7MVFM89Tw98UvEcIOb3e4l3lIsQdV4hHg3qF9.6sI7
+ pnRvDBkLA6K9qILvPhbpUF4IUiqaHRX3vVPvlGukXzYcFVGE4v35hTNh.kUpCFEfVhXfqU8Wbvi4
+ LHop2bpXyIcrtroX.PftMx3aISXLaHUYpAi4FUKpXqvs1ghYHAWJwFmBs1xtukLKhmX6sbno9N__
+ 6F6GZEb.zI4L1iV36QjwM0r_GZbrkamv3ItsabGdWXWTk6AMobgCggZPsiSm1EWzcEwqLtq6A3ar
+ SbgovQ5Dq_5gMB0l_hgBehre_YGwhVtFgr2mNKVu5PR4djpCVOzljNJSK0Uhgo4LMY6K4lyW0k9F
+ Hc7MBFIZrClVn4ilQCCy_P0_EbJZCHQtt752H0vjvWQxUI9qxo5sFoKL8Fh0cVPo2UaMmM3Unjcj
+ Nkwpbpcz.Jx4x1OIy3bO4fU2rUMbLMLMIqZXyapEZAxwpJDG1EcnVJEUiBH78lT.1maIS4DsfJc7
+ VeD0cYvffIzubb.LgcZjGdquoi.OIAGrbZvPwLNXFDmJ9MxutsYXjkO5OGsU.cJm1Bp_MMVZGls6
+ zJBeWakPuoKz2Kmpa3LkDPELa.FY6LWQOSw.vcFnFpc1W8m5qDdgEVysasaCHMpjCh5NGXG5MjNH
+ jPslxwmuZzPJmkuPs4QJP_SAASRI_Rang4.CSJkFHIN0ly6MQ8ZNNBt8o
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic303.consmr.mail.ir2.yahoo.com with HTTP; Mon, 29 Apr 2019 16:34:18 +0000
+Received: from korolev.nds.ruhr-uni-bochum.de (EHLO [134.147.40.36]) ([134.147.40.36])
+          by smtp405.mail.ir2.yahoo.com (Oath Hermes SMTP Server) with ESMTPA ID 665926860fbac6ce7d271a05386e1301
+          for <smith_j46@aol.com>;
+          Mon, 29 Apr 2019 16:32:18 +0000 (UTC)
+To: smith_j46@aol.com
+From: AOL Mail <smith_j46@aol.com>
+Subject: Internal PGP/MIME
+Openpgp: preference=signencrypt
+Autocrypt: addr=smith_j46@aol.com; keydata=
+ mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk
+ IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp
+ V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9
+ mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH
+ 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB
+ AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud
+ yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO
+ gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke
+ EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb
+ azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R
+ qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS
+ nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E
+ WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU
+ KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s
+ vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd
+ v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG
+ 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB
+ NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H
+ /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K
+ vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/
+ NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O
+ wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF
+ cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc=
+Message-ID: <4a14487c-e463-f577-b320-396af211b453@aol.com>
+Date: Mon, 29 Apr 2019 18:32:16 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="UeH0gU3PCQkVcyYJpq5HdJcsk2s7ZuXfy"
+Content-Length: 1357
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--UeH0gU3PCQkVcyYJpq5HdJcsk2s7ZuXfy
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--UeH0gU3PCQkVcyYJpq5HdJcsk2s7ZuXfy
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA+XhBIZl3+i5AQf/dRihiWLqi9YN/4d6GhHWn9D4xCUPjHHKdxgoORLJRtaN
+oGsw96fvl63PX8rlxFfy6ZUMBXkLYD76gzLCjBFuzcM1P9KlLzf3o8DTCt7JTdDL
+y+mATMFty3U/JDptDW9ijcC05qFsathyBurC+VuPM47eb1r5+NuU9OHdOsKaxgBz
+knpXB7TFvvQPWYbYA2yHs19FrlCGTTm5ssdIFQp1H4GucXId9/1u6ftOh6vcwGR7
+2SUC0+OElrA8qIL6dI4VUm0nAxXD5PBEwd1U9edrajAWtaWIv6Y8B3iD+OpeuOsY
+o2D2ev1J6APK83XBF9iwBTXkHP9D3VcSvNW0URlyGdLApAGNH4HRWKWZiGt3Ls2G
+il5n47L6kbc0ikhy6CPRDeSJ8DrfjX+7gHKk6KRs90TPxerZ84d9itqUZ8Df+qzj
+hoMQbUcHOiY7NCI3DU8ki2UIrrdCfjmGnI5tL9RTGgeFWoZalQGbNTw4M/2KpK+7
+JPNhkmflUjIBXo1MjR+JcNdg6KjULDiLb24VL4h/XY1E9jGyWOkJZ2b0IQsnc9gv
+r01Cg06O0E64E7HT9+SZyZBB0i0avE+RlEvC1yTSh+Q60xgeWnEOo+idE1hAEuHB
+7tErtt6EEASIyCp+WDU7eVoZ0QFpgfY27VCi18wTFoRFy/NXVhIb6AQk++8qWDl6
+oSWxwhOw0Ao8/MhoMzXJqe/k26OLRNd+JAUG94NyyBp1SY3Rf3uOVcgVFvKFRNUW
+vGIAZffXB3TnD8O7OZz2ySwJkV3kkg6Uk1SBz61b43vqSi+xRIGpn80RiyhwPbNe
+oHqJZvBe
+=sMvC
+-----END PGP MESSAGE-----
+
+--UeH0gU3PCQkVcyYJpq5HdJcsk2s7ZuXfy--

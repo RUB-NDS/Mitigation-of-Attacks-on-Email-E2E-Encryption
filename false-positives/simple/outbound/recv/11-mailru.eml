@@ -1,0 +1,42 @@
+Return-Path: <john.10177@mail.ru>
+Delivered-To: brucewayne45@das-labor.org
+Received: from newvegas.das-labor.org
+	by newvegas.das-labor.org with LMTP id KC+YEOIKx1wrEgAAAera6A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 16:32:02 +0200
+Received: by newvegas.das-labor.org (Postfix, from userid 1040)
+	id 30DC71052360; Mon, 29 Apr 2019 16:32:02 +0200 (CEST)
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on
+	newvegas.das-labor.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.4 required=5.0 tests=BAYES_00,BODY_URI_ONLY,
+	DKIM_INVALID,DKIM_SIGNED,FREEMAIL_FROM autolearn=no autolearn_force=no
+	version=3.4.2
+Received: from smtpng3.m.smailru.net (smtpng3.m.smailru.net [94.100.177.149])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by newvegas.das-labor.org (Postfix) with ESMTPS id CA1E0105207A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 16:32:01 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mail.ru; s=mail2;
+	h=Content-Transfer-Encoding:Content-Type:MIME-Version:Date:Message-ID:Subject:From:To; bh=c9YrUoLy39CzQIqBXoJZlGOOpEqMH67zg1VcU72C0cA=;
+	b=HIB3HAwbujUSdupK7J91Q2Z/h5h8vgH+LZF8h0VktJ6dHv5RJqsqWdo+fYYZvwbP/m94kj+0cL0ticu/NQP/aAv3cqpthEvFLpCscNT78h7Kp10hfwLfWred/brvdM7HeDLKOvYwJZfySM1FcJvWl5VYcof2jMhki2Uv33Lg1eE=;
+Received: by smtpng3.m.smailru.net with esmtpa (envelope-from <john.10177@mail.ru>)
+	id 1hL7K4-0006SV-Pa
+	for brucewayne45@das-labor.org; Mon, 29 Apr 2019 17:32:01 +0300
+To: brucewayne45@das-labor.org
+From: "Mail.Ru" <john.10177@mail.ru>
+Subject: Outbound from Mail.Ru
+Message-ID: <b5cab942-d316-a6b8-a4e6-f16df25d92ba@das-labor.org>
+Date: Mon, 29 Apr 2019 16:31:59 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Authentication-Results: smtpng3.m.smailru.net; auth=pass smtp.auth=john.10177@mail.ru smtp.mailfrom=john.10177@mail.ru
+X-77F55803: 2D1AD755E866B1545A78504BD2AC294106C14034F5F51D939495961668B469E1F509D27B297CABAD77A6BFA9554D4F45
+X-7FA49CB5: 0D63561A33F958A5310971B4CD36E35EB01A422AC925D0EF3208769622BE8C828941B15DA834481FA18204E546F3947CFE0D02E6309259D2F6B57BC7E64490618DEB871D839B7333395957E7521B51C2545D4CF71C94A83E9FA2833FD35BB23D27C277FBC8AE2E8B45CF3281D200C6DFA471835C12D1D977C4224003CC836476C0CAF46E325F83A522CA9DD8327EE4933F735096452955E3D4FDEBFCF7F962C7F07152E6C4F4165E731C566533BA786A40A5AABA2AD371193C9F3DD0FB1AF5EBE26B79914A659FB62623479134186CDE6BA297DBC24807EABDAD6C7F3747799A
+X-Mailru-Sender: 689FA8AB762F739359CD701D0F70D3B169C3D0933C59BC7899176E919513D42FAEA035EFE99AD130AAB3D6316F56CC473A52CEC597209DD4D0B5BDE067B62245ADDCB4C089A630DE72F660656F35F0C5B4A721A3011E896F
+X-Mras: OK
+
+Outbound from Mail.Ru

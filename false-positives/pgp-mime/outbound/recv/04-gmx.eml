@@ -1,0 +1,116 @@
+Return-Path: <john.10179@gmx.de>
+Delivered-To: brucewayne45@das-labor.org
+Received: from newvegas.das-labor.org
+	by newvegas.das-labor.org with LMTP id CD2lLngvx1wMIgAAAera6A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 19:08:08 +0200
+Received: by newvegas.das-labor.org (Postfix, from userid 1040)
+	id B619C1052360; Mon, 29 Apr 2019 19:08:08 +0200 (CEST)
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on
+	newvegas.das-labor.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.9 required=5.0 tests=BAYES_00,DKIM_SIGNED,
+	DKIM_VALID,ENCRYPTED_MESSAGE,FREEMAIL_FROM,TVD_SPACE_RATIO
+	autolearn=ham autolearn_force=no version=3.4.2
+Received: from mout.gmx.net (mout.gmx.net [212.227.15.15])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by newvegas.das-labor.org (Postfix) with ESMTPS id 99169105207A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 19:08:07 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+	s=badeba3b8450; t=1556557687;
+	bh=qWRR7OVKVePfXsxTPICQrwRd8B9Vn0HsAs7cxUrCpgg=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=GVjV/qCSJ4FWKpZ1ftNWXVhE6s2tToqh8QPSBgqKEazfkG8fEvDYvySpn597oK95/
+	 JomYrXo0H7vyB/fZ24N5msgZfUVipFtjjS5s5VHWkLi4+kKuxZP3aLEOHq6Yy2Glsy
+	 bnRcM/qH0gzSeo65yh+811zUUQ+AZPPgLZdF4TAo=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from [134.147.40.36] ([134.147.40.36]) by mail.gmx.com (mrgmx003
+ [212.227.17.190]) with ESMTPSA (Nemesis) id 0MXqaN-1hEsKn3YKl-00Wl0O for
+ <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 19:08:06 +0200
+To: brucewayne45@das-labor.org
+From: "GMX / Mail.com" <john.10179@gmx.de>
+Subject: Outbound PGP/MIME
+Openpgp: preference=signencrypt
+Autocrypt: addr=john.10179@gmx.de; keydata=
+ mQENBFniALwBCADMIQQUidbNMUmBS9tFVaatUL5plNDCyUcoNJCCUiAnu0VOlI8FKuuCtWPk
+ IuWMbKhLXIrOj8qC156rJZD5KUorD5LNif8py85USW40ZNgu0kV37XyVzdrMaAAI3f9Un8gp
+ V/8eOPfimVbZODZ80wZ8OMRp9O5LhUbl8r361eK46+rDoPOzuFk+1+tmkiZUPyqwUbwYQkd9
+ mPlWAih/E5r7xzAaSC8FZpmOb4uX9QwJ6G9Dm5S99xn2reIx9cKg8Ll/9kzs7zVkr0YpT5CH
+ 7ux5kg+hE4bmb8/D5b5N1tSC55Qu1LVPauA8ydVIDtuxsQLe1NZCa1oplcvHhuCa3YdhABEB
+ AAG0IUJydWNlIFdheW5lIDxicnVjZXdheW5lNDVAd2ViLmRlPokBTgQTAQgAOBYhBGRgJSud
+ yqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsDBQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJEEYO
+ gOX7em7tUREH/1y495FZXzS7t6yr28rKZvwpW5crwjfexw8ltJfpYxxv3cv1484LAFfAPvke
+ EVv2CNwIBMTSRM8is5eJJJJhtfEcAN7rArbkelwIHzDPRPPI9shDLqU+zrxpQ/vTjJiUiRbb
+ azR0Yq53amwraJmjC5/lOp9FZJqyy80B9LGGhZC7zH8sNFMnaEMUcjgqWVf/dRFAZFCB7t9R
+ qeuGBYOJ7ewPK6p959u3u4OLLXnGidWfFOr6ij9MPRm/gc8yZjQBiwHgNZqgYbtWZ0lU8zeS
+ nfhC/pKYeY5PN/tXS0Ctpwh4SVwPAwNF4tqGe6V5kgOsDLs+b3MWRQSvZIus+HCdH2W5AQ0E
+ WeIAvAEIAKYAATJaboM6THZiwBkD+UZlpmrj07ykVQEfuoSzo1cC8Qb99+JaGEHuRnOF2+nU
+ KvJU3y26bXcXNX7NmdBgOChCQ+BQPqPSlFxDwUnrxQlg0YB3xpHDxsZgyxJKMDAWkIYyWH6s
+ vX39LCHxUd59othaW7hfkVzC4rVt+SIDNJlDml1m7kwRKj/TnjpiG2XDIYOImbSrR2VKW6Xd
+ v3VEaLH4Pt87sQHyqKMK9p7b67CRTncyIzj94DbG8kqScUwYW6TB5Dyoj4mTdSjqTUpXswkG
+ 5kmTFwaAcvDQFXRBvYO5DKf7zqedicKDszAb133P8Od0ltpk64AfRP7FKvT0+yUAEQEAAYkB
+ NgQYAQgAIBYhBGRgJSudyqIqQH0kSUYOgOX7em7tBQJZ4gC8AhsMAAoJEEYOgOX7em7tnW8H
+ /R+5Qi6qGwHnCrILxyPb1gQhNyCW6+KAVSmhJMGS+0gJM6hJybGCZKjty8ic7YZ0WuB66c/K
+ vx++u6AA1nMFOdauNjqwxIC+g57tEugBjbU8XvJFHZRBAVvuvYccbn5zftlYQ+cTw+YUOyH/
+ NRvpyXg64Wk4V7tVRHYeAms/kZpsncs2WU3njfJIr+pGc8lq3MJK4V3K6A0kaFMJWE19bq2O
+ wxdNoJ4D23ByeB295pT9/2qRmRr3/WZi7Jz8Su4N5dPcVi7q8neQbTc5Mi5vY1L3d51NNKiF
+ cC2xieuPW5/EXkrpM6YPkvHyJW5AjgTJ94sDGsBVh8s+PyO1Lpez7oc=
+Message-ID: <6de53e5c-c5b3-66c1-7173-6ff62263e2b3@das-labor.org>
+Date: Mon, 29 Apr 2019 19:08:06 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="7IdChVoFUvmtc4x1ZcQ51ZUlQyN1VgK5Z"
+X-Provags-ID: V03:K1:+RKLTYIS1F/fA+3YHJt/Tac1GgY3NwVrecA0MNEuwI1sfzD40E5
+ 08WFTkNzkDbfZx361yQtgCWR025oSIiUdkL5ES4nRhsX7uInNA20mlOVeBpNatwCj3dGhdF
+ Z3OSu5qP5BC45vkPLOJkNAklPZ0TzHdxsiwEThTZKvriEki31ATonV+OWvgaOljSPI66cSx
+ StTNMz51MtvGUXA+VlJ9g==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:xXLmngaVSYY=:mPAzUikuq6Rl9WxrOCpioj
+ jU/gS+/iILVEXE1iXjFNZLUU+sH8V573ipy8x1r0UGGtNwWBzqLvYnMwnQUlfizaXrr+e332h
+ K6X+YiusKXoILxCG02rCuJU3NKmPVAqdRxn7Wr5t3n3yN08Yfld7r2BKLB8mTCUpmvAjsU+yg
+ oBnorl+L6t6GnC0grElS9I+lypNokrJFMIxGvkpZ4AYcHQpxLgSF8R+V8mMpScUU72VxSLnd8
+ Z+pcFxa+kC3w3GSAxLfAkD/NV7ue0Xx3ivUTRs2d4Z1RAwzbDbwdx+TlfjTK2VpPitjfzxE6S
+ sTX82hqI3Mq/jChYPYHrFm1dFC8eqnyYjul0h8Vz76Vw8zBaMk/UtdF8sl87KOzRaQY1N7tu3
+ SHn5hYcxkZkxzuR3tDvYIN0XDvzieGZfbJZrBGcmMNTI71/ihZ1lZLNtwWEJ/BoyQ3pIiLtfF
+ cZTwBZSNK/EZHWFUZkTEcxvLvNZDqNMWX7xIf02qWDKvlttIFphOVHFpDo8zYYTn+EnDvNUae
+ i0vukr0iVSnSqMEewf4pNi0iM0p/fYX3sNjUaa6bqfoEllPLzoxhd7APzPzumpxxmiFIsNNMN
+ ArpW5fiaqZZkmnNk7q8sf/X43LANPY8DLi7Gsuj15NHc2LoZ+JiE9sl7BsRONJDe4rSSJWr5l
+ t6Fz0stiDufCKA2CBmfOPhcZWZU2pjGb5Oy3j7NFEL0uc9r9h6xVndIdFIViXyAkdIiq1wboP
+ WChck3MFbit5pYET9lJbCt6ILA2o+b/na31VdFPaHsjVdRKYj/2ywEFfU4pDbrSI0F4sfI458
+ TI5Zvb7bHIT/ndP5zrCEZF1uCMla04j4VHeUk9PNVSvIPmLnT84Nk86DccfK+StFtFkcRk2GH
+ nelaHlLkCNoy+kITEWKFKuubz8SsCgMhP+eIGkIJJnXewB/VGikilRAUo9MwNl
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--7IdChVoFUvmtc4x1ZcQ51ZUlQyN1VgK5Z
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--7IdChVoFUvmtc4x1ZcQ51ZUlQyN1VgK5Z
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA+XhBIZl3+i5AQf/TKZLoaJ/eT7jAmst8hqmJuUqQiPqSsuH9dacMTwA6Zlm
+gFtsq6g1priqqlPoHpDk60uENACJsLWpNmI4P+6LfD8bXkxMP1AI/FrqovKmoSZ1
+pql8aY1LX6b7UrMtRkUrYFBitEG7Lq+BXoYw36XudgGp03pQxDdBDA72F1LFhGoA
+Ss49JVatfVaoSTChGrKGyEo5EMpG7b5hn7KO7uLrDBbxteJLynyN09ivf0lizzyl
+atGpaCBDLjC+18E4tXMQNHwiS1b3OxWFNRIDydEzw5xV4WKtNeuPwEnHoVm8YxYa
+i7cjYKkQJuVaaIY32L67YIArqyGPTIkNb11+P1nhXdLAtgGdTN7ZjNIyIZjiZjzE
+LcYIZwiOuIXaarrbtOPCYRBCHI3nDJk4sCzJ2gjdpOojuUnQibex3CHFWWsnRtLO
+IP9IJPPG4YWgwF0MrMq+o/tYtOGP9hY5DdQ9euSFolVtcNqplU754X1dzUCCVtGR
+PlXXka486byDgrfAzidg0em1PzDTBw1k1kruak0E+/bVvXtODfqPi7as+xbTRV/G
+1/PCz2rEySQX2yv1uxb4zYPx5pwBAKOF6SCZunAD0OeLwrgXDKJl+2JTAIuEzv5o
+wd/E7ug9K2Ldgh/5yhFZ1fbfOON7oiZvRJcmxRlwRlEZHxRkgJb/dqKzfM2iUrdR
+qV37nzs0MsaCG26d1HvbBsXkvDy2rN59I0AAQcAxBdFEFAEV6wDdbJmQeCAdRLUN
+oZi6FiDdCzE/yWHmfb7JJC+9MpFvRowOLThwmyg+kbtKvbV/0jimujjxiuNOJFb5
+Mjl3KHwLpJ44shdN5eDt486GhuQjNM6Z
+=rEkw
+-----END PGP MESSAGE-----
+
+--7IdChVoFUvmtc4x1ZcQ51ZUlQyN1VgK5Z--

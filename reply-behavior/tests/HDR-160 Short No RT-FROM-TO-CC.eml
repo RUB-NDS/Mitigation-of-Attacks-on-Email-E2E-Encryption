@@ -1,0 +1,11 @@
+bcc: dcheadertest+bcc-1@gmail.com
+bcc: dcheadertest+bcc-2@gmail.com
+sender: dcheadertest+sender-1@gmail.com
+sender: dcheadertest+sender-2@gmail.com
+content-transfer-encoding: 8bit
+content-type: text/plain; charset=utf-8
+content-disposition: inline
+subject: HDR-160 Short No RT-FROM-TO-CC
+
+This email has all headers twice.
+

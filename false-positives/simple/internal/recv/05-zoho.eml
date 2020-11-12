@@ -1,0 +1,36 @@
+Delivered-To: john.10180@zohomail.eu
+Return-Path: <john.10180@zohomail.eu>
+ARC-Seal: i=1; a=rsa-sha256; t=1556550857; cv=none; 
+	d=zohomail.eu; s=zohoarc; 
+	b=g2lcqjqhRaILn9ooVjTdV/ODgJHjVZKx8wRX7hqGV6dEsVsW2ZGGeorvwDtw2Vdy+jpAU3pXVlH6hyGt4poZHmiNeRM+h4q8vkibOUvGK9XVuPXMGkPMFEOwoA/iRK24ESNtB2bnL88l3oDVxTp4UnjQOlZ+RNIB2/hI2c5+B1g=
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=zohomail.eu; s=zohoarc; 
+	t=1556550857; h=Content-Type:Content-Transfer-Encoding:Date:From:MIME-Version:Message-ID:Subject:To:ARC-Authentication-Results; 
+	bh=DNnBkhVebS2rwW2qZgXs7FFYneYLZMm3Q7FCDZVSX/Q=; 
+	b=Er7WKEhWKt3d64KcxQpZJiW/cwzr50Qrx9FyrJRdK4A+g0trx/Q6caFomw0SXJXf5VqBmPA1htXpOsjO4dxmvlZlG9rTQ9upmprFoE0PxU9VuU/Ae+dx6rGfXaMDAi6cYPuYrYEfEliWFrcSHt6b24S7/3R0c7HuhXjWW0uqfXU=
+ARC-Authentication-Results: i=1; mx.zohomail.eu;
+	dkim=pass  header.i=zohomail.eu;
+	spf=pass  smtp.mailfrom=john.10180@zohomail.eu;
+	dmarc=pass header.from=<john.10180@zohomail.eu> header.from=<john.10180@zohomail.eu>
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1556550857;
+	s=zoho; d=zohomail.eu; i=john.10180@zohomail.eu;
+	h=To:From:Subject:Message-ID:Date:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	l=24; bh=DNnBkhVebS2rwW2qZgXs7FFYneYLZMm3Q7FCDZVSX/Q=;
+	b=FI6sGUwa+5DWz2KPf99fITYhlmXmv6a/vffOT80NwacPGwJ06EkA/iQ6Zey6bmnP
+	ohRgOn/bTXsy6PV+8uUfpuj1XHBidxF4Os3xrMkG9s4+6I8ts7s2m9iSrihpaG495xT
+	jKu81EgeOwcV6/2UhalhhMP4JLJeQNQkQ1TO1LG4=
+Received: from [134.147.40.36] (korolev.nds.ruhr-uni-bochum.de [134.147.40.36]) by mx.zoho.eu
+	with SMTPS id 1556550856864447.17989060961054; Mon, 29 Apr 2019 17:14:16 +0200 (CEST)
+To: john.10180@zohomail.eu
+From: Zoho Mail <john.10180@zohomail.eu>
+Subject: Internal for ZoHo Mail
+Message-ID: <bbf29130-d285-9a6a-28bf-5b3f235061f9@zohomail.eu>
+Date: Mon, 29 Apr 2019 17:14:16 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+X-ZohoMailClient: External
+
+Internal for ZoHo Mail

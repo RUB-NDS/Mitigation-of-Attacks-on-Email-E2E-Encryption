@@ -1,0 +1,105 @@
+X-Apparently-To: smith_j46@aol.com; Mon, 29 Apr 2019 14:10:58 +0000
+Return-Path: <brucewayne45@web.de>
+Received-SPF: pass (domain of web.de designates 212.227.15.14 as permitted sender)
+X-YMailISG: 856AdBwWLDvEB6MTjjxfidxeuV219hktrmBJOxzK2TTWNfRu
+ 7Vd3bihOrfhndtTAONte7ZCcJDdFWOvco7RSwQUxIm6oP7kaABGqEk0D6OJg
+ 0dDFmHR8F8ajFm7r0U3xCsVoIu6poOdYKgeU_S8FkFqYRFQ66Gzft4LhVT8C
+ 3ez06ihkdWtdWaSqaBJwFgDvPSFOgjAUEZXS6wzT1IOhFdUrNUBh8oHHOnpv
+ padH8yK7hGv6BL_7RJ01el54yqNYeMJiDjZeAfALbPzX9yfgrITk87BPdMKS
+ 0CL2SJiiH.7OO5ceWNKZDvHZRVwFQytpeB5SOZlqlSLkggMPDWiDYl6UiJjn
+ ke1jaDmiPoj6KNc6KApkSyxHgDEBavlFgd07PUBaOkNBIfwUzC2dtST1A6TT
+ aREbtZms35hzmVaC_XTmNfBtpqm8._kk4vIqQrKjHmfUWECw2vPjMN7eLFQj
+ v49yRol_BMoKtK8IZ.E8Dyf02PU0WM12rLAYdjmx4jYQAoztBVzIFeqXaYRv
+ .yIh1wMJULFNkm7pQyHnEo701j4kh2OIjsf44tgTzQvnHpaKxHzbpJD5G2pA
+ gYAPRIL1I_o2Wz8wMbVhOBK0anW.M39fi2CLh4OoRmozjSdWx51CD6K6ems3
+ ZVOJLiLzjF3dp66DLTvp1C5MGFXQBZ68nsBtUJf9hyvvCwXu7BZeBGJYoVx0
+ pXJfUtvLs9dwv1kcVlBCvDbPXv0P3ReDv1C5eVjgaAXlfcsPqwEUF721Acuh
+ vzzDw5_n7KIJFbX9Gx.dSiV8W4MiUclarnj10x274rsxyIxkWI5K1CGWS1AE
+ BhdtvsYfUB0LjCq3esI83RYF5bpI.bhcBrpP4_i3qXkFX419MNYPIeLNtQgU
+ zASNhEsWkK0vDPvLAL..ccXQqqMumUSXWwrouWftI3PIhngUGAwrYujPJO16
+ IVR6rUf9_b8sRD4qfPtJojXkBTx8NfTeuYwF1U9BIu4XUVsCRAg2wKtVPnqu
+ k2JU5aIf0SGhAYgm5YC15hy5Hg--
+X-Originating-IP: [212.227.15.14]
+Authentication-Results: mta4106.aol.mail.ne1.yahoo.com 
+ header.i=@web.de; header.s=dbaedf251592; dkim=pass (ok)
+Received: from 127.0.0.1  (EHLO mout.web.de) (212.227.15.14)
+  by mta4106.aol.mail.ne1.yahoo.com with SMTPS; Mon, 29 Apr 2019 14:10:57 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+	s=dbaedf251592; t=1556547055;
+	bh=1tGVxRs7pj6pIYf3cVpXQlngZIDYp8yxQTa7N/hd/ow=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=op44Ef5ONQ37PbH6z+iCOr6QFBedOUu1ajdVMpxnqcmQywcQM+4y9igl8b/QLEfP3
+	 pqxTxAuqimjIWtjYrhauCMpt0Py6qo2v2ouhLrO3CDWZFEPRoCGmDEqxDSWedKMSle
+	 54mgEmDfSWOxGtajkCvTIj+TPh2lMJbFAIVog0Kc=
+X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
+Received: from [134.147.40.36] ([134.147.40.36]) by smtp.web.de (mrweb001
+ [213.165.67.108]) with ESMTPSA (Nemesis) id 0MGRI8-1hYMX934sa-00DDoh for
+ <smith_j46@aol.com>; Mon, 29 Apr 2019 16:10:55 +0200
+To: smith_j46@aol.com
+From: "brucewayne45@web.de" <brucewayne45@web.de>
+Openpgp: preference=signencrypt
+Autocrypt: addr=brucewayne45@web.de; keydata=
+ mQGNBFuJkGoBDACopapU9WbycEfe1tnd28EnuV32zyWy6iwNSPQdlsK6KMjX6fXPrpYnFqI6
+ huj/ndHKF/9tYNOwzXnW3gXcsdliLwUuUAuIXePd+Oz/fJ44wWVExuXEBdqzbQ+m7WrhpTGO
+ pEByabUsX+Wcw4N/SuuCNiXE/i90sFFXMtwjIq+rggXf+Gk8xexEFg2Yl1q3UNm1z3eImWGK
+ W9IQn6aXepwmG/v2JtQehUU7jO4een1K2/HyGH4cEiImoYf9K3BzirO0DdXFKrlGBadRb2yF
+ LS6YiB/eeMu5BujpwHpP6xV+dK685hVUarNa/jNveqMsmiaS7HIN6+8G/YcO2t2Uhdlrg16O
+ l/g1a6SwCFVOb+enOQ7mw18gZIXTCKEBSVgtyWZfKccRYyBdXgFA/HgVBfwUhAm/p/M6eWPQ
+ 1TWxJNflXRAExfZ2B91stdiHjaeCSpidm2DE7wAnA2w3WA1gTQBmaQvECmfpZmrjycyqk6Sz
+ eGa1V3WVdWgQ9kSluW6M75sAEQEAAbQaTWFuYWdlciA8bWFuYWdlckB3b3JrLmNvbT6JAdQE
+ EwEIAD4WIQQL//9e9tqXFG2pGPRghopg37Z5HgUCW4mQagIbAwUJA8JnAAULCQgHAgYVCgkI
+ CwIEFgIDAQIeAQIXgAAKCRBghopg37Z5HscQC/4ywmg0YjsUXM5n18UFjpjstFfBEueAHuyB
+ BPXr52U7ImSYk5BDsQ4xMzpxF7Mu1dUVKXoF8BSoaZzoVEl7FsXjTcQoLalcToX4neAs2XhG
+ /+xbDiXU1a0ta6TtQV4SDu5oGhczXgf31zQLiMdY2edngrBZTtfPmELIrkK5uCehSKFWtM6l
+ 4zcSzEVkMOwW8krBmkxnp770BHvbSWDbhfoG7i+kjPtTg3kfq0+E4Fve17PToISfoqcaeKwd
+ 6sbgo/boFYlmjazTycz58AqMruQ0pH6xVmVBonS8SLNX9zyRL2Yj68tV2qm/z0wsJpxNzSmp
+ IH0GsLg/8QDz3Vz65HPDxyuwu7vchdzkzLNuFcD4J2mZAJ3vrr9sBqefn6Gsl1QlFtrI+sd6
+ qOkP0BSzMtncqsDf5kFuhd/w9E5szXdaBCyn3ymOH5F4TxQZ7kQl+wxWH2BdJhLqc+8BntGU
+ i6AHZ+kFrl1bFRVG5PIYER88uZ+BiL8l0w6IUJ6TugB5Yqm5AY0EW4mQagEMAK9clhlJTvYh
+ uL13WYB/YYQeaJ9bbRRsj9UVZFeiIKqv2Ghz/wVlCxVaUwguTQQYZT8geebCTaDz2CmuOoID
+ RcVLtUsPBZ+2a/gDW5K2eUm1ZGFxmClbDxV54Gq7OUv2Qea4dm4m7c/QKWBmkQAsrfzonBRo
+ CgnP3rw5bySDkrna74xzNrZXKVIoKvubbOZT7tblCYdlgEb07GVC39vJ8Qcu1c9eIeFW5+Qu
+ 8DTG3EhKYG/WftgenhpdEWHbDQE5zjHq1IHxfyNen4Ir1QddEdpXlFmPsuFPWcvBxKeYSQec
+ PUD1hxtMqMTzNyuKQeUvD+TMXsHrTnNsGscya5pzo8/Dg4TC6pccuK6rfPwWi5SyegaSH9gM
+ 7iFvUGHedM2KE2QEF7l4WCJonACua3bw1dd+1qVHA2cBC4COKWMCH+wwSkLz99ylqW/W80Bk
+ Wfr78GTyOC1tMONVEP/h4iGrAZPpbkaiXlBAkDzN+WOn/iGr12oaOF03d9PL1DUyDE+quwAR
+ AQABiQG8BBgBCAAmFiEEC///XvbalxRtqRj0YIaKYN+2eR4FAluJkGoCGwwFCQPCZwAACgkQ
+ YIaKYN+2eR4Dxgv/cU5KmvGWLCOceu6qpa3w9Z7Cj4nZq53+Y+llW54WKJnRGN4ZdNDoEF0+
+ U9Qr80p/7GJeZSqIrMMSrpcZNBPoGv7aPrdkARpQCPaIo0PW56tZsGaoKSdRfC5NQ7NT1zPz
+ c7wQm1Rb5neUgArzgoh9J2ijZ2vupZlTw1npqYL/pn29ZumLjo241rd+kqVLeqPIfWUyhUPX
+ aA9tUuJX8kdMtI31VSxes3h7xgeAEErFt49shGJRI2Su28uKNVej1HML0zHLXOzxua+8DNqE
+ zM5QO5gEn1jWWbQFDMfYBuZPZCAAh38Mh7niWtuWddKv73Tb1smRAsJ6D81gKkZEOjmN0zdu
+ COSEFENBSGIobnVZ8qfqP0JlsfHat7Rkwr27cBENaRZ1gQAf7O04prOlUIFhO6sSDqXFWXp9
+ WRy7LOiha1AGehHOIJz67xCe/OqN6gDOQF5ECDj3Q4CUnfzci94ExyfBMzo7ysrd9cAuhjtF
+ 8RNuhi9qShTp2cog6/yJmAtX
+Subject: Inbound for AOL Mail
+Message-ID: <00e83a99-83ae-4810-18b6-a90b162a03da@web.de>
+Date: Mon, 29 Apr 2019 16:10:55 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-US
+X-Provags-ID: V03:K1:5FrgFUjmjUCp8RCpVk3I1cirkiIohiz9CN33qXarqHpU0N165x1
+ sNPoc995QCIXRjHyWq2n1Ppr9iD9W4rxyhuITew5U9XlnrmWteYphaGx/VeQQfSqPfenhAe
+ 0uPRVXLQgSTM49SqJVopBcyOI0Wtb+v2YREaesN0xUTvSZMt7LeiTdTPLkBbFyvKHBqkgBf
+ belsppMGrIWmGU8y1Judw==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:Lf/7vp5MHiw=:VN9qFrKDXXy1fHtwSOCxUc
+ QrXOXQ4p9WZmjac/TQwx3G8WGSHWjsoirjKMKypXqu7WTryXTLxOwZlloqFPMiWnRp9puwv53
+ Jj0VYVo6iJVwH1uA2AEJSyuKQI6/pGKOJgYsyrLqvTFv0liANUCWBkt0Rr7i7qd12oB8oT9Lr
+ 3g10ieqcpWe+W2SFL1flF5fHooTu22TlsP4Tr7P9qPP9zXsQ1nhJpSDMdfAvkt0YOr3UseYLl
+ 4ZY+ZCCL1aQV8D5DuTwELH1wcIB8eix2o50I9yu40wYsszW288QYWv15s+aDmBtuHtXh+DPBC
+ kK4EUcr/TLwULdONKzwol4Y5O8CFVSQpomkRpcFuzpGlmv41Tk4M/viiX5gnoPkc+2G4uuUoA
+ sjJ8WHWNK+n1E1yK7wGGEPyPcIVQNO41yeUPXNxyvMOW28B9V3Wf+sR31yuJsjkD5YcTcMvaV
+ LSHqM33t9gkGFNnfAOAk8XixnWnlqJDX7iczZDSOFpyqE0BmktR2ghYJ1IkATUN6MMSgqXYNN
+ +wdNG9DeAKbypjkVSdqiKmV6eoYKJlTamGjwmbZ2ZZa+hQi1EJaqJgwB8ZXCW5lr6ra/m8K9h
+ 6xbQHUlH8Dg9PVuwEV7BjYyNjXNR02FyGcFDNXo9jYPU1Todm2UX9lBz+56x9YgslQuTSuCTR
+ H8//sC+iZ0cY1kCHDnEAKKqpKEbIE6vl61rVljNmpchZWfq8+OVMe8vHMG5bGm3VPYG5szNkt
+ Rtjh9Id0xf7PV2WR5K+ZKNXET/MgD496YkkwTylMxMXjTht3wP6f+3UWzFudBCwx3VJDoODOW
+ LBInk4tixspEofs2WxJUzxUZwsjXaUhdWdOPAu7vFC3Eyx7NiyYRZwSVIJLrDlNdKdZsn/oMn
+ x3m+vo6ETSJ1rd5aQOBoXIIItYwZrhGZ6aQGfsjVTbRkaEhzf29aCwWBhV2xVPGAg/1olGvpU
+ fxmgnd6asTA==
+Content-Length: 21
+
+Inbound for AOL Mail

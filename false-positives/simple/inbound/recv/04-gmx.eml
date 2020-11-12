@@ -1,0 +1,115 @@
+Return-Path: <brucewayne45@web.de>
+Received: from mout.web.de ([212.227.15.3]) by mx-ha.gmx.net (mxgmx014
+ [212.227.15.9]) with ESMTPS (Nemesis) id 1Mi37L-1gqBx82WH3-00e86c for
+ <john.10179@gmx.de>; Mon, 29 Apr 2019 16:10:23 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+	s=dbaedf251592; t=1556547023;
+	bh=mZAlUgZv1XfN0uq1kkorgXIRrqH6FgrlkdLUoasGZY4=;
+	h=X-UI-Sender-Class:To:From:Subject:Date;
+	b=P4aAYrOE2ZQ7DPNUbWHnUXeZklUoCC4kYYGlQXr/ZK0juyvx3+1gYZKWJ8gmjN/d+
+	 4jSChc6n8ppMtB6+GxEucTu/7I9PQe3Gy0oDell2kQr75PneT5wMTWwrdiCh1xAuBH
+	 swZyoUU88Z3ZloGvl2GYqdCYN4NEx+P9E7oQgS18=
+X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
+Received: from [134.147.40.36] ([134.147.40.36]) by smtp.web.de (mrweb002
+ [213.165.67.108]) with ESMTPSA (Nemesis) id 0M4Zps-1ga2dv1WYe-00yhqN for
+ <john.10179@gmx.de>; Mon, 29 Apr 2019 16:10:23 +0200
+To: john.10179@gmx.de
+From: "brucewayne45@web.de" <brucewayne45@web.de>
+Openpgp: preference=signencrypt
+Autocrypt: addr=brucewayne45@web.de; keydata=
+ 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
+ 8RNuhi9qShTp2cog6/yJmAtX
+Subject: Inbound for GMX / Mail.com
+Message-ID: <6acd235a-088e-0745-fcb8-cab335383706@web.de>
+Date: Mon, 29 Apr 2019 16:10:23 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-US
+X-Provags-ID: V03:K1:+ZzOLyXCHfjKy2Zc0mub8hqz4KxMX8XTcHQ1bPLvuKEqMuVgx6N
+ CSh05Dq4v7EpDJkOVu//2iLlozK70q06wLK5lKhkua/3R5hh7eLOiZ8VVjva65HnXur4ZFn
+ NO3matczCgyrO0Ikntct2brBuV++ivcDTSJRjROA6v6pXUp3E2oDGj1VtF80H/5ZzwSTH14
+ igR6uYFKxL9vIh2UGPqDQ==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:wP7QV1w2pB8=:w5+ojMnxOMMyzEvG0vk4Mn
+ eSK2xGN3c2Xl/mEb/wcaMTIczUK+5SduG1d2y0V3hp+7GTZDIGBHShv5PT4oh1cvKXuVqLFCZ
+ DEbUkKwbG9ll5EnPWDqVvcsypqAdCNywfXofWKSiaiLQdGywCxIMqybq4vhcWqgaACnCGcvFE
+ SoprhIrlgeG2R6FxzPyS4MBYxen2//aOj9hUXDLSFatA7HhBaoqrDocb82QyJpf6GCV8B0PaZ
+ 7gtgwPq1/q3jiFXr0O4ZND4RAUfCVLg40k8uygxJZXrT+dzmIc5FcDr/1nRtPGoo4cZUIUb68
+ ILERiQ96vBJdzfGlZiMxpfn5h04u4ZVDPFoQw644WW4FjfAPda5DTQVhBnjpoyDnmawH2VDoX
+ Omxdtd7+SPE+l8NarxB5H6Qpkijv67T5RpA6guusbUrD0z5noEYNMWHtlo7PE8Z0vPv03l2TF
+ CQMiPFOiCtrPfq2pBbpTE+LBUKbub2USyzZEbpWSKU+AcZccPqI/NU3zWV/a3AkvzebAUfKH1
+ Iea78a/M2zSVhOpIqIXNixHnCzvmLrPzZCELfLEvgm+8U9VAT6AU+zye+Yyq2B0eGwbjaoapH
+ vq+yc2crwEUbQlXovBV6EFTJlEYHJjCWbIrgjZHYeqNac3F2R+5qxWhlA+/tkqKd6REmjpUiR
+ +S58rvWhVOp0m28wwyFx0h10ClfXr9MRCQulBf8qpKOPAcpTQifwu4c3ytR8WnNtdOQ8iiAoG
+ NDujpyrr7y3RADJ1Z5F41xQDlmuym5SE3ekwcqwXvuz/Ux6cQD9t6ut/Q3RAHZuQYPO4u2+wP
+ bZ+0/kyv2NmpAPEm+em8TgDr0nG3PfPwFs1+JJSEK39pUTySLcrhgmqiYrH/2VfoF3XF4NU//
+ 7ShZYjX2qrN6JvzL8R6wthv0udiAsxPiMAHpaZe/ipzA+hvlOYKpfXdiHnp7fpF8Rj4AtwH6d
+ qUSiyUz+5kA==
+Envelope-To: <john.10179@gmx.de>
+X-GMX-Antispam: 0 (Mail was not recognized as spam); Detail=V3;
+X-Spam-Flag: NO
+X-UI-Filterresults: notjunk:1;V03:K0:TcicrdInkrY=:/kMalhQsBSQs+cxxO1o/cG46p2
+ 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
+ ==
+
+Inbound for GMX / Mail.com

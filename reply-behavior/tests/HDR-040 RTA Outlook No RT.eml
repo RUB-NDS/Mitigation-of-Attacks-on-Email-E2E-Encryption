@@ -1,0 +1,17 @@
+bcc: dcheadertest+bcc-1@gmail.com
+bcc: dcheadertest+bcc-2@gmail.com
+cc: dcheadertest+cc-1@gmail.com
+cc: dcheadertest+cc-2@gmail.com
+from: dcheadertest+from-1@gmail.com
+from: dcheadertest+from-2@gmail.com
+sender: dcheadertest+sender-1@gmail.com
+sender: dcheadertest+sender-2@gmail.com
+to: dcheadertest+to-1@gmail.com
+to: dcheadertest+to-2@gmail.com
+content-transfer-encoding: 8bit
+content-type: text/plain; charset=utf-8
+content-disposition: inline
+subject: HDR-040 RTA Outlook No RT
+
+This email has all headers twice.
+

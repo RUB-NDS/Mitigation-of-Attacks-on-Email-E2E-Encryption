@@ -1,0 +1,63 @@
+From 89d7286fb84a206939d8d96df7e9bab7a2621858 Mon Sep 17 00:00:00 2001
+From: DC Demo <decryptioncontext@gmail.com>
+Date: Tue, 12 Nov 2019 16:29:30 -0800
+Subject: [PATCH 2/2] Correctly output AEAD decryption error on the status
+ interface.
+
+---
+ g10/decrypt-data.c | 7 +++++--
+ g10/mainproc.c     | 3 +++
+ g10/parse-packet.c | 5 +++++
+ 3 files changed, 13 insertions(+), 2 deletions(-)
+
+diff --git a/g10/decrypt-data.c b/g10/decrypt-data.c
+index edfa5f466..c807aa991 100644
+--- a/g10/decrypt-data.c
++++ b/g10/decrypt-data.c
+@@ -509,8 +509,11 @@ decrypt_data (ctrl_t ctrl, void *procctx, PKT_encrypted *ed, DEK *dek)
+         }
+       xfree (filename);
+     }
+-  else
+-    proc_packets (ctrl, procctx, ed->buf );
++  else {
++    rc = proc_packets (ctrl, procctx, ed->buf );
++    if (rc)
++      goto leave;
++  }
+ 
+   ed->buf = NULL;
+   if (dfx->eof_seen > 1 )
+diff --git a/g10/mainproc.c b/g10/mainproc.c
+index c12039e6d..c06f5d4c4 100644
+--- a/g10/mainproc.c
++++ b/g10/mainproc.c
+@@ -1541,6 +1541,9 @@ do_proc_packets (CTX c, iobuf_t a)
+       if (rc)
+         {
+           free_packet (pkt, &parsectx);
++	  if (gpg_err_code(rc) == GPG_ERR_BAD_SIGNATURE)
++	    goto leave;
++
+           /* Stop processing when an invalid packet has been encountered
+            * but don't do so when we are doing a --list-packets.  */
+           if (gpg_err_code (rc) == GPG_ERR_INV_PACKET
+diff --git a/g10/parse-packet.c b/g10/parse-packet.c
+index 2f92c1d2c..17e9ac43f 100644
+--- a/g10/parse-packet.c
++++ b/g10/parse-packet.c
+@@ -592,6 +592,11 @@ parse (parse_packet_ctx_t ctx, PACKET *pkt, int onlykeypkts, off_t * retpos,
+       rc = -1;
+       goto leave;
+     }
++  if (iobuf_error(inp)) {
++    rc = iobuf_error(inp);
++    goto leave;
++  }
++
+   hdrlen = 0;
+   hdr[hdrlen++] = ctb;
+ 
+-- 
+2.20.1
+

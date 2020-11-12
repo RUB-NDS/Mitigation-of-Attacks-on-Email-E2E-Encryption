@@ -1,0 +1,412 @@
+From df5ef553fff6b7b76212db046ab6016d87b4036f Mon Sep 17 00:00:00 2001
+From: DC Demo <decryptioncontext@gmail.com>
+Date: Thu, 14 Nov 2019 02:21:16 -0800
+Subject: [PATCH 2/2] Support decryption context in PGP MIME encryption and
+ decryption.
+
+---
+ package/cryptoAPI/gnupg-decryption.jsm |   6 ++
+ package/encryption.jsm                 |  19 +++--
+ package/mimeDecrypt.jsm                |  95 ++++++++++++++++++++++-
+ package/mimeEncrypt.jsm                | 100 ++++++++++++++++++++++++-
+ 4 files changed, 210 insertions(+), 10 deletions(-)
+
+diff --git a/package/cryptoAPI/gnupg-decryption.jsm b/package/cryptoAPI/gnupg-decryption.jsm
+index e528f6a7..bb07e0e8 100644
+--- a/package/cryptoAPI/gnupg-decryption.jsm
++++ b/package/cryptoAPI/gnupg-decryption.jsm
+@@ -38,6 +38,7 @@ var GnuPGDecryption = {
+    *  - verifyOnly
+    *  - mimeSignatureFile
+    *  - maxOutputLength
++   *  - associatedData
+    *
+    */
+   getDecryptionArgs: function(options) {
+@@ -64,6 +65,11 @@ var GnuPGDecryption = {
+       args.push(options.fromAddr.toLowerCase());
+     }
+ 
++    if (options.associatedData) {
++      args.push("--associated-data");
++      args.push(options.associatedData);
++    }
++
+     if (options.noOutput) {
+       args.push("--verify");
+       if (options.mimeSignatureFile) {
+diff --git a/package/encryption.jsm b/package/encryption.jsm
+index 82421a88..e138a4ac 100644
+--- a/package/encryption.jsm
++++ b/package/encryption.jsm
+@@ -38,7 +38,7 @@ const GPG_COMMENT_OPT = "Using GnuPG with %s - https://www.enigmail.net/";
+ 
+ var EnigmailEncryption = {
+   getEncryptCommand: function(fromMailAddr, toMailAddr, bccMailAddr, hashAlgorithm, sendFlags, isAscii, errorMsgObj,
+-    logFileObj) {
++    logFileObj, associatedData) {
+     EnigmailLog.DEBUG("encryption.jsm: getEncryptCommand: hashAlgorithm=" + hashAlgorithm + "\n");
+ 
+     try {
+@@ -104,6 +104,11 @@ var EnigmailEncryption = {
+           encryptArgs.push("-a");
+       }
+ 
++      if (associatedData) {
++        encryptArgs.push("--associated-data");
++        encryptArgs.push(associatedData);
++      }
++
+       encryptArgs.push("--encrypt");
+ 
+       if (signMsg)
+@@ -229,7 +234,7 @@ var EnigmailEncryption = {
+   },
+ 
+   encryptMessageStart: function(win, uiFlags, fromMailAddr, toMailAddr, bccMailAddr,
+-    hashAlgorithm, sendFlags, listener, statusFlagsObj, errorMsgObj) {
++    hashAlgorithm, sendFlags, listener, statusFlagsObj, errorMsgObj, associatedData) {
+     EnigmailLog.DEBUG("encryption.jsm: encryptMessageStart: uiFlags=" + uiFlags + ", from " + fromMailAddr + " to " + toMailAddr + ", hashAlgorithm=" + hashAlgorithm + " (" + EnigmailData.bytesToHex(
+       EnigmailData.pack(sendFlags, 4)) + ")\n");
+ 
+@@ -266,7 +271,7 @@ var EnigmailEncryption = {
+     }
+ 
+     let logFileObj = {};
+-    let encryptArgs = EnigmailEncryption.getEncryptCommand(fromMailAddr, toMailAddr, bccMailAddr, hashAlgo, sendFlags, ENC_TYPE_MSG, errorMsgObj, logFileObj);
++    let encryptArgs = EnigmailEncryption.getEncryptCommand(fromMailAddr, toMailAddr, bccMailAddr, hashAlgo, sendFlags, ENC_TYPE_MSG, errorMsgObj, logFileObj, associatedData);
+     if (!encryptArgs)
+       return null;
+ 
+@@ -373,7 +378,7 @@ var EnigmailEncryption = {
+   },
+ 
+   encryptMessage: function(parent, uiFlags, plainText, fromMailAddr, toMailAddr, bccMailAddr, sendFlags,
+-    exitCodeObj, statusFlagsObj, errorMsgObj) {
++    exitCodeObj, statusFlagsObj, errorMsgObj, associatedData) {
+     EnigmailLog.DEBUG("enigmail.js: Enigmail.encryptMessage: " + plainText.length + " bytes from " + fromMailAddr + " to " + toMailAddr + " (" + sendFlags + ")\n");
+ 
+     exitCodeObj.value = -1;
+@@ -411,7 +416,7 @@ var EnigmailEncryption = {
+     var proc = EnigmailEncryption.encryptMessageStart(parent, uiFlags,
+       fromMailAddr, toMailAddr, bccMailAddr,
+       null, sendFlags,
+-      listener, statusFlagsObj, errorMsgObj);
++      listener, statusFlagsObj, errorMsgObj, associatedData);
+     if (!proc) {
+       exitCodeObj.value = -1;
+       EnigmailLog.DEBUG("  <=== encryptMessage()\n");
+@@ -447,7 +452,7 @@ var EnigmailEncryption = {
+   },
+ 
+   encryptAttachment: function(parent, fromMailAddr, toMailAddr, bccMailAddr, sendFlags, inFile, outFile,
+-    exitCodeObj, statusFlagsObj, errorMsgObj) {
++    exitCodeObj, statusFlagsObj, errorMsgObj, associatedData) {
+     EnigmailLog.DEBUG("encryption.jsm: EnigmailEncryption.encryptAttachment infileName=" + inFile.path + "\n");
+ 
+     statusFlagsObj.value = 0;
+@@ -460,7 +465,7 @@ var EnigmailEncryption = {
+     catch (ex) {}
+ 
+     const asciiFlags = (asciiArmor ? ENC_TYPE_ATTACH_ASCII : ENC_TYPE_ATTACH_BINARY);
+-    let args = EnigmailEncryption.getEncryptCommand(fromMailAddr, toMailAddr, bccMailAddr, "", sendFlags, asciiFlags, errorMsgObj);
++    let args = EnigmailEncryption.getEncryptCommand(fromMailAddr, toMailAddr, bccMailAddr, "", sendFlags, asciiFlags, errorMsgObj, associatedData);
+ 
+     if (!args) {
+       return null;
+diff --git a/package/mimeDecrypt.jsm b/package/mimeDecrypt.jsm
+index 69812dac..2c325499 100644
+--- a/package/mimeDecrypt.jsm
++++ b/package/mimeDecrypt.jsm
+@@ -26,6 +26,9 @@ const EnigmailHttpProxy = ChromeUtils.import("chrome://enigmail/content/modules/
+ const EnigmailCryptoAPI = ChromeUtils.import("chrome://enigmail/content/modules/cryptoAPI.jsm").EnigmailCryptoAPI;
+ const EnigmailAutocrypt = ChromeUtils.import("chrome://enigmail/content/modules/autocrypt.jsm").EnigmailAutocrypt;
+ const EnigmailCompat = ChromeUtils.import("chrome://enigmail/content/modules/compat.jsm").EnigmailCompat;
++const EnigmailStdlib = ChromeUtils.import("chrome://enigmail/content/modules/stdlib.jsm").EnigmailStdlib;
++const EnigmailExecution = ChromeUtils.import("chrome://enigmail/content/modules/execution.jsm").EnigmailExecution;
++const make_decryption_context = ChromeUtils.import("chrome://enigmail/content/modules/mimeEncrypt.jsm").make_decryption_context;
+ 
+ const APPSHELL_MEDIATOR_CONTRACTID = "@mozilla.org/appshell/window-mediator;1";
+ const PGPMIME_JS_DECRYPTOR_CONTRACTID = "@mozilla.org/mime/pgp-mime-js-decrypt;1";
+@@ -136,6 +139,9 @@ function MimeDecryptHandler() {
+   this.mimePartNumber = "";
+   this.dataIsBase64 = null;
+   this.base64Cache = "";
++  this.mime_msg = null;
++  this.mime_msg_done = false;
++  this.mime_msg_cnt = 0;
+ 
+   if (EnigmailCompat.isMessageUriInPgpMime()) {
+     this.onDataAvailable = this.onDataAvailable68;
+@@ -160,6 +166,9 @@ MimeDecryptHandler.prototype = {
+ 
+     this.initOk = true;
+     this.mimeSvc = request.QueryInterface(Ci.nsIPgpMimeProxy);
++    for (var k in this.mimeSvc) {
++      EnigmailLog.DEBUG("mimeDecrypt.jsm: XXXX: " + k + ": " + this.mimeSvc[k] + "\n");
++    }
+     if ("mimePart" in this.mimeSvc) {
+       this.mimePartNumber = this.mimeSvc.mimePart;
+     } else {
+@@ -201,13 +210,32 @@ MimeDecryptHandler.prototype = {
+     this.decryptedHeaders = {};
+     this.xferEncoding = ENCODING_DEFAULT;
+     this.boundary = EnigmailMime.getBoundary(this.mimeSvc.contentType);
++    this.mime_msg = null;
++    this.mime_msg_done = false;
++    this.mime_msg_cnt++;
++    this.mime_tree = null;
++    this.mime_tree_done = false;
+ 
+     if (!this.isReloadingLastMessage()) {
+       EnigmailSingletons.clearLastDecryptedMessage();
+     }
++
++    dump("PROCESSING EMAIL: " + this.uri.spec + " " + this.mimePartNumber + "\n");
++
++    var msgHdr = this.uri.QueryInterface(Components.interfaces.nsIMsgMessageUrl).messageHeader;
++    var obj = this;
++    var cnt = obj.mime_msg_cnt;
++      EnigmailStdlib.msgHdrGetHeaders(msgHdr, function (aMimeMsg) {
++	  EnigmailLog.DEBUG("mimeDecrypt.jsm: GOT MIME MESSAGE: " + cnt + " (expected: " + obj.mime_msg_cnt + ")\n");
++          if (cnt == obj.mime_msg_cnt) {
++	      obj.mime_msg = aMimeMsg;
++	      obj.mime_msg_done = true;
++	  }
++      });
++
+   },
+ 
+-  processData: function(data) {
++    processData: function(data) {
+     // detect MIME part boundary
+     if (data.indexOf(this.boundary) >= 0) {
+       LOCAL_DEBUG("mimeDecrypt.jsm: processData: found boundary\n");
+@@ -511,6 +539,71 @@ MimeDecryptHandler.prototype = {
+         fromAddr: EnigmailDecryption.getFromAddr(win),
+         maxOutputLength: maxOutput
+       };
++
++
++
++	var cnt = 0;
++	while (! this.mime_msg_done && cnt < 20)
++	{
++	    EnigmailLog.DEBUG("mimeDecryp.jsm: waiting for mime message\n");
++	    let exitCodeObj = {};
++	    let cmdErrorMsgObj = {};
++	    EnigmailExecution.simpleExecCmd("/usr/bin/sleep", ["0.1"], exitCodeObj, cmdErrorMsgObj);
++	    cnt++;
++	}
++
++	if (! this.mime_msg_done) {
++	    EnigmailLog.DEBUG("mimeDecryp.jsm: failed to get mime message\n");
++	}
++
++        if (this.mime_msg_done && this.mime_msg) {
++	    var dcPolicy = "";
++	    if (this.mime_msg.has("decryption-context")) {
++		dcPolicy = this.mime_msg.get("decryption-context");
++	    } else if (this.mime_msg.has("x-decryption-context")) {
++		dcPolicy = this.mime_msg.get("x-decryption-context");
++	    }
++	    if (dcPolicy) {
++		let mime_path = this.mimePartNumber.split(".");
++		let content_types = [];
++		let node = this.mime_msg;
++		let found_path = true;
++		for (var idx of mime_path) {
++		    if (idx > node.parts.length || idx < 1) {
++			node = null;
++			found_path = false;
++			break;
++		    }
++		    node = node.parts[idx - 1];
++		    var ct = node.get("content-type");
++		    ct = ct.replace(/\s+/g, " ").split(";").filter((p) => !p.match(/^\s*boundary=/)).join(";").trim();
++		    content_types.push(ct);
++		}
++		if (found_path)
++		{
++		    let fieldnames = [ "from", "to", "cc", "reply-to", "subject" ];
++		    let headers = {};
++		    for (let h of fieldnames) {
++			var hh = this.mime_msg.getAll(h).slice();
++			hh = hh.map((v) => v.replace(/\s*\r?\n\s*/g, " "));
++			headers[h] = hh;
++		    }
++
++		    dump ("\nDECRYPTING EMAIL\n");
++		    var decryptionContext = make_decryption_context(dcPolicy, headers, content_types);
++		    if (decryptionContext) {
++			EnigmailLog.DEBUG("mimeDecrypt.js: onStopRequest: decryptionContext: " + decryptionContext + "\n");
++			dump ("decryptionContext: " + decryptionContext + "\n");
++			options.associatedData = decryptionContext;
++		    }
++		    else {
++			EnigmailLog.DEBUG("mimeDecrypt.js: onStopRequest: decryptionContext invalid: (disabling DC)\n");
++			dump ("decryptionContext: (invalid)\n");
++		    }
++		}
++	    }
++	}
++
+       const cApi = EnigmailCryptoAPI();
+       this.returnStatus = cApi.sync(cApi.decryptMime(this.outQueue, options));
+       if (!this.returnStatus) {
+diff --git a/package/mimeEncrypt.jsm b/package/mimeEncrypt.jsm
+index 9d768ab7..dc95b50e 100644
+--- a/package/mimeEncrypt.jsm
++++ b/package/mimeEncrypt.jsm
+@@ -9,7 +9,7 @@
+  *  implemented as XPCOM component
+  */
+ 
+-var EXPORTED_SYMBOLS = ["EnigmailMimeEncrypt"];
++var EXPORTED_SYMBOLS = ["EnigmailMimeEncrypt", "make_decryption_context"];
+ 
+ const Cr = Components.results;
+ 
+@@ -26,6 +26,8 @@ const EnigmailConstants = ChromeUtils.import("chrome://enigmail/content/modules/
+ const EnigmailPEPAdapter = ChromeUtils.import("chrome://enigmail/content/modules/pEpAdapter.jsm").EnigmailPEPAdapter;
+ const EnigmailKeyRing = ChromeUtils.import("chrome://enigmail/content/modules/keyRing.jsm").EnigmailKeyRing;
+ const EnigmailLocale = ChromeUtils.import("chrome://enigmail/content/modules/locale.jsm").EnigmailLocale;
++const GlodaUtils = ChromeUtils.import("resource:///modules/gloda/utils.js").GlodaUtils;
++const { MailServices } = ChromeUtils.import("resource:///modules/MailServices.jsm");
+ 
+ // our own contract IDs
+ const PGPMIME_ENCRYPT_CID = Components.ID("{96fe88f9-d2cd-466f-93e0-3a351df4c6d2}");
+@@ -43,6 +45,55 @@ const MIME_ENCRYPTED = 2;
+ 
+ var gDebugLogLevel = 0;
+ 
++function make_decryption_context(dcPolicy, headers, mimepath) {
++    var decryptionContext = dcPolicy;
++    var dcp = dcPolicy;
++
++    EnigmailLog.DEBUG("make_decryption_context: headers: " + headers + "\n");
++    while (dcp.length > 0) {
++	if (dcp.startsWith("{smtp=")) {
++	    dcp = dcp.substring(6);
++	    let closing = dcp.indexOf("}");
++	    if (closing == -1) {
++		break;
++	    }
++	    let hl = dcp.substring(0, closing).split(":")
++	    dcp = dcp.substring(closing + 1);
++	    for (var h of hl) {
++		if (! headers[h]) {
++		    EnigmailLog.DEBUG("make_decryption_context: unknown header: " + h + "\n");
++		    dump("make_decryption_context: unknown header: " + h + "\n");
++		}
++		else if (headers[h].length > 0) {
++		    var v = headers[h].shift();
++		    decryptionContext += h + ":" + v + "\r\n";
++		}
++	    }
++	}
++	else if (dcp.startsWith("{mime=mimepath}")) {
++	    dcp = dcp.substring(15);
++	    for (var mp of mimepath) {
++		decryptionContext += "mimepath:" + mp + "\r\n";
++	    }
++	}
++	else if (dcp.startsWith("{")) {
++	    dcp = dcp.substring(1);
++	}
++	else if (dcp.startsWith("}")) {
++	    dcp = dcp.substring(1);
++	}
++	else {
++	    break;
++	}
++    }
++    if (dcp.length > 0) {
++	EnigmailLog.DEBUG("make_decryption_context: invalid: " + dcp + "\n");
++	dump("make_decryption_context: invalid: " + dcp + "\n");
++	return null;
++    }
++    return decryptionContext;
++}
++
+ function PgpMimeEncrypt(sMimeSecurityInfo) {
+   this.wrappedJSObject = this;
+ 
+@@ -130,6 +181,8 @@ PgpMimeEncrypt.prototype = {
+   inspector: null,
+   checkSMime: true,
+ 
++  decryptionContext: null,
++
+   // nsIStreamListener interface
+   onStartRequest: function(request) {
+     EnigmailLog.DEBUG("mimeEncrypt.js: onStartRequest\n");
+@@ -267,6 +320,7 @@ PgpMimeEncrypt.prototype = {
+         if (this.sendFlags & EnigmailConstants.SEND_ENCRYPTED) {
+           // applies to encrypted and signed & encrypted
+           this.cryptoMode = MIME_ENCRYPTED;
++	  this.msgIdentity = msgIdentity;
+         }
+         else if (this.sendFlags & EnigmailConstants.SEND_SIGNED) {
+           this.cryptoMode = MIME_SIGNED;
+@@ -426,6 +480,47 @@ PgpMimeEncrypt.prototype = {
+       subj = jsmime.headeremitter.emitStructuredHeader("subject", EnigmailFuncs.getProtectedSubjectText(), {});
+     }
+ 
++    var dcPolicy = this.msgIdentity.getCharAttribute("dcPolicy");
++    dump ("\nENCRYPTING EMAIL\n");
++    dump("decryptionContextPolicy: " + dcPolicy + "\n");
++    if (dcPolicy) {
++	this.decryptionContext = dcPolicy;
++
++	// e.g.
++	// {{smtp=from:from:reply-to:to:to:subject:subject}{mime=mimepath}}
++	// from:Alice <alice@university.edu>\r\nto:Bob <victim@company.com>\r\nsubject:Confidential\r\nmimepath:Content-type:application/pkcs7-mime; smime-type=enveloped-data\r\n
++	let fieldnames = [ "from", "to", "cc", "reply-to", "subject" ];
++	let headers = {};
++	for (let h of fieldnames) {
++	    var f = fieldnames[h];
++	    headers[h] = [];
++	    // FIXME: This does not work. The output is not UTF-8.  There seems to be a bug or misconfiguration.
++	    if (this.msgCompFields.hasHeader(h)) {
++		var val = MailServices.mimeConverter.decodeMimeHeaderToUTF8(this.msgCompFields.getRawHeader(h), null, false, true);
++		if (val) {
++		    headers[h].push(val);
++		}
++	    }
++	}
++
++	var mimepath = ['multipart/encrypted; protocol="application/pgp-encrypted"'];
++	this.decryptionContext = make_decryption_context(dcPolicy, headers, mimepath);
++	if (this.decryptionContext) {
++	    EnigmailLog.DEBUG("mimeEncrypt.js: encryptedHeaders: decryptionContext: " + this.decryptionContext + "\n");
++	    dump("decryptionContext: " + this.decryptionContext + "\n");
++	}
++	else {
++	    EnigmailLog.DEBUG("mimeEncrypt.js: encryptedHeaders: decryptionContext invalid: disabling DC)\n");
++	    dump("decryptionContext: invalid\n");
++	    this.decryptionContext = "";
++	}
++    }
++
++    if (dcPolicy && this.decryptionContext) {
++	this.writeOut("Decryption-Context: " + dcPolicy + "\r\n");
++	this.writeOut("X-Decryption-Context: " + dcPolicy + "\r\n");
++    }
++
+     this.writeOut(subj +
+       "Content-Type: multipart/encrypted;\r\n" +
+       " protocol=\"application/pgp-encrypted\";\r\n" +
+@@ -506,7 +601,8 @@ PgpMimeEncrypt.prototype = {
+       this.sendFlags,
+       this,
+       statusFlagsObj,
+-      errorMsgObj);
++      errorMsgObj,
++      this.decryptionContext);
+     if (!proc) throw Cr.NS_ERROR_FAILURE;
+ 
+     try {
+-- 
+2.20.1
+

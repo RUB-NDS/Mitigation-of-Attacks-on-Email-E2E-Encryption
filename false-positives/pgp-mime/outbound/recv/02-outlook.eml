@@ -1,0 +1,118 @@
+Return-Path: <john10179@outlook.com>
+Delivered-To: brucewayne45@das-labor.org
+Received: from newvegas.das-labor.org
+	by newvegas.das-labor.org with LMTP id CK7SEmQux1y5IQAAAera6A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 19:03:32 +0200
+Received: by newvegas.das-labor.org (Postfix, from userid 1040)
+	id 3B99A1052360; Mon, 29 Apr 2019 19:03:32 +0200 (CEST)
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on
+	newvegas.das-labor.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.7 required=5.0 tests=BAYES_00,DKIM_INVALID,
+	DKIM_SIGNED,FREEMAIL_FROM,SPF_HELO_PASS,TVD_SPACE_RATIO,URIBL_BLOCKED
+	autolearn=no autolearn_force=no version=3.4.2
+Received: from EUR02-AM5-obe.outbound.protection.outlook.com (mail-oln040092067022.outbound.protection.outlook.com [40.92.67.22])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by newvegas.das-labor.org (Postfix) with ESMTPS id CEE2D105207A
+	for <brucewayne45@das-labor.org>; Mon, 29 Apr 2019 19:03:31 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=IWcuF4QMvHTQ0qAv5vc02+0yLJf/E2q2jmf6xURh7Iw=;
+ b=IcKYEzs7lNBd8mm+qA45MwoPEdP8jLHWkOnuwiMo7fK5cq0LL3Q5gnYp+k0MjCk6pnC13p+Lj0Nv0FVFmiVpwQYn2o9zOUWDwHbkonscO0+/3DRLg2d46rbb2+s1LuSCXEU2GXXZa15jYHeKJ9GriysNLJPzDakTj+6dCP+Vo9/PQKtIXYb/B6Wmfw8eHfVHAj3B7AxIJhYAaEsIJFXAPDo3RAKigceISM2qJXUtJUOuMGmaWQmD73cfHK3oboGboMEbrKNCAPsR5bq8oMAMpLn0YjQSWr+lggIDT76O50c8YYToZNLALa+jQw4Sv4GhSCRR8+4tW1MCzkd0IyavBg==
+Received: from HE1EUR02FT027.eop-EUR02.prod.protection.outlook.com
+ (10.152.10.55) by HE1EUR02HT175.eop-EUR02.prod.protection.outlook.com
+ (10.152.11.131) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1835.13; Mon, 29 Apr
+ 2019 17:03:30 +0000
+Received: from HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM (10.152.10.51) by
+ HE1EUR02FT027.mail.protection.outlook.com (10.152.10.72) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1835.13 via Frontend Transport; Mon, 29 Apr 2019 17:03:30 +0000
+Received: from HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM
+ ([fe80::d10f:94f7:47ff:9c3c]) by HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM
+ ([fe80::d10f:94f7:47ff:9c3c%5]) with mapi id 15.20.1835.018; Mon, 29 Apr 2019
+ 17:03:30 +0000
+From: John Smith <john10179@outlook.com>
+To: "brucewayne45@das-labor.org" <brucewayne45@das-labor.org>
+Subject: Outbound PGP/MIME
+Thread-Topic: Outbound PGP/MIME
+Thread-Index: AQHU/q14WoMM9udfsUenvW1IUelbIw==
+Date: Mon, 29 Apr 2019 17:03:30 +0000
+Message-ID: <HE1P18901MB0107A4B51FECB89ED4B93A63E1390@das-labor.org>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+x-clientproxiedby: AM5P189CA0028.EURP189.PROD.OUTLOOK.COM
+ (2603:10a6:206:15::41) To HE1P18901MB0107.EURP189.PROD.OUTLOOK.COM
+ (2603:10a6:3:91::16)
+x-incomingtopheadermarker: OriginalChecksum:DD329767D73075B59B902B2E1964BC1D20F7D0456EB9393F30EC27E21BA092A1;UpperCasedChecksum:592A536115BA5F99AC9BEA89593C81018B34A2F3974778001A21DC132C1C3BFC;SizeAsReceived:7197;Count:46
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [Ss5kyYTTH8QlYrj4YXZ6MZ9NCwazGrHZFp5yj4KtzNvDBJowM5BpvLcieMDQ8AzY]
+x-microsoft-original-message-id: <e730154f-1059-23d5-ef2d-01f76c7cd65b@outlook.com>
+x-ms-publictraffictype: Email
+x-incomingheadercount: 46
+x-eopattributedmessage: 0
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:(2390118)(5050001)(7020095)(20181119110)(201702061078)(5061506573)(5061507331)(1603103135)(2017031320274)(2017031323274)(2017031324274)(2017031322404)(1601125500)(1603101475)(1701031045);SRVR:HE1EUR02HT175;
+x-ms-traffictypediagnostic: HE1EUR02HT175:
+x-microsoft-antispam-message-info: KFAv3Xk7dlZh+24QFBa0CziksNYN4n7LT93/t2ecQ5jmgwbWk2EhMQUq5ZH6CvKc
+Content-Type: multipart/mixed;
+	boundary="_003_HE1P18901MB0107A4B51FECB89ED4B93A63E1390HE1P18901MB0107_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 5edc0041-872e-47c8-9550-08d6ccc49ae3
+X-MS-Exchange-CrossTenant-originalarrivaltime: 29 Apr 2019 17:03:30.5777
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: HE1EUR02HT175
+
+--_003_HE1P18901MB0107A4B51FECB89ED4B93A63E1390HE1P18901MB0107_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+
+--_003_HE1P18901MB0107A4B51FECB89ED4B93A63E1390HE1P18901MB0107_
+Content-Type: application/pgp-encrypted;
+	name="PGPMIME version identification"
+Content-Description: PGP/MIME version identification
+Content-Disposition: attachment; filename="PGPMIME version identification";
+	size=12; creation-date="Mon, 29 Apr 2019 17:03:30 GMT";
+	modification-date="Mon, 29 Apr 2019 17:03:30 GMT"
+Content-ID: <BDA3CECF2352B047A710BF6EF1E6BFBF@EURP189.PROD.OUTLOOK.COM>
+Content-Transfer-Encoding: base64
+
+VmVyc2lvbjogMQ0K
+
+--_003_HE1P18901MB0107A4B51FECB89ED4B93A63E1390HE1P18901MB0107_
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message.asc
+Content-Disposition: attachment; filename="encrypted.asc"; size=953;
+	creation-date="Mon, 29 Apr 2019 17:03:30 GMT";
+	modification-date="Mon, 29 Apr 2019 17:03:30 GMT"
+Content-ID: <6616C8683634AF4AAEF8B1759547CE33@EURP189.PROD.OUTLOOK.COM>
+Content-Transfer-Encoding: base64
+
+LS0tLS1CRUdJTiBQR1AgTUVTU0FHRS0tLS0tDQoNCmhRRU1BK1hoQklabDMraTVBUWYrSy9OV1hO
+YVZ1Y1BVVG5rSVU0TUJQVU5WblJwaXdvZldTRWxTY0s1dnJCcjUNCm1FS3FNWWRyeEp0ckVydk9p
+SnNBYUJCNml5K0EzYzBzTXdUYStTL3RXZERFUkxLYTdFK2RQdThmVFlSSUZrcDINCmtVcEZ5c210
+RXRaNWgxdjZMUEZQcUpRWGhtTGZ4UGtUWXpKdDdpYjhNOFRYM3FadDdYVEZJOHRSblFWenpXTzIN
+CnIzRlM5aFdibUV6aldqMFNKdzlPOEkwTFRRVnlzSjVpbmVGcDZLcUhkSVdXUElOUDBWclpQM2t0
+NEVzTW1WWEMNCjZhNHgrR1dablppZUZCTmI4RWFva3dZSzJoZ2pJUGtkNEQ4U1RrYTdoTlVSeFcw
+N2ZlQ1pWSjVGUkMrV1RmQlANCnZZYktsbVFxNUYrZHlwWHFCbk9GbjhmTVJwOVRqd3R1QnJWc1ZY
+enhrTkxBc1FHb0U5dS9FY2Jsd0orZjMxWlkNCndQaU82ZU9xZHRIM3VrTFdPVkxCaXRnYXhrbk9r
+Q1gxbUE3RG5xd1I3Q1dwTTRSM09jaFpteDJGcmhKKzUzbG4NCi95T3QwWTJsRitOMWxuQk1RTDhK
+ZVFPVzl1N1BBMms1QThURmVETitjeGF5ZUdQREdhUzhXa0M2QTFTZVZWSFUNClJHN1AxNkhtNTZX
+elNiaTNrWVRwTjMzbno5TUdaRW5aekhlQVA4TktwSnA0WTYrZFAyeXdteXhsOTltOE1RekUNClVw
+R1RnQlFqQXlMbEZNWHU5eStHL3F2K2RHUVNJSTRaMEVTRGk3NUMxOVpxR0NuMHZzOEJCR2FZY0w3
+Vys5UlMNCmFCUDZteXh6OFl5anpEblppM05wTS9Nc0FZbXF1b3B3elZXamNxdnprQmEwWTFlYnUz
+S1BRclo2b3JabUJVaU0NCnVRKzZ5bzkvaGI5d2JtQ3kwMkZrVmpMS3EwWGxrc01ycVJkeGlVd01v
+ejNRd3hKNzFPc0M2UFVnaUk5TGtHbUgNCkhzcGhxVGxZVnZEWk9WcEVtTHByS0lhSUFEVm45Wms3
+NUVwaG44ODZUazFrNlRTR0k4ME9VeEFtZ2lrSzZITVQNCjIvNkRXNGpOYVUvMk8veTdzYVNMS3RZ
+R0FBPT0NCj1BWU11DQotLS0tLUVORCBQR1AgTUVTU0FHRS0tLS0tDQo=
+
+--_003_HE1P18901MB0107A4B51FECB89ED4B93A63E1390HE1P18901MB0107_--
